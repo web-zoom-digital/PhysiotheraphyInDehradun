@@ -59,13 +59,13 @@ export const LeadForm: React.FC = () => {
       {isSubmitted ? (
         <div className="py-16 text-center space-y-4">
           <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center mx-auto">
-            <CheckCircle className="w-8 h-8 text-teal-600" />
+            <CheckCircle className="w-8 h-8 text-teal-800" />
           </div>
           <h3 className="text-xl font-black text-slate-800">Booking Confirmed!</h3>
           <p className="text-sm text-slate-500 max-w-xs mx-auto leading-relaxed">
             Thank you, <strong className="text-slate-700">{formData.name}</strong>. Redirecting you to WhatsApp to confirm your slot.
           </p>
-          <div className="inline-flex items-center gap-2 text-xs font-bold text-teal-600 bg-teal-50 px-4 py-2 rounded-full border border-teal-100">
+          <div className="inline-flex items-center gap-2 text-xs font-bold text-teal-800 bg-teal-50 px-4 py-2 rounded-full border border-teal-100">
             <span>Opening WhatsApp...</span>
             <ArrowRight className="w-3.5 h-3.5 animate-pulse" />
           </div>
@@ -214,7 +214,7 @@ export const LeadForm: React.FC = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-4 bg-teal-600 hover:bg-teal-700 text-white text-sm font-bold rounded-xl shadow-md hover:shadow-teal-200 hover:scale-[1.01] active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+            className="w-full py-4 bg-teal-800 hover:bg-teal-900 text-white text-sm font-bold rounded-xl shadow-md hover:shadow-teal-200 hover:scale-[1.01] active:scale-95 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
           >
             {loading ? (
               <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />

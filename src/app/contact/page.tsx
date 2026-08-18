@@ -34,7 +34,7 @@ export default function ContactPage() {
           <Reveal delay={0.1} yOffset={25}>
             <h1 className="text-2xl sm:text-3xl lg:text-4.5xl font-bold text-white">
               Contact Our Care Team<br />
-              <span className="text-teal-400">Physiotherapy Dehradun</span>
+              <span className="text-teal-800">Physiotherapy Dehradun</span>
             </h1>
             <p className="text-slate-300 mt-3 text-sm sm:text-base max-w-xl">
               Have questions or ready to book? Reach out via call, email, or WhatsApp — we respond in minutes.
@@ -53,7 +53,7 @@ export default function ContactPage() {
 
               {/* Section label */}
               <div className="space-y-2">
-                <span className="text-[10px] font-black text-teal-600 uppercase tracking-widest bg-teal-50 border border-teal-100 px-3 py-1 rounded-full inline-block">
+                <span className="text-[10px] font-black text-teal-800 uppercase tracking-widest bg-teal-50 border border-teal-100 px-3 py-1 rounded-full inline-block">
                   Quick Details
                 </span>
                 <h2 className="text-xl sm:text-xl font-bold text-slate-800 ">
@@ -70,11 +70,11 @@ export default function ContactPage() {
                   href={CLINIC_CONFIG.contact.phoneUrl}
                   className="group flex items-center gap-4 bg-white border border-slate-100 rounded-2xl p-5 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:border-teal-200 hover:shadow-[0_8px_30px_rgba(20,184,166,0.1)] transition-all duration-300"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-teal-50 border border-teal-100 flex items-center justify-center shrink-0 group-hover:bg-teal-600 group-hover:border-teal-600 transition-all duration-300">
-                    <Phone className="w-5 h-5 text-teal-600 group-hover:text-white transition-colors duration-300" />
+                  <div className="w-12 h-12 rounded-2xl bg-teal-50 border border-teal-100 flex items-center justify-center shrink-0 group-hover:bg-teal-800 group-hover:border-teal-800 transition-all duration-300">
+                    <Phone className="w-5 h-5 text-teal-800 group-hover:text-white transition-colors duration-300" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-[10px] font-black text-teal-600 uppercase ">Call Now</p>
+                    <p className="text-[10px] font-black text-teal-800 uppercase ">Call Now</p>
                     <p className="text-xs text-slate-400 mt-0.5">Direct consulting desk</p>
                     <p className="text-base  text-slate-800 mt-1">{CLINIC_CONFIG.contact.phone}</p>
                   </div>
@@ -88,11 +88,11 @@ export default function ContactPage() {
                   href={`mailto:${CLINIC_CONFIG.contact.email}`}
                   className="group flex items-center gap-4 bg-white border border-slate-100 rounded-2xl p-5 shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:border-teal-200 hover:shadow-[0_8px_30px_rgba(20,184,166,0.1)] transition-all duration-300"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-teal-50 border border-teal-100 flex items-center justify-center shrink-0 group-hover:bg-teal-600 group-hover:border-teal-600 transition-all duration-300">
-                    <Mail className="w-5 h-5 text-teal-600 group-hover:text-white transition-colors duration-300" />
+                  <div className="w-12 h-12 rounded-2xl bg-teal-50 border border-teal-100 flex items-center justify-center shrink-0 group-hover:bg-teal-800 group-hover:border-teal-800 transition-all duration-300">
+                    <Mail className="w-5 h-5 text-teal-800 group-hover:text-white transition-colors duration-300" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-[10px] font-black text-teal-600 uppercase ">Email Us</p>
+                    <p className="text-[10px] font-black text-teal-800 uppercase ">Email Us</p>
                     <p className="text-xs text-slate-400 mt-0.5">Queries &amp; tie-ups</p>
                     <p className="text-sm  text-slate-800 mt-1 truncate">{CLINIC_CONFIG.contact.email}</p>
                   </div>
@@ -105,9 +105,9 @@ export default function ContactPage() {
                 <div className="bg-white border border-slate-100 rounded-2xl p-5 shadow-[0_4px_20px_rgba(0,0,0,0.05)]">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-teal-50 border border-teal-100 flex items-center justify-center shrink-0">
-                      <Clock className="w-5 h-5 text-teal-600" />
+                      <Clock className="w-5 h-5 text-teal-800" />
                     </div>
-                    <h4 className=" text-teal-600 uppercase font-black text-sm">Clinic Hours</h4>
+                    <h4 className=" text-teal-800 uppercase font-black text-sm">Clinic Hours</h4>
                   </div>
                   <div className="space-y-3">
                     <div className="flex items-start justify-between gap-4 py-2.5 border-b border-slate-50">
@@ -119,7 +119,7 @@ export default function ContactPage() {
                       <span className="text-sm font-black text-slate-800 whitespace-nowrap">10:00 AM – 6:00 PM</span>
                     </div>
                     <div className="flex items-start justify-between gap-4 py-2.5 rounded-xl bg-teal-50 px-3">
-                      <span className="text-sm font-semibold text-teal-700">Home Visit (Daily)</span>
+                      <span className="text-sm font-semibold text-teal-800">Home Visit (Daily)</span>
                       <span className="text-sm font-black text-teal-800 whitespace-nowrap">8:00 AM – 8:00 PM</span>
                     </div>
                   </div>
@@ -133,7 +133,7 @@ export default function ContactPage() {
               <Reveal delay={0.1}>
                 <div className="bg-white rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.08)] border border-slate-100 overflow-hidden">
                   {/* Form header bar */}
-                  <div className="bg-gradient-to-r from-teal-600 to-teal-500 px-8 py-6">
+                  <div className="bg-gradient-to-r from-teal-800 to-teal-800 px-8 py-6">
                     <h2 className="text-white font-black text-xl ">Send Us a Message</h2>
                     <p className="text-teal-100 text-xs mt-1">We'll confirm your slot on WhatsApp within minutes.</p>
                   </div>
@@ -160,7 +160,7 @@ export default function ContactPage() {
             <div className="bg-white border border-slate-100 rounded-3xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)] space-y-4">
               <div className="flex gap-3 items-start">
                 <div className="w-9 h-9 rounded-xl bg-teal-50 border border-teal-100 flex items-center justify-center shrink-0">
-                  <MapPin className="w-4 h-4 text-teal-600" />
+                  <MapPin className="w-4 h-4 text-teal-800" />
                 </div>
                 <div>
                   <h4 className="font-extrabold text-slate-800 text-sm">Rajpur Road Branch (Main)</h4>
@@ -181,7 +181,7 @@ export default function ContactPage() {
             <div className="bg-white border border-slate-100 rounded-3xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)] space-y-4">
               <div className="flex gap-3 items-start">
                 <div className="w-9 h-9 rounded-xl bg-teal-50 border border-teal-100 flex items-center justify-center shrink-0">
-                  <MapPin className="w-4 h-4 text-teal-600" />
+                  <MapPin className="w-4 h-4 text-teal-800" />
                 </div>
                 <div>
                   <h4 className="font-extrabold text-slate-800 text-sm">Bhaniyawala Branch</h4>
@@ -217,7 +217,7 @@ export default function ContactPage() {
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-teal-600 text-white font-bold rounded-full hover:bg-teal-700 shadow-md hover:shadow-teal-200 hover:scale-105 active:scale-95 transition-all"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-teal-800 text-white font-bold rounded-full hover:bg-teal-900 shadow-md hover:shadow-teal-200 hover:scale-105 active:scale-95 transition-all"
               >
                 <span>Start WhatsApp Chat</span>
                 <ArrowRight className="w-4 h-4" />

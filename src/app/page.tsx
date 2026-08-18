@@ -84,7 +84,7 @@ export default function HomePage() {
       shortDesc:
         "Connect with certified physiotherapists near you in Dehradun. Personalized care for arthritis, paralysis, sports injuries, and posture issues.",
       icon: Heart,
-      bgTint: "bg-teal-100 text-teal-700",
+      bgTint: "bg-teal-100 text-teal-800",
       items: [
         "MPT Ortho Specialist",
         "MPT Neuro Specialist",
@@ -248,7 +248,7 @@ export default function HomePage() {
       excerpt:
         "Chronic back pain affects millions. Understand the common causes — from sedentary lifestyles to disc issues — and how physiotherapy can help.",
       image:
-        "https://images.unsplash.com/photo-1591343395902-1707e5e0e2c5?w=800&q=80",
+        "/services/back-pain-dehradun.png",
       category: "Back Pain",
       date: "Jul 20, 2026",
       readTime: "6 min read",
@@ -259,7 +259,7 @@ export default function HomePage() {
       excerpt:
         "Whether you're a weekend athlete or a competitive player, these physiotherapy-backed tips will help you avoid common sports injuries.",
       image:
-        "https://images.unsplash.com/photo-1517637382994-f02da38c6728?w=800&q=80",
+        "/services/sport-pain-dehradun.png",
       category: "Sports Care",
       date: "Jul 12, 2026",
       readTime: "4 min read",
@@ -270,7 +270,7 @@ export default function HomePage() {
       excerpt:
         "From delayed milestones to cerebral palsy, learn how early pediatric physiotherapy intervention can make a lasting difference for children.",
       image:
-        "https://images.unsplash.com/photo-1519452575417-564c1401ecc0?w=800&q=80",
+        "/services/child-support-dehradun.png",
       category: "Pediatric Care",
       date: "Jul 3, 2026",
       readTime: "5 min read",
@@ -316,9 +316,9 @@ export default function HomePage() {
             {/* Left Column: Headline */}
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               <Reveal delay={0.1} yOffset={25}>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full  text-teal-600 border border-white/10 text-sm font-bold shadow-lg shadow-sm">
-                  <Star className="w-3.5 h-3.5 fill-current text-teal-400" />
-                  <span>Dehradun's Premium Physical Therapy Center</span>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full  text-teal-800 border border-white/10 text-sm font-bold shadow-lg shadow-sm">
+                  <Star className="w-3.5 h-3.5 fill-current text-white" />
+                  <span className="text-gradient-brand">Dehradun's Premium Physical Therapy Center</span>
                 </div>
               </Reveal>
 
@@ -352,7 +352,7 @@ export default function HomePage() {
                   key={idx}
                   className="bg-white border border-slate-300 p-6 sm:p-8 rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_-15px_rgba(13,148,136,0.08)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center space-y-2 group"
                 >
-                  <span className="text-3xl md:text-4xl font-black text-teal-600 tracking-tight block">
+                  <span className="text-3xl md:text-4xl font-black text-teal-800 tracking-tight block">
                     <AnimatedCounter
                       target={stat.target}
                       decimals={stat.decimals}
@@ -375,7 +375,7 @@ export default function HomePage() {
           <div className="flex flex-col gap-12">
             {/* Heading */}
             <div className="space-y-4 text-center max-w-3xl mx-auto">
-              <span className="text-sm font-bold uppercase tracking-wide text-teal-600 block">
+              <span className="text-sm font-bold uppercase tracking-wide text-teal-800 block">
                 ABOUT US
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -446,7 +446,7 @@ export default function HomePage() {
       <section className="py-20 bg-brand-gray-light/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4 flex flex-col items-center">
-            <span className="text-sm font-bold uppercase tracking-wide text-teal-600">
+            <span className="text-sm font-bold uppercase tracking-wide text-teal-800">
               SERVICES
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -484,7 +484,7 @@ export default function HomePage() {
                         {card.items.slice(0, 3).map((item, idx) => (
                           <span
                             key={idx}
-                            className="text-[11px] font-semibold text-teal-700 bg-teal-50 border border-teal-100 px-2.5 py-1 rounded-full"
+                            className="text-[11px] font-semibold text-teal-800 bg-teal-50 border border-teal-100 px-2.5 py-1 rounded-full"
                           >
                             {item}
                           </span>
@@ -495,7 +495,7 @@ export default function HomePage() {
                     {/* CTA button */}
                     <Link
                       href={`/services/${card.slug}`}
-                      className="mt-8 w-full py-3.5 bg-gradient-to-r from-primary-brand to-teal-500 text-white hover:from-primary-hover hover:to-teal-600 font-bold rounded-2xl flex items-center justify-center gap-2 transition-all text-sm shadow-sm hover:shadow-md"
+                      className="mt-8 w-full py-3.5 bg-gradient-to-r from-primary-brand to-teal-800 text-white hover:from-primary-hover hover:to-teal-800 font-bold rounded-2xl flex items-center justify-center gap-2 transition-all text-sm shadow-sm hover:shadow-md"
                     >
                       <span>Explore {card.category} Therapy</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -522,13 +522,13 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4 flex flex-col items-center">
-            <span className="text-sm font-bold uppercase tracking-wide text-teal-600">
+            <span className="text-sm font-bold uppercase tracking-wide text-teal-800">
               CONDITIONS TREATED
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
               Get Relief From Stubborn Pain
             </h2>
-            <p className="text-base md:text-xl lg:text-2xl font-semibold text-teal-700 max-w-2xl leading-relaxed">
+            <p className="text-base md:text-xl lg:text-2xl font-semibold text-teal-800 max-w-2xl leading-relaxed">
               Trusted Physiotherapy Centre in Dehradun. Select your condition to
               view target exercises.
             </p>
@@ -612,13 +612,13 @@ export default function HomePage() {
 
               {/* Doctor Details */}
               <div className="lg:col-span-7 space-y-6 lg:pl-5">
-                <span className="text-sm font-bold uppercase tracking-wide text-teal-600 block">
+                <span className="text-sm font-bold uppercase tracking-wide text-teal-800 block">
                   LEAD DOCTOR
                 </span>
                 <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
                   Meet {CLINIC_CONFIG.doctor.name}
                 </h2>
-                <p className="text-base font-bold text-teal-700 tracking-wide uppercase">
+                <p className="text-base font-bold text-teal-800 tracking-wide uppercase">
                   {CLINIC_CONFIG.doctor.credentials} |{" "}
                   {CLINIC_CONFIG.doctor.experience} Clinical Practice
                 </p>
@@ -770,7 +770,7 @@ export default function HomePage() {
           {/* Header */}
           <div className="text-center mb-14 space-y-5 flex flex-col items-center">
             <span
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50 text-teal-700 text-sm font-bold uppercase tracking-wider"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50 text-teal-800 text-sm font-bold uppercase tracking-wider"
             >
               <span />
               FAQ
@@ -782,7 +782,7 @@ export default function HomePage() {
               Frequently Asked Questions
             </h2>
 
-            <p className="max-w-2xl text-lg md:text-xl font-medium text-teal-700 leading-relaxed ">
+            <p className="max-w-2xl text-lg md:text-xl font-medium text-teal-800 leading-relaxed ">
               Quick answers about our Dehradun physiotherapy clinic, treatments,
               facilities and appointments.
             </p>
@@ -798,7 +798,7 @@ export default function HomePage() {
                   className="flex items-start gap-4 rounded-xl p-4 md:p-5 bg-gradient-to-r from-white to-teal-50/30">
                   {/* Number */}
                   <div
-                    className=" w-9 h-9 rounded-full bg-teal-600 text-white flex items-center justify-center text-sm font-bold  shadow-teal-200 "
+                    className=" w-9 h-9 rounded-full bg-teal-800 text-white flex items-center justify-center text-sm font-bold  shadow-teal-200 "
                   >
                     {String(idx + 1).padStart(2, "0")}
                   </div>
@@ -823,7 +823,7 @@ export default function HomePage() {
           px-6
           py-3
           rounded-full
-          bg-teal-600
+          bg-teal-800
           text-white
           font-bold
           text-sm
@@ -831,7 +831,7 @@ export default function HomePage() {
           
           transition-all
           duration-300
-          hover:bg-teal-700 hover:-translate-y-1 "
+          hover:bg-teal-900 hover:-translate-y-1 "
             >
               View complete FAQ list
               <ArrowRight
@@ -850,13 +850,13 @@ export default function HomePage() {
       <section className="py-20 bg-brand-gray-light/30 border-t border-slate-100 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4 flex flex-col items-center">
-            <span className="text-sm font-bold uppercase tracking-wide text-teal-600">
+            <span className="text-sm font-bold uppercase tracking-wide text-teal-800">
               CLINIC LOCATIONS
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight text-center">
               Visit Our Modern Facilities
             </h2>
-            <p className="text-base md:text-xl lg:text-2xl font-semibold text-teal-700 max-w-2xl leading-relaxed">
+            <p className="text-base md:text-xl lg:text-2xl font-semibold text-teal-800 max-w-2xl leading-relaxed">
               Find directions to our closest rehabilitation branch in Dehradun.
             </p>
           </div>
@@ -883,7 +883,7 @@ export default function HomePage() {
             <div className="max-w-2xl mx-auto space-y-4 relative z-10">
               <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight text-center">
                 Ready to Live Without{" "}
-                <span className="text-teal-400">Physical Pain?</span>
+                <span className="text-teal-800">Physical Pain?</span>
               </h2>
               <p className="text-base text-slate-500 leading-relaxed max-w-2xl mx-auto">
                 Connect with our senior physical therapists. Receive a custom

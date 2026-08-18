@@ -15,13 +15,13 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-teal-700 text-white pt-16 pb-28 lg:pb-12">
+    <footer className="bg-teal-800 text-white pt-16 pb-28 lg:pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Clinic Info */}
           <div className="lg:col-span-5 space-y-6">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-2xl bg-white text-teal-700 flex items-center justify-center font-black text-xl shadow-lg">
+              <div className="w-12 h-12 rounded-2xl bg-white text-teal-800 flex items-center justify-center font-black text-xl shadow-lg">
                 P
               </div>
 
@@ -72,7 +72,7 @@ export const Footer: React.FC = () => {
                 href="https://www.facebook.com/people/RonEx-Physiotherapy-Rehabilitation-centre/61582957640581/#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-teal-700 transition"
+                className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-teal-800 transition"
               >
                 f
               </a>
@@ -81,7 +81,7 @@ export const Footer: React.FC = () => {
                 href="https://www.instagram.com/ronex_physiotherapy/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-teal-700 transition"
+                className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-teal-800 transition"
               >
                 ◎
               </a>

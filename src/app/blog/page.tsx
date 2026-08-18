@@ -33,7 +33,7 @@ export default function BlogIndexPage() {
           <Reveal delay={0.1} yOffset={25}>
             <h1 className="text-2xl sm:text-3xl lg:text-4.5xl font-bold text-white">
               Physiotherapy Blog<br />
-              <span className="text-teal-400">&amp; Recovery Guides</span>
+              <span className="text-teal-800">&amp; Recovery Guides</span>
             </h1>
             <p className="text-slate-300 mt-3 text-sm sm:text-base max-w-xl">
               Evidence-based exercise guides, clinical timelines, and health advice from our physiotherapy team in Dehradun.
@@ -60,7 +60,7 @@ export default function BlogIndexPage() {
                         alt={post.title}
                         className="w-full h-full   "
                       />
-                      <span className="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-teal-700 text-[10px] font-bold px-3 py-1 rounded-full shadow-sm border border-teal-100">
+                      <span className="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-teal-800 text-[10px] font-bold px-3 py-1 rounded-full shadow-sm border border-teal-100">
                         {post.category}
                       </span>
                       <span className="absolute top-3 right-3 bg-black/50 text-white text-[10px] font-semibold px-2.5 py-1 rounded-full">
