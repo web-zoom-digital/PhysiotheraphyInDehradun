@@ -122,7 +122,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         {/* Background Decorations */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary-brand/20 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-72 h-72 bg-teal-400/10 blur-3xl rounded-full translate-y-1/2 -translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-teal-800/10 blur-3xl rounded-full translate-y-1/2 -translate-x-1/2" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -150,7 +150,7 @@ export default async function ServiceDetailPage({ params }: Props) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-8 space-y-6">
               <Reveal delay={0.05}>
-                <span className="inline-block text-xs font-black tracking-widest text-teal-400 uppercase bg-teal-400/10 border border-teal-400/20 px-3.5 py-1.5 rounded-full">
+                <span className="inline-block text-xs font-black tracking-widest text-teal-800 uppercase bg-teal-800/10 border border-teal-800/20 px-3.5 py-1.5 rounded-full">
                   Expert Physiotherapy in Dehradun
                 </span>
               </Reveal>
@@ -158,7 +158,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               <Reveal delay={0.1}>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
                   {service.title}
-                  <span className="block text-teal-400 text-2xl sm:text-3xl mt-1">
+                  <span className="block text-teal-800 text-2xl sm:text-3xl mt-1">
                     in Dehradun
                   </span>
                 </h1>
@@ -202,7 +202,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                         key={idx}
                         className="flex items-center gap-2 text-xs text-slate-300"
                       >
-                        <BadgeIcon className="w-4 h-4 text-teal-400 shrink-0" />
+                        <BadgeIcon className="w-4 h-4 text-teal-800 shrink-0" />
                         <span>{badge.label}</span>
                       </div>
                     );
@@ -232,16 +232,16 @@ export default async function ServiceDetailPage({ params }: Props) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             {/* LEFT: Main Content */}
-            <div className="lg:col-span-8 space-y-14">
+            <div className="lg:col-span-7 space-y-14">
               {/* What This Treats / Key Benefits */}
               <section aria-labelledby="benefits-heading">
                 <Reveal>
-                  <span className="text-xs font-black tracking-widest text-primary-brand uppercase block mb-2">
+                  <span className="text-sm text-teal-500 font-bold uppercase block mb-2">
                     CLINICAL BENEFITS
                   </span>
                   <h2
                     id="benefits-heading"
-                    className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6"
+                    className="text-2xl sm:text-2xl font-extrabold text-slate-900 tracking-tight mb-6"
                   >
                     What You Gain from {service.title}
                   </h2>
@@ -267,7 +267,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 <Reveal>
                   <h2
                     id="about-heading"
-                    className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6"
+                    className="text-2xl sm:text-2xl font-extrabold text-slate-900 tracking-tight mb-6"
                   >
                     About {service.title} at RonEx
                   </h2>
@@ -281,26 +281,26 @@ export default async function ServiceDetailPage({ params }: Props) {
               {/* How It Works — 4 Step Process */}
               <section aria-labelledby="process-heading">
                 <Reveal>
-                  <span className="text-xs font-black tracking-widest text-primary-brand uppercase block mb-2">
+                  <span className="text-sm font-black  text-primary-brand uppercase  mb-2">
                     OUR APPROACH
                   </span>
                   <h2
                     id="process-heading"
-                    className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6"
+                    className="text-2xl sm:text-2xl font-extrabold text-slate-900 tracking-tight mb-6"
                   >
                     How We Treat {service.title.split(" ").slice(-1)[0]}
                   </h2>
                 </Reveal>
                 <StaggerContainer>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 cursor-pointer">
                     {service.approach.map((step, idx) => (
                       <StaggerItem key={idx}>
-                        <div className="relative flex gap-4 p-5 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md hover:border-teal-100 transition-all group">
-                          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-primary-brand to-brand-blue text-white flex items-center justify-center font-black text-sm shrink-0 group-hover:scale-110 transition-transform">
+                        <div className="relative flex gap-3 p-5 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md hover:border-teal-100 ">
+                          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-primary-brand to-brand-blue text-white flex items-center justify-center font-black ">
                             {idx + 1}
                           </div>
                           <div>
-                            <h3 className="font-bold text-slate-800 text-sm leading-snug group-hover:text-primary-brand transition-colors">
+                            <h3 className="font-bold text-slate-800 text-sm group-hover:text-primary-brand transition-colors">
                               {step}
                             </h3>
                             <p className="text-xs text-slate-500 mt-1">
@@ -323,12 +323,12 @@ export default async function ServiceDetailPage({ params }: Props) {
               {/* Who Is This For */}
               <section aria-labelledby="whofor-heading">
                 <Reveal>
-                  <span className="text-xs font-black tracking-widest text-primary-brand uppercase block mb-2">
+                  <span className="text-sm font-black  text-primary-brand uppercase mb-2">
                     IDEAL CANDIDATES
                   </span>
                   <h2
                     id="whofor-heading"
-                    className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6"
+                    className="text-2xl sm:text-2xl font-extrabold text-slate-900  mb-6"
                   >
                     Who Should Choose {service.title}?
                   </h2>
@@ -344,7 +344,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                   ].map((who, idx) => (
                     <div
                       key={idx}
-                      className="flex items-start gap-2.5 p-3.5 bg-slate-50 rounded-xl border border-slate-100"
+                      className="flex items-start gap-2.5 p-3.5 bg-slate-50 rounded-xl border border-slate-100 cursor-pointer"
                     >
                       <CheckCircle className="w-4 h-4 text-primary-brand shrink-0 mt-0.5" />
                       <span className="text-xs text-slate-700 font-medium">
@@ -359,12 +359,12 @@ export default async function ServiceDetailPage({ params }: Props) {
               {relatedConditions.length > 0 && (
                 <section aria-labelledby="conditions-heading">
                   <Reveal>
-                    <span className="text-xs font-black tracking-widest text-primary-brand uppercase block mb-2">
+                    <span className="text-sm font-black  text-primary-brand uppercase mb-2">
                       RELATED CONDITIONS
                     </span>
                     <h2
                       id="conditions-heading"
-                      className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6"
+                      className="text-2xl sm:text-2xl font-extrabold text-slate-900  mb-6"
                     >
                       Conditions We Treat with {service.title}
                     </h2>
@@ -391,57 +391,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 </section>
               )}
 
-              {/* Doctor Trust Strip */}
-              <section className="bg-gradient-to-tr from-slate-50 to-teal-50/50 rounded-3xl border border-teal-100/50 p-6 sm:p-8">
-                <div className="flex flex-col sm:flex-row items-start gap-5">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-primary-brand to-brand-blue flex items-center justify-center text-white font-black text-xl shrink-0">
-                    {CLINIC_CONFIG.doctor.name.charAt(0)}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <BadgeCheck className="w-4 h-4 text-primary-brand" />
-                      <span className="text-xs font-bold text-primary-brand uppercase tracking-wide">
-                        Lead Specialist
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-extrabold text-slate-800">
-                      {CLINIC_CONFIG.doctor.name}
-                    </h3>
-                    <p className="text-sm text-slate-600 mt-0.5">
-                      {CLINIC_CONFIG.doctor.title}
-                    </p>
-                    <p className="text-xs text-teal-700 font-semibold mt-0.5">
-                      {CLINIC_CONFIG.doctor.credentials} ·{" "}
-                      {CLINIC_CONFIG.doctor.experience} Practice
-                    </p>
-                    <div className="flex flex-wrap gap-2 mt-3">
-                      {CLINIC_CONFIG.doctor.certifications
-                        .slice(0, 2)
-                        .map((cert, i) => (
-                          <span
-                            key={i}
-                            className="text-[10px] bg-white border border-teal-100 text-teal-700 px-2.5 py-1 rounded-full font-semibold"
-                          >
-                            {cert}
-                          </span>
-                        ))}
-                    </div>
-                  </div>
-                  <div className="text-right shrink-0">
-                    <div className="flex justify-end mb-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400"
-                        />
-                      ))}
-                    </div>
-                    <span className="text-xs text-slate-500">
-                      4.9 · 847 reviews
-                    </span>
-                  </div>
-                </div>
-              </section>
+              
 
               {/* FAQs */}
               <section aria-labelledby="faq-heading">
@@ -495,12 +445,21 @@ export default async function ServiceDetailPage({ params }: Props) {
             </div>
 
             {/* RIGHT: Sticky Sidebar */}
-            <div className="lg:col-span-4 space-y-5 lg:sticky lg:top-24">
+            <div className="lg:col-span-5 space-y-5 lg:sticky lg:top-24">
               {/* Lead Booking Form */}
-              <LeadForm />
+              <div className="bg-white rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.08)] border border-slate-100 overflow-hidden">
+                {/* Form header bar */}
+                <div className="bg-gradient-to-r from-teal-800 to-teal-800 px-6 py-5">
+                  <h2 className="text-white font-black text-base tracking-tight">Book a Consultation</h2>
+                  <p className="text-teal-100 text-xs mt-1">Secure your slot — redirects to WhatsApp for instant confirmation.</p>
+                </div>
+                <div className="p-8 sm:p-6">
+                  <LeadForm />
+                </div>
+              </div>
 
               {/* Quick Call Box */}
-              <div className="bg-gradient-to-tr from-white to-teal-50 border border-teal-100 rounded-3xl p-5 space-y-3">
+              {/* <div className="bg-gradient-to-tr from-white to-teal-50 border border-teal-100 rounded-3xl p-5 space-y-3">
                 <h4 className="font-extrabold text-slate-800 text-sm">
                   Need Consultation Guidance?
                 </h4>
@@ -522,54 +481,28 @@ export default async function ServiceDetailPage({ params }: Props) {
                   <Calendar className="w-3.5 h-3.5" />
                   <span>Book Appointment</span>
                 </Link>
-              </div>
+              </div> */}
 
               {/* Other Services */}
-              <div className="bg-white border border-slate-100 rounded-3xl p-5 space-y-3">
-                <h4 className="font-extrabold text-slate-800 text-sm">
+              <div className="bg-white border border-slate-200 rounded-3xl p-5 space-y-3">
+                <h3 className="font-extrabold text-slate-800 text-md">
                   Other Specialized Therapies
-                </h4>
+                </h3>
                 <div className="flex flex-col divide-y divide-slate-50">
                   {otherServices.map((os) => (
                     <Link
                       key={os.slug}
                       href={`/services/${os.slug}`}
-                      className="flex items-center justify-between py-2.5 text-xs text-slate-600 hover:text-primary-brand font-semibold group"
+                      className="flex items-center justify-between py-2.5 text-sm text-slate-600 hover:text-primary-brand font-semibold group"
                     >
                       <span className="truncate pr-2">{os.title}</span>
                       <ChevronRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-primary-brand shrink-0" />
                     </Link>
                   ))}
                 </div>
-                <Link
-                  href="/services/physiotherapy-in-dehradun"
-                  className="text-xs font-bold text-primary-brand hover:underline flex items-center gap-1"
-                >
-                  View All Services <ArrowRight className="w-3 h-3" />
-                </Link>
               </div>
 
-              {/* Locations */}
-              <div className="bg-slate-50 border border-slate-100 rounded-3xl p-5 space-y-3">
-                <h4 className="font-extrabold text-slate-800 text-sm flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-primary-brand" />
-                  Our Clinic Locations
-                </h4>
-                {CLINIC_CONFIG.branches.map((b) => (
-                  <div
-                    key={b.id}
-                    className="text-xs text-slate-600 space-y-0.5"
-                  >
-                    <p className="font-bold text-slate-700">{b.name}</p>
-                    <p className="text-slate-500 leading-relaxed">
-                      {b.address}
-                    </p>
-                    <p className="text-teal-600 font-semibold">
-                      {b.openingHours}
-                    </p>
-                  </div>
-                ))}
-              </div>
+              
             </div>
           </div>
         </div>
@@ -579,7 +512,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       <section className="py-16 bg-gradient-to-br from-slate-900 to-teal-900 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-5">
           <Reveal>
-            <span className="inline-block text-xs font-black tracking-widest text-teal-400 uppercase bg-teal-400/10 border border-teal-400/20 px-3.5 py-1.5 rounded-full mb-3">
+            <span className="inline-block text-xs font-black tracking-widest text-teal-800 uppercase bg-teal-800/10 border border-teal-800/20 px-3.5 py-1.5 rounded-full mb-3">
               START RECOVERY TODAY
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">

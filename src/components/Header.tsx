@@ -115,7 +115,7 @@ export const Header: React.FC = () => {
 
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary-brand to-teal-400 flex items-center justify-center text-white font-extrabold text-lg shadow-sm group-hover:scale-105 transition-transform duration-300">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary-brand to-teal-800 flex items-center justify-center text-white font-extrabold text-lg shadow-sm group-hover:scale-105 transition-transform duration-300">
                 P
               </div>
               <div>
@@ -124,6 +124,9 @@ export const Header: React.FC = () => {
                 </span>
                 <span className="text-[10px] text-slate-400 font-bold tracking-widest uppercase leading-none block mt-0.5">
                   DEHRADUN
+                </span>
+                <span className="text-[10px] text-slate-400 font-bold tracking-widest uppercase leading-none block mt-0.5">
+                  via Ronex 
                 </span>
               </div>
             </Link>
@@ -200,13 +203,13 @@ export const Header: React.FC = () => {
                             </div>
                             {/* Footer row */}
                             <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-                              <Link
+                              {/* <Link
                                 href="/services/physiotherapy-in-dehradun"
                                 onClick={() => setServicesOpen(false)}
                                 className="text-xs font-bold text-primary-brand hover:underline flex items-center gap-1"
                               >
                                 View All Services <ArrowRight className="w-3 h-3" />
-                              </Link>
+                              </Link> */}
                               <Link
                                 href="/book-appointment"
                                 onClick={() => setServicesOpen(false)}
@@ -281,21 +284,21 @@ export const Header: React.FC = () => {
                               ))}
                             </div>
                             <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-                              <Link
+                              {/* <Link
                                 href="/locations"
                                 onClick={() => setLocationsOpen(false)}
                                 className="text-xs font-bold text-primary-brand hover:underline flex items-center gap-1"
                               >
                                 View All 15+ Areas <ArrowRight className="w-3 h-3" />
-                              </Link>
-                              <Link
+                              </Link> */}
+                              {/* <Link
                                 href="/home-visit-physiotherapy"
                                 onClick={() => setLocationsOpen(false)}
                                 className="flex items-center gap-1.5 px-4 py-2 bg-primary-brand text-white text-xs font-bold rounded-full hover:bg-primary-hover transition-colors"
                               >
                                 <Home className="w-3 h-3" />
                                 Book Home Visit
-                              </Link>
+                              </Link> */}
                             </div>
                           </motion.div>
                         )}
@@ -359,8 +362,9 @@ export const Header: React.FC = () => {
             transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
             className="lg:hidden fixed inset-0 z-[99] bg-white  overflow-y-auto"
           >
+
             {/* Drawer Header */}
-            <div className="sticky top-0 z-10 bg-gradient-to-r from-teal-600 to-teal-500 px-5 py-4 flex items-center justify-between shadow-lg">
+            <div className="sticky top-0 z-10 bg-teal-800 px-5 py-4 flex items-center justify-between shadow-lg">
               <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2.5">
                 <div className="w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center text-white font-extrabold text-base">
                   P
@@ -394,8 +398,8 @@ export const Header: React.FC = () => {
                       onClick={() => setIsOpen(false)}
                       className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold border transition-all ${
                         isActive
-                          ? "bg-teal-500 text-white border-teal-500"
-                          : "bg-slate-50 border border-slate-200 text-slate-500 hover:bg-slate-50"
+                          ? "bg-teal-800 text-white border-teal-800"
+                          : "bg-slate-50 border border-slate-200 text-slate-500 hover:bg-teal-50 hover:text-teal-800 hover:border-teal-200"
                       }`}
                     >
                       <span>{name}</span>
@@ -407,12 +411,12 @@ export const Header: React.FC = () => {
 
               {/* Services Section */}
               <div>
-                <div className="inline-block px-3 py-1 bg-teal-500 text-white rounded-md mb-3">
-                  <p className="text-[10px] font-semibold  uppercase tracking-widest">Services</p>
+                <div className="inline-block px-3 py-1 bg-teal-800 text-white rounded-md mb-3">
+                  <p className="text-[10px] font-semibold uppercase tracking-widest">Services</p>
                 </div>
                 {serviceGroups.map((group) => (
                   <div key={group.label} className="mb-4">
-                    <div className="inline-block px-2.5 py-0.5 bg-teal-500 rounded mb-2">
+                    <div className="inline-block px-2.5 py-0.5 bg-teal-800 rounded mb-2">
                       <p className="text-[9px] font-semibold text-white uppercase tracking-widest">{group.label}</p>
                     </div>
                     <div className="space-y-1">
@@ -424,14 +428,14 @@ export const Header: React.FC = () => {
                             key={item.name}
                             href={item.href}
                             onClick={() => setIsOpen(false)}
-                            className={`flex items-center rounded-xl gap-3 px-3 py-2.5 text-sm transition-all group/item ${
+                            className={`flex items-center rounded-xl gap-3 px-3 py-2.5 text-sm transition-all border group/item ${
                               isActive
-                                ? "bg-teal-500 text-white border border-teal-500"
-                                : "bg-slate-50 border border-slate-100 text-slate-700 hover:text-teal-600 hover:bg-teal-50"
+                                ? "bg-teal-800 text-white border-teal-800"
+                                : "bg-slate-50 border border-slate-100 text-slate-700 hover:text-teal-800 hover:bg-teal-50 hover:border-teal-200"
                             }`}
                           >
                             <div className="w-8 h-8 flex items-center justify-center shrink-0">
-                              <ItemIcon className={`w-4 h-4 ${isActive ? "text-white" : "text-teal-600"}`} />
+                              <ItemIcon className={`w-4 h-4 ${isActive ? "text-white" : "text-teal-800"}`} />
                             </div>
                             <span className="font-semibold leading-tight">{item.name}</span>
                           </Link>
@@ -445,17 +449,17 @@ export const Header: React.FC = () => {
               {/* Locations Section */}
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <div className="inline-block px-3 py-1 bg-teal-500 rounded-md">
-                    <p className="text-[10px]  text-white uppercase">Locations</p>
+                  <div className="inline-block px-3 py-1 bg-teal-800 rounded-md">
+                    <p className="text-[10px] text-white uppercase">Locations</p>
                   </div>
-                  <Link href="/locations" onClick={() => setIsOpen(false)} className="text-[10px] font-bold text-teal-400 hover:underline flex items-center gap-1">
+                  <Link href="/locations" onClick={() => setIsOpen(false)} className="text-[10px] font-bold text-teal-800 hover:underline flex items-center gap-1">
                     View All <ArrowRight className="w-3 h-3" />
                   </Link>
                 </div>
                 {locationGroups.map((group) => (
                   <div key={group.label} className="mb-4">
-                    <div className="inline-block px-2.5 py-0.5 bg-teal-500  rounded mb-2">
-                      <p className="text-[9px]  text-white uppercase">{group.label}</p>
+                    <div className="inline-block px-2.5 py-0.5 bg-teal-800 rounded mb-2">
+                      <p className="text-[9px] text-white uppercase">{group.label}</p>
                     </div>
                     <div className="flex flex-wrap gap-2 px-1">
                       {group.items.map((item) => {
@@ -467,11 +471,11 @@ export const Header: React.FC = () => {
                             onClick={() => setIsOpen(false)}
                             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all ${
                               isActive
-                                ? "bg-teal-500 text-white border-teal-500"
-                                : "bg-slate-50 border border-slate-200 text-slate-650 hover:bg-teal-50 hover:border-teal-200 hover:text-teal-700"
+                                ? "bg-teal-800 text-white border-teal-800"
+                                : "bg-slate-50 border border-slate-200 text-slate-650 hover:bg-teal-50 hover:border-teal-200 hover:text-teal-800"
                             }`}
                           >
-                            <MapPin className={`w-3 h-3 shrink-0 ${isActive ? "text-white" : "text-teal-600"}`} />
+                            <MapPin className={`w-3 h-3 shrink-0 ${isActive ? "text-white" : "text-teal-800"}`} />
                             {item.name}
                           </Link>
                         );
@@ -487,13 +491,13 @@ export const Header: React.FC = () => {
                   href={CLINIC_CONFIG.contact.phoneUrl}
                   className="flex items-center justify-center gap-2 w-full py-3.5 rounded-2xl border border-slate-200 bg-slate-50 text-sm font-bold text-slate-700 hover:bg-slate-100 transition-all"
                 >
-                  <Phone className="w-4 h-4 text-teal-600" />
+                  <Phone className="w-4 h-4 text-teal-800" />
                   <span>Call {CLINIC_CONFIG.contact.phone}</span>
                 </a>
                 <Link
                   href="/book-appointment"
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-center gap-2 w-full py-3.5 rounded-2xl bg-gradient-to-r from-teal-600 to-teal-500 text-white text-sm font-bold shadow-[0_6px_20px_rgba(20,184,166,0.35)] hover:from-teal-500 hover:to-teal-400 transition-all"
+                  className="flex items-center justify-center gap-2 w-full py-3.5 rounded-2xl bg-gradient-to-r from-teal-800 to-teal-800 text-white text-sm font-bold shadow-[0_6px_20px_rgba(20,184,166,0.35)] hover:from-teal-800 hover:to-teal-800 transition-all"
                 >
                   <Calendar className="w-4 h-4" />
                   <span>Book Appointment</span>

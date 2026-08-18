@@ -32,7 +32,7 @@ export default function BookAppointmentPage() {
           <Reveal delay={0.1} yOffset={25}>
             <h1 className="text-2xl sm:text-3xl lg:text-4.5xl font-bold text-white">
               Book an Appointment<br />
-              <span className="text-teal-400">Physiotherapy Dehradun</span>
+              <span className="text-teal-800">Physiotherapy Dehradun</span>
             </h1>
             <p className="text-slate-300 mt-3 text-sm sm:text-base max-w-xl">
               Fill out the form below and our team will confirm your slot on WhatsApp within minutes.
@@ -51,7 +51,7 @@ export default function BookAppointmentPage() {
               <Reveal>
                 <div className="bg-white rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.08)] border border-slate-100 overflow-hidden">
                   {/* Form header bar */}
-                  <div className="bg-gradient-to-r from-teal-600 to-teal-500 px-8 py-6">
+                  <div className="bg-gradient-to-r from-teal-800 to-teal-800 px-8 py-6">
                     <h2 className="text-white font-black text-xl tracking-tight">Book a Consultation</h2>
                     <p className="text-teal-100 text-xs mt-1">Secure your slot — redirects to WhatsApp for instant confirmation.</p>
                   </div>
@@ -72,7 +72,7 @@ export default function BookAppointmentPage() {
                   <div className="space-y-4 text-xs text-slate-600">
                     <div className="flex gap-3 items-start">
                       <div className="w-8 h-8 rounded-xl bg-teal-50 flex items-center justify-center shrink-0 mt-0.5">
-                        <Clock className="w-4 h-4 text-teal-600" />
+                        <Clock className="w-4 h-4 text-teal-800" />
                       </div>
                       <div>
                         <p className="font-bold text-slate-800 text-sm">Arrive Early</p>
@@ -81,7 +81,7 @@ export default function BookAppointmentPage() {
                     </div>
                     <div className="flex gap-3 items-start">
                       <div className="w-8 h-8 rounded-xl bg-teal-50 flex items-center justify-center shrink-0 mt-0.5">
-                        <FileText className="w-4 h-4 text-teal-600" />
+                        <FileText className="w-4 h-4 text-teal-800" />
                       </div>
                       <div>
                         <p className="font-bold text-slate-800 text-sm">Bring Reports</p>
@@ -90,7 +90,7 @@ export default function BookAppointmentPage() {
                     </div>
                     <div className="flex gap-3 items-start">
                       <div className="w-8 h-8 rounded-xl bg-teal-50 flex items-center justify-center shrink-0 mt-0.5">
-                        <UserCheck className="w-4 h-4 text-teal-600" />
+                        <UserCheck className="w-4 h-4 text-teal-800" />
                       </div>
                       <div>
                         <p className="font-bold text-slate-800 text-sm">Wear Comfortable Clothing</p>
@@ -105,14 +105,14 @@ export default function BookAppointmentPage() {
               <Reveal delay={0.15}>
                 <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex items-start gap-4">
                   <div className="w-10 h-10 rounded-2xl bg-teal-50 flex items-center justify-center shrink-0">
-                    <Phone className="w-5 h-5 text-teal-600" />
+                    <Phone className="w-5 h-5 text-teal-800" />
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-800 text-sm">Need Instant Support?</h4>
                     <p className="text-xs text-slate-500 leading-relaxed mt-1">
                       Experiencing acute pain or need an emergency home visit? Call us directly:
                     </p>
-                    <a href={CLINIC_CONFIG.contact.phoneUrl} className="text-base font-extrabold text-teal-600 block hover:underline mt-2">
+                    <a href={CLINIC_CONFIG.contact.phoneUrl} className="text-base font-extrabold text-teal-800 block hover:underline mt-2">
                       {CLINIC_CONFIG.contact.phone}
                     </a>
                   </div>

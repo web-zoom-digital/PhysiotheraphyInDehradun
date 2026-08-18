@@ -97,7 +97,7 @@ export default async function LocationDetailPage({ params }: Props) {
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 py-16 sm:py-24 text-white">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary-brand/20 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-72 h-72 bg-teal-400/10 blur-3xl rounded-full translate-y-1/2 -translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-teal-800/10 blur-3xl rounded-full translate-y-1/2 -translate-x-1/2" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -116,8 +116,8 @@ export default async function LocationDetailPage({ params }: Props) {
             <div className="lg:col-span-8 space-y-6">
               <Reveal delay={0.05}>
                 <div className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-teal-400" />
-                  <span className="text-xs font-black tracking-widest text-teal-400 uppercase">
+                  <MapPin className="w-5 h-5 text-teal-800" />
+                  <span className="text-xs font-black tracking-widest text-teal-800 uppercase">
                     {location.name}, Dehradun, Uttarakhand
                   </span>
                 </div>
@@ -126,7 +126,7 @@ export default async function LocationDetailPage({ params }: Props) {
               <Reveal delay={0.1}>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
                   Physiotherapist in
-                  <span className="text-teal-400 block">{location.name} Dehradun</span>
+                  <span className="text-teal-800 block">{location.name} Dehradun</span>
                 </h1>
               </Reveal>
 
@@ -158,7 +158,7 @@ export default async function LocationDetailPage({ params }: Props) {
               </Reveal>
 
               {/* Areas Quick Nav */}
-              <Reveal delay={0.25}>
+              {/* <Reveal delay={0.25}>
                 <div className="pt-4 border-t border-white/10">
                   <p className="text-xs text-teal-300 font-bold uppercase tracking-wider mb-3">
                     Other Areas We Serve:
@@ -169,47 +169,26 @@ export default async function LocationDetailPage({ params }: Props) {
                         Physiotherapy in {ol.name}
                       </Link>
                     ))}
-                    <Link href="/locations" className="font-bold text-teal-400 hover:text-white transition-colors">
+                    <Link href="/locations" className="font-bold text-teal-800 hover:text-white transition-colors">
                       + View All Locations
                     </Link>
                   </div>
                 </div>
-              </Reveal>
+              </Reveal> */}
             </div>
 
             {/* Rating Card */}
             <div className="lg:col-span-4">
-              <Reveal delay={0.3}>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-6 space-y-4">
-                  <div className="flex items-center gap-2">
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                      ))}
-                    </div>
-                    <span className="text-sm font-bold text-white">4.9/5</span>
-                  </div>
-                  <p className="text-sm text-slate-300 italic leading-relaxed">
-                    "Best physiotherapy clinic serving {location.name}. Our therapist arrived on time and was extremely professional."
-                  </p>
-                  <p className="text-xs text-teal-400 font-bold">— Verified Patient, {location.name}</p>
-                  <div className="pt-2 border-t border-white/10 grid grid-cols-3 gap-3 text-center">
-                    <div>
-                      <div className="text-xl font-black text-teal-400">10K+</div>
-                      <div className="text-[10px] text-slate-400">Patients</div>
-                    </div>
-                    <div>
-                      <div className="text-xl font-black text-teal-400">12+</div>
-                      <div className="text-[10px] text-slate-400">Yrs Exp.</div>
-                    </div>
-                    <div>
-                      <div className="text-xl font-black text-teal-400">15+</div>
-                      <div className="text-[10px] text-slate-400">Areas</div>
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
-            </div>
+                          <Reveal delay={0.3}>
+                            <div className="relative rounded-3xl max-h-[65vh] overflow-hidden border border-white/20">
+                              <img
+                                src="/blog/knee-pain-physio.png"
+                                alt="Physiotherapy"
+                                className="w-full h-full"
+                              />
+                            </div>
+                          </Reveal>
+                        </div>
           </div>
         </div>
       </section>
@@ -274,55 +253,37 @@ export default async function LocationDetailPage({ params }: Props) {
                 />
               </section>
 
-              {/* Home Visit Eligibility */}
-              {location.homeVisitAvailable && (
-                <section className="bg-gradient-to-tr from-teal-50 to-white rounded-3xl border border-teal-100 p-6 sm:p-8 flex gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-primary-brand/10 flex items-center justify-center shrink-0">
-                    <ShieldCheck className="w-6 h-6 text-primary-brand" />
-                  </div>
-                  <div>
-                    <h3 className="font-extrabold text-slate-800 text-base mb-1">
-                      Home Visit Physiotherapy Available in {location.name}
-                    </h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">
-                      Our mobile physiotherapy team services {location.name} and surrounding areas. Therapists carry portable electrotherapy units (TENS/IFT/Ultrasound) for a complete in-home clinical experience. Ideal for stroke patients, post-surgery recovery, and elderly with mobility limitations.
-                    </p>
-                    <a
-                      href={waUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 mt-3 text-xs font-bold text-primary-brand hover:underline"
-                    >
-                      <MessageSquare className="w-3.5 h-3.5" />
-                      Request Home Visit Now
-                    </a>
-                  </div>
-                </section>
-              )}
 
-              {/* Landmarks Served */}
-              <section aria-labelledby="landmarks-heading">
-                <Reveal>
-                  <h3 id="landmarks-heading" className="text-lg font-extrabold text-slate-800 flex items-center gap-2 mb-4">
-                    <Landmark className="w-5 h-5 text-primary-brand" />
-                    Landmarks & Societies We Serve near {location.name}
-                  </h3>
-                </Reveal>
-                <div className="flex flex-wrap gap-2">
-                  {location.landmarks.map((landmark, idx) => (
-                    <span
-                      key={idx}
-                      className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-150 px-3.5 py-1.5 rounded-xl shadow-sm"
-                    >
-                      <MapPin className="w-3.5 h-3.5 text-slate-400" />
-                      {landmark}
-                    </span>
-                  ))}
-                </div>
-              </section>
+              
 
               {/* Google Map Embed */}
-              <section aria-labelledby="map-heading">
+              
+
+              {/* Why Choose RonEx */}
+              {/* <section aria-labelledby="why-heading">
+                <Reveal>
+                  <h2 id="why-heading" className="text-2xl sm:text-2xl font-extrabold text-slate-900 mb-6">
+                    Why Patients in {location.name} Choose Us
+                  </h2>
+                </Reveal>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {whyChooseUs.map((item, idx) => {
+                    const ItemIcon = item.icon;
+                    return (
+                      <div key={idx} className="flex gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl cursor-pointer">
+                        <div className="w-10 h-10 rounded-xl bg-primary-brand/10 flex items-center justify-center shrink-0">
+                          <ItemIcon className="w-5 h-5 text-primary-brand" />
+                        </div>
+                        <div>
+                          <h3 className="font-base text-slate-800 text-sm">{item.title}</h3>
+                          <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.desc}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </section> */}
+<section aria-labelledby="map-heading">
                 <Reveal>
                   <h3 id="map-heading" className="text-lg font-extrabold text-slate-800 mb-4">
                     Visit Our Nearest Clinic to {location.name}
@@ -345,35 +306,8 @@ export default async function LocationDetailPage({ params }: Props) {
                   📍 Main Clinic: 13, Rajpur Road, near Clock Tower, Dehradun · <a href={CLINIC_CONFIG.contact.phoneUrl} className="text-primary-brand font-bold hover:underline">{CLINIC_CONFIG.contact.phone}</a>
                 </p>
               </section>
-
-              {/* Why Choose RonEx */}
-              <section aria-labelledby="why-heading">
-                <Reveal>
-                  <span className="text-xs font-black tracking-widest text-primary-brand uppercase block mb-2">WHY RONEX</span>
-                  <h2 id="why-heading" className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6">
-                    Why Patients in {location.name} Choose Us
-                  </h2>
-                </Reveal>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {whyChooseUs.map((item, idx) => {
-                    const ItemIcon = item.icon;
-                    return (
-                      <div key={idx} className="flex gap-4 p-5 bg-slate-50 border border-slate-100 rounded-2xl">
-                        <div className="w-10 h-10 rounded-xl bg-primary-brand/10 flex items-center justify-center shrink-0">
-                          <ItemIcon className="w-5 h-5 text-primary-brand" />
-                        </div>
-                        <div>
-                          <h3 className="font-bold text-slate-800 text-sm">{item.title}</h3>
-                          <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.desc}</p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </section>
-
               {/* Conditions We Treat */}
-              <section aria-labelledby="conditions-heading">
+              {/* <section aria-labelledby="conditions-heading">
                 <Reveal>
                   <h3 id="conditions-heading" className="text-lg font-extrabold text-slate-800 mb-4">
                     Common Conditions Treated in {location.name}
@@ -391,31 +325,12 @@ export default async function LocationDetailPage({ params }: Props) {
                     </Link>
                   ))}
                 </div>
-              </section>
+              </section> */}
 
-              {/* Doctor Trust Strip */}
-              <section className="bg-gradient-to-tr from-slate-50 to-teal-50/50 rounded-3xl border border-teal-100/50 p-6 sm:p-8">
-                <div className="flex flex-col sm:flex-row items-start gap-5">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-primary-brand to-brand-blue flex items-center justify-center text-white font-black text-xl shrink-0">
-                    {CLINIC_CONFIG.doctor.name.charAt(0)}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <BadgeCheck className="w-4 h-4 text-primary-brand" />
-                      <span className="text-xs font-bold text-primary-brand uppercase tracking-wide">Your Lead Specialist</span>
-                    </div>
-                    <h3 className="text-lg font-extrabold text-slate-800">{CLINIC_CONFIG.doctor.name}</h3>
-                    <p className="text-sm text-slate-600 mt-0.5">{CLINIC_CONFIG.doctor.title}</p>
-                    <p className="text-xs text-teal-700 font-semibold mt-0.5">{CLINIC_CONFIG.doctor.credentials} · {CLINIC_CONFIG.doctor.experience}</p>
-                    <Link href="/doctor" className="inline-flex items-center gap-1 mt-3 text-xs font-bold text-primary-brand hover:underline">
-                      View Full Profile <ChevronRight className="w-3 h-3" />
-                    </Link>
-                  </div>
-                </div>
-              </section>
+             
 
               {/* FAQs */}
-              <section aria-labelledby="faq-heading">
+              {/* <section aria-labelledby="faq-heading">
                 <Reveal>
                   <span className="text-xs font-black tracking-widest text-primary-brand uppercase block mb-2">FAQ</span>
                   <h2 id="faq-heading" className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-6">
@@ -430,6 +345,26 @@ export default async function LocationDetailPage({ params }: Props) {
                       answer={faq.answer}
                     />
                   ))}
+                </div> */}
+              {/* </section> */}
+              {/* Landmarks Served */}
+              <section aria-labelledby="landmarks-heading">
+                <Reveal>
+                  <h3 id="landmarks-heading" className="text-lg font-extrabold text-slate-800 flex items-center gap-2 mb-4">
+                    <Landmark className="w-5 h-5 text-primary-brand" />
+                    Landmarks & Societies We Serve near {location.name}
+                  </h3>
+                </Reveal>
+                <div className="flex flex-wrap gap-2">
+                  {location.landmarks.map((landmark, idx) => (
+                    <span
+                      key={idx}
+                      className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-150 px-3.5 py-1.5 rounded-xl shadow-sm"
+                    >
+                      <MapPin className="w-3.5 h-3.5 text-slate-400" />
+                      {landmark}
+                    </span>
+                  ))}
                 </div>
               </section>
 
@@ -438,35 +373,24 @@ export default async function LocationDetailPage({ params }: Props) {
             {/* RIGHT: Sticky Sidebar */}
             <div className="lg:col-span-4 space-y-5 lg:sticky lg:top-24">
 
-              <LeadForm />
-
-              <div className="bg-gradient-to-tr from-white to-teal-50 border border-teal-100 rounded-3xl p-5 space-y-3">
-                <h4 className="font-extrabold text-slate-800 text-sm">Need a Therapist in {location.name}?</h4>
-                <p className="text-xs text-slate-500 leading-relaxed">
-                  We organize home visit schedules across {location.name}. Call us to verify therapist availability in your area.
-                </p>
-                <a
-                  href={CLINIC_CONFIG.contact.phoneUrl}
-                  className="flex items-center justify-center gap-2 w-full py-3 border border-slate-200 bg-white text-xs font-bold text-slate-700 rounded-xl hover:bg-slate-50 transition-colors"
-                >
-                  <Phone className="w-3.5 h-3.5 text-primary-brand" />
-                  <span>Call {CLINIC_CONFIG.contact.phone}</span>
-                </a>
-                <Link
-                  href="/book-appointment"
-                  className="flex items-center justify-center gap-2 w-full py-3 bg-primary-brand text-white text-xs font-bold rounded-xl hover:bg-primary-hover transition-colors"
-                >
-                  <Calendar className="w-3.5 h-3.5" />
-                  <span>Book Appointment</span>
-                </Link>
+              {/* Lead Booking Form */}
+              <div className="bg-white rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.08)] border border-slate-100 overflow-hidden">
+                {/* Form header bar */}
+                <div className="bg-gradient-to-r from-teal-800 to-teal-800 px-6 py-5">
+                  <p className="text-teal-100 text-xs mt-1">Secure your slot — redirects to WhatsApp for instant confirmation.</p>
+                </div>
+                <div className="p-6">
+                  <LeadForm />
+                </div>
               </div>
 
               {/* Other Locations */}
-              <div className="bg-white border border-slate-100 rounded-3xl p-5 space-y-3">
-                <h4 className="font-extrabold text-slate-800 text-sm flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-primary-brand" />
+
+              <div className="bg-white border border-slate-200 rounded-3xl p-5 space-y-3">
+                <h3 className="font-extrabold text-slate-800 text-sm flex items-center gap-2">
+                  <MapPin className="w-8 h-8 text-primary-brand" />
                   Other Neighborhoods Served
-                </h4>
+                </h3>
                 <div className="flex flex-col divide-y divide-slate-50">
                   {otherLocations.map((ol) => (
                     <Link
@@ -481,7 +405,7 @@ export default async function LocationDetailPage({ params }: Props) {
                 </div>
                 <Link
                   href="/locations"
-                  className="text-xs font-bold text-primary-brand hover:underline flex items-center gap-1"
+                  className="text-sm font-bold text-primary-brand hover:underline flex items-center gap-1"
                 >
                   View All 15+ Areas <ArrowRight className="w-3 h-3" />
                 </Link>
@@ -496,7 +420,7 @@ export default async function LocationDetailPage({ params }: Props) {
       <section className="py-16 bg-gradient-to-br from-slate-900 to-teal-900 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-5">
           <Reveal>
-            <span className="inline-block text-xs font-black tracking-widest text-teal-400 uppercase bg-teal-400/10 border border-teal-400/20 px-3.5 py-1.5 rounded-full mb-3">
+            <span className="inline-block text-xs font-black tracking-widest text-teal-800 uppercase bg-teal-800/10 border border-teal-800/20 px-3.5 py-1.5 rounded-full mb-3">
               BOOK A SESSION IN {location.name.toUpperCase()}
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
