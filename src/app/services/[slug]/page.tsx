@@ -150,7 +150,7 @@ export default async function ServiceDetailPage({ params }: Props) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-8 space-y-6">
               <Reveal delay={0.05}>
-                <span className="inline-block text-xs font-black tracking-widest text-teal-800 uppercase bg-teal-800/10 border border-teal-800/20 px-3.5 py-1.5 rounded-full">
+                <span className="inline-block text-xs font-black tracking-widest text-teal-400 uppercase bg-teal-800/10 border border-teal-800/20 px-3.5 py-1.5 rounded-full">
                   Expert Physiotherapy in Dehradun
                 </span>
               </Reveal>
@@ -158,7 +158,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               <Reveal delay={0.1}>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
                   {service.title}
-                  <span className="block text-teal-800 text-2xl sm:text-3xl mt-1">
+                  <span className="block text-teal-400 text-2xl sm:text-3xl mt-1">
                     in Dehradun
                   </span>
                 </h1>
@@ -236,7 +236,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               {/* What This Treats / Key Benefits */}
               <section aria-labelledby="benefits-heading">
                 <Reveal>
-                  <span className="text-sm text-teal-500 font-bold uppercase block mb-2">
+                  <span className="text-sm font-black  text-primary-brand uppercase  mb-2">
                     CLINICAL BENEFITS
                   </span>
                   <h2
@@ -249,8 +249,8 @@ export default async function ServiceDetailPage({ params }: Props) {
                 <StaggerContainer>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {service.benefits.map((benefit, idx) => (
-                      <StaggerItem key={idx}>
-                        <div className="flex items-start gap-3.5 p-4 bg-brand-blue-light/30 border border-teal-100 rounded-2xl">
+                      <StaggerItem key={idx} className="h-full">
+                        <div className="flex items-start gap-3.5 p-4 bg-brand-blue-light/30 border border-teal-100 rounded-2xl h-full">
                           <CheckCircle2 className="w-5 h-5 text-primary-brand shrink-0 mt-0.5" />
                           <p className="text-sm text-slate-700 font-medium leading-relaxed">
                             {benefit}
@@ -294,8 +294,8 @@ export default async function ServiceDetailPage({ params }: Props) {
                 <StaggerContainer>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 cursor-pointer">
                     {service.approach.map((step, idx) => (
-                      <StaggerItem key={idx}>
-                        <div className="relative flex gap-3 p-5 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md hover:border-teal-100 ">
+                      <StaggerItem key={idx} className="h-full">
+                        <div className="relative flex gap-3 p-5 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md hover:border-teal-100 h-full">
                           <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-primary-brand to-brand-blue text-white flex items-center justify-center font-black ">
                             {idx + 1}
                           </div>

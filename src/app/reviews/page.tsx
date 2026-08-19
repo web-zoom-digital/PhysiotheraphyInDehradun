@@ -114,7 +114,7 @@ export default function ReviewsPage() {
           <StaggerContainer>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {verifiedReviews.map((rev, idx) => (
-                <StaggerItem key={idx}>
+                <StaggerItem key={idx} className="h-full">
                   <div className="glass-panel bg-white border border-slate-100 p-6 rounded-3xl shadow-soft h-full flex flex-col justify-between hover:border-brand-blue/10 transition-colors duration-300">
                     <div className="space-y-3.5">
                       <div className="flex items-center justify-between">

@@ -112,7 +112,7 @@ export default function HomeVisitPage() {
           <StaggerContainer>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {processSteps.map((step, idx) => (
-                <StaggerItem key={idx}>
+                <StaggerItem key={idx} className="h-full">
                   <div className="glass-panel bg-white p-6 rounded-3xl border border-slate-100 shadow-soft h-full space-y-3">
                     <span className="w-8 h-8 rounded-full bg-brand-blue-light text-brand-blue flex items-center justify-center font-black text-xs">
                       0{idx + 1}

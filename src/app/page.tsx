@@ -303,14 +303,13 @@ export default function HomePage() {
         {/* Background Image of Physiotherapy Center - Full Width */}
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src="https://www.ronexphysiotherapy.com/blog/home-physiotherapy.png"
+            src="/services/hero-section.png"
             alt="Physiotherapy Clinic"
-            className="w-full min-h-[75h] object-cover object-center opacity-80"
+            className="w-full h-full object-cover "
           />
         </div>
         {/* Subtle Dark Overlay/Gradient behind text for high readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-
+        <div className="absolute inset-0 bg-black/45  " />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Column: Headline */}
@@ -461,7 +460,7 @@ export default function HomePage() {
           <StaggerContainer>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {serviceCards.map((card) => (
-                <StaggerItem key={card.slug}>
+                <StaggerItem key={card.slug} className="h-full">
                   <div className="bg-white rounded-2xl border border-slate-400 p-7 sm:p-8 flex flex-col justify-between shadow-soft hover:shadow-premium hover:-translate-y-1.5 hover:border-teal-100 transition-all duration-300 h-full group">
                     <div className="space-y-5">
                       {/* Icon badge */}
@@ -537,7 +536,7 @@ export default function HomePage() {
           <StaggerContainer>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {featuredConditions.map((cond) => (
-                <StaggerItem key={cond.slug}>
+                <StaggerItem key={cond.slug} className="h-full">
                   <Link
                     href={`/conditions/${cond.slug}`}
                     className="premium-card p-6 h-full flex flex-col justify-between group rounded-2xl border border-slate-400 shadow-hard cursor-pointer"

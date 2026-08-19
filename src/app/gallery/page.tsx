@@ -79,8 +79,8 @@ export default function GalleryPage() {
               {items.map((item, idx) => {
                 const IconComponent = item.icon;
                 return (
-                  <StaggerItem key={idx}>
-                    <div className="glass-panel bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-soft hover:shadow-premium hover:border-brand-blue/10 transition-all duration-300 group">
+                  <StaggerItem key={idx} className="h-full">
+                    <div className="glass-panel bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-soft hover:shadow-premium hover:border-brand-blue/10 transition-all duration-300 group h-full flex flex-col">
                       
                       {/* Visual Graphic Area */}
                       <div className="relative aspect-[4/3] bg-gradient-to-tr from-brand-blue-light/50 to-brand-blue-light/30 flex items-center justify-center text-slate-400 group-hover:scale-102 transition-transform duration-500 border-b border-slate-50">

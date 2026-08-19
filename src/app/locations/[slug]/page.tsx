@@ -116,8 +116,8 @@ export default async function LocationDetailPage({ params }: Props) {
             <div className="lg:col-span-8 space-y-6">
               <Reveal delay={0.05}>
                 <div className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-teal-800" />
-                  <span className="text-xs font-black tracking-widest text-teal-800 uppercase">
+                  <MapPin className="w-5 h-5 text-teal-400" />
+                  <span className="text-xs font-black tracking-widest text-teal-400 uppercase">
                     {location.name}, Dehradun, Uttarakhand
                   </span>
                 </div>
@@ -126,7 +126,7 @@ export default async function LocationDetailPage({ params }: Props) {
               <Reveal delay={0.1}>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
                   Physiotherapist in
-                  <span className="text-teal-800 block">{location.name} Dehradun</span>
+                  <span className="text-teal-400 block">{location.name} Dehradun</span>
                 </h1>
               </Reveal>
 
@@ -214,10 +214,10 @@ export default async function LocationDetailPage({ params }: Props) {
                     {internalServices.map((service, idx) => {
                       const ServiceIcon = serviceIcons[idx % serviceIcons.length];
                       return (
-                        <StaggerItem key={service.slug}>
+                        <StaggerItem key={service.slug} className="h-full">
                           <Link
                             href={`/services/${service.slug}`}
-                            className="flex flex-col gap-3 p-5 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md hover:border-teal-100 transition-all group"
+                            className="flex flex-col gap-3 p-5 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md hover:border-teal-100 transition-all group h-full"
                           >
                             <div className="w-10 h-10 rounded-xl bg-brand-blue-light flex items-center justify-center group-hover:bg-primary-brand group-hover:scale-110 transition-all">
                               <ServiceIcon className="w-5 h-5 text-primary-brand group-hover:text-white transition-colors" />
