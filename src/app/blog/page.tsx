@@ -4,14 +4,31 @@ import { BLOGS_DATA } from "@/config/blogs";
 import { CLINIC_CONFIG } from "@/config/clinic";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/FramerWrapper";
 import { ClinicSchema } from "@/components/ClinicSchema";
-import { Clock, Calendar, ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 export const metadata = {
   title: "Physiotherapy Blog & Recovery Guides | Physiotherapy Dehradun",
   description: "Read physical therapy guidelines, exercises, and rehabilitation guides written by our expert physiotherapists in Dehradun."
 };
 
-export default function BlogIndexPage() {
+export default async function BlogIndexPage({
+  searchParams,
+}: {
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const resolvedSearchParams = await searchParams;
+  const pageParam = resolvedSearchParams?.page;
+  let currentPage = typeof pageParam === 'string' ? parseInt(pageParam, 10) : 1;
+  const postsPerPage = 21;
+  
+  const totalPages = Math.max(1, Math.ceil(BLOGS_DATA.length / postsPerPage));
+  if (currentPage > totalPages) {
+    currentPage = totalPages;
+  }
+  
+  const startIndex = (currentPage - 1) * postsPerPage;
+  const currentPosts = BLOGS_DATA.slice(startIndex, startIndex + postsPerPage);
+
   return (
     <>
       <ClinicSchema type="breadcrumb" breadcrumbs={[
@@ -47,18 +64,18 @@ export default function BlogIndexPage() {
         <div className="max-w-6xl mx-auto px-4">
           <StaggerContainer>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {BLOGS_DATA.map((post) => (
+              {currentPosts.map((post) => (
                 <StaggerItem key={post.slug} className="h-full">
                   <Link
                     href={`/blog/${post.slug}`}
                     className="group block bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-soft hover:shadow-premium hover:-translate-y-1 transition-all duration-300 h-full flex flex-col"
                   >
                     {/* Image */}
-                    <div className="relative w-full h-52 overflow-hidden">
+                    <div className="relative w-full h-52 overflow-hidden bg-slate-100">
                       <img
                         src={post.image}
                         alt={post.title}
-                        className="w-full h-full   "
+                        className="w-full h-full object-cover"
                       />
                       <span className="absolute top-3 left-3 bg-white/95 backdrop-blur-md text-teal-700 text-[10px] font-bold px-3 py-1 rounded-full shadow-sm border border-teal-100">
                         {post.category}
@@ -71,16 +88,15 @@ export default function BlogIndexPage() {
                     {/* Content */}
                     <div className="p-5 pt-4 flex flex-col flex-1">
                       
-
-                      <h2 className="italic text-slate-800 text-[10px] line-clamp-2  flex-1">
+                      <h2 className="italic text-slate-800 text-lg font-semibold line-clamp-2 flex-1">
                         {post.title}
                       </h2>
 
-                      <p className="text-[10px] text-slate-500 leading-relaxed line-clamp-2 mt-2 mb-4">
+                      <p className="text-sm text-slate-500 leading-relaxed line-clamp-2 mt-2 mb-4">
                         {post.shortDesc}
                       </p>
 
-                      <span className="inline-flex items-center gap-1 text-xs font-bold text-primary-brand">
+                      <span className="inline-flex items-center gap-1 text-xs font-bold text-primary-brand mt-auto">
                         Read Article
                         <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" />
                       </span>
@@ -90,6 +106,41 @@ export default function BlogIndexPage() {
               ))}
             </div>
           </StaggerContainer>
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="mt-16 flex justify-center items-center gap-4">
+              {currentPage > 1 ? (
+                <Link
+                  href={`/blog?page=${currentPage - 1}`}
+                  className="p-2 rounded-full border border-slate-200 hover:bg-slate-50 transition-colors text-slate-600 hover:text-primary-brand"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </Link>
+              ) : (
+                <div className="p-2 rounded-full border border-slate-100 text-slate-300 cursor-not-allowed">
+                  <ChevronLeft className="w-5 h-5" />
+                </div>
+              )}
+              
+              <span className="text-sm font-medium text-slate-600">
+                Page {currentPage} of {totalPages}
+              </span>
+
+              {currentPage < totalPages ? (
+                <Link
+                  href={`/blog?page=${currentPage + 1}`}
+                  className="p-2 rounded-full border border-slate-200 hover:bg-slate-50 transition-colors text-slate-600 hover:text-primary-brand"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </Link>
+              ) : (
+                <div className="p-2 rounded-full border border-slate-100 text-slate-300 cursor-not-allowed">
+                  <ChevronRight className="w-5 h-5" />
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </section>
 
