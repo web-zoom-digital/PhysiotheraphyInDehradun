@@ -586,12 +586,12 @@ export default function HomePage() {
       {/* old about section removed — merged into section above */}
 
       {/* 6. MEET THE DOCTOR */}
-      <section className="py-12 sm:py-16 bg-white">
+      {/* <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel rounded-3xl border border-slate-100/60 p-8 sm:p-12 shadow-premium bg-gradient-to-tr from-white to-brand-blue-light/10">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center"> */}
               {/* Doctor Avatar Mockup */}
-              <div className="lg:col-span-5 relative flex justify-center">
+              {/* <div className="lg:col-span-5 relative flex justify-center">
                 <div className="relative w-full max-w-md h-[420px] sm:h-[480px] rounded-3xl overflow-hidden shadow-lg border-4 border-white bg-slate-100 my-4 mx-auto">
                   <img
                     src="/doctors/om-prakash.jpg"
@@ -606,11 +606,11 @@ export default function HomePage() {
                       {CLINIC_CONFIG.doctor.title}
                     </span>
                   </div>
-                </div>
-              </div>
+                </div> */}
+              {/* </div> */}
 
               {/* Doctor Details */}
-              <div className="lg:col-span-7 space-y-6 lg:pl-5">
+              {/* <div className="lg:col-span-7 space-y-6 lg:pl-5">
                 <span className="text-sm font-bold uppercase tracking-wide text-teal-800 block">
                   LEAD DOCTOR
                 </span>
@@ -660,7 +660,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-20 bg-brand-gray-light/30 border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -722,7 +722,7 @@ export default function HomePage() {
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-center group-hover:scale-105 transition-transform duration-500"
                   />
                   <span className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-primary-brand text-[11px]  px-3 py-1 rounded-full shadow-sm">
                     {post.category}
@@ -863,7 +863,7 @@ export default function HomePage() {
           <div className="w-full h-[350px] sm:h-[450px] lg:h-[550px] rounded-3xl overflow-hidden shadow-soft border border-slate-100 bg-white">
             <iframe
               title="Physiotherapy Dehradun"
-              src="https://maps.google.com/maps?q=Rajpur%20Road%20Dehradun&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              src={CLINIC_CONFIG.contact.googleMapRajpurRoad}
               width="100%"
               height="100%"
               style={{ border: 0 }}

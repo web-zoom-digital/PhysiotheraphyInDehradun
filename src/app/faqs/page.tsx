@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CLINIC_CONFIG } from "@/config/clinic";
 import { Reveal, FaqAccordion } from "@/components/FramerWrapper";
 import { ClinicSchema } from "@/components/ClinicSchema";
-import { MessageSquare, ArrowRight } from "lucide-react";
+import { MessageSquare, ArrowRight, Phone, ChevronRight } from "lucide-react";
 
 export const metadata = {
   title: "Frequently Asked Questions (FAQs) | Physiotherapy Dehradun",
@@ -78,15 +78,89 @@ export default function FaqsPage() {
         { name: "FAQs", item: "/faqs" }
       ]} />
 
-      {/* Header Banner */}
-      <section className="bg-gradient-to-tr from-primary-brand to-brand-blue py-16 text-white text-center">
-        <div className="max-w-4xl mx-auto px-4">
+      {/* ─── HERO SECTION ─── */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 py-16 sm:py-24 text-white">
+        {/* Background Decorations */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-brand/20 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-teal-800/10 blur-3xl rounded-full translate-y-1/2 -translate-x-1/2" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Breadcrumb */}
           <Reveal>
-            <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Frequently Asked Questions</h1>
-            <p className="text-sm text-slate-200 mt-2 max-w-xl mx-auto">
-              Find instant answers regarding clinical appointments, treatment methods, home visits, and billing.
-            </p>
+            <nav
+              className="mb-6 flex items-center gap-1.5 text-xs text-teal-300 flex-wrap"
+              aria-label="Breadcrumb"
+            >
+              <Link href="/" className="hover:text-white transition-colors">
+                Home
+              </Link>
+              <ChevronRight className="w-3 h-3 text-teal-500" />
+              <span className="text-white font-semibold">FAQs</span>
+            </nav>
           </Reveal>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* LEFT: Content */}
+            <div className="lg:col-span-8 space-y-6">
+              <Reveal delay={0.05}>
+                <span className="inline-block text-xs font-black tracking-widest text-teal-400 uppercase bg-teal-800/10 border border-teal-800/20 px-3.5 py-1.5 rounded-full">
+                  Instant Support
+                </span>
+              </Reveal>
+
+              <Reveal delay={0.1}>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+                  Frequently Asked
+                  <span className="block text-teal-400 text-2xl sm:text-3xl mt-1">
+                    Questions
+                  </span>
+                </h1>
+              </Reveal>
+
+              <Reveal delay={0.15}>
+                <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+                  Find instant answers regarding clinical appointments, treatment methods, home visits, packages, and health billing in Dehradun.
+                </p>
+              </Reveal>
+
+              {/* CTA Buttons */}
+              <Reveal delay={0.2}>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href={waUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 px-7 py-4 bg-primary-brand text-white font-bold rounded-full hover:bg-primary-hover shadow-lg hover:scale-105 active:scale-95 transition-all text-sm cursor-pointer"
+                  >
+                    <MessageSquare className="w-4 h-4" />
+                    Ask on WhatsApp
+                  </a>
+                  <a
+                    href={CLINIC_CONFIG.contact.phoneUrl}
+                    className="flex items-center justify-center gap-2 px-7 py-4 border border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all text-sm"
+                  >
+                    <Phone className="w-4 h-4" />
+                    Call Coordinator
+                  </a>
+                </div>
+              </Reveal>
+            </div>
+
+            {/* RIGHT: Image */}
+            <div className="lg:col-span-4">
+                          <Reveal delay={0.3}>
+                            <div className="relative rounded-3xl max-h-[65vh] overflow-hidden border border-white/20">
+                              <img
+                                src="/blog/neck-pain-cervical.png"
+                                alt="Contact Physiotherapy Dehradun Team"
+                                className="w-full h-full object-cover object-center"
+                              />
+                            </div>
+                          </Reveal>
+                        </div>
+          </div>
         </div>
       </section>
 

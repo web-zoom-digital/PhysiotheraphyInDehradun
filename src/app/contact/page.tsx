@@ -3,7 +3,9 @@ import { CLINIC_CONFIG } from "@/config/clinic";
 import { Reveal } from "@/components/FramerWrapper";
 import { LeadForm } from "@/components/LeadForm";
 import { ClinicSchema } from "@/components/ClinicSchema";
-import { Mail, Phone, MapPin, Clock, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin,  MessageSquare,
+ Clock, ArrowRight, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 export const metadata = {
   title: "Contact Us | Physiotherapy Clinic Dehradun",
@@ -20,28 +22,97 @@ export default function ContactPage() {
         { name: "Contact", item: "/contact" }
       ]} />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20 pb-20 sm:pt-25 sm:pb-40 min-h-[90vh] flex items-center">
-        <div className="absolute inset-0 overflow-hidden">
-          <img
-            src="/blog/best-physiotherapy.png"
-            alt="Contact Physiotherapy Dehradun"
-            className="w-full h-full object-cover object-center opacity-80"
-          />
+      {/* ─── HERO SECTION ─── */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 py-16 sm:py-24 text-white">
+        {/* Background Decorations */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-brand/20 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-teal-800/10 blur-3xl rounded-full translate-y-1/2 -translate-x-1/2" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <Reveal delay={0.1} yOffset={25}>
-            <h1 className="text-2xl sm:text-3xl lg:text-4.5xl font-bold text-white">
-              Contact Our Care Team<br />
-              <span className="text-teal-800">Physiotherapy Dehradun</span>
-            </h1>
-            <p className="text-slate-300 mt-3 text-sm sm:text-base max-w-xl">
-              Have questions or ready to book? Reach out via call, email, or WhatsApp — we respond in minutes.
-            </p>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <Reveal>
+            <nav
+              className="flex items-center gap-1.5 text-xs text-teal-300 flex-wrap"
+              aria-label="Breadcrumb"
+            >
+              <Link href="/" className="hover:text-white transition-colors">
+                Home
+              </Link>
+              <ChevronRight className="w-3 h-3 text-teal-500" />
+              <Link
+                href="/contact"
+                className="hover:text-white text-white transition-colors"
+              >
+                Contact Us
+              </Link>
+             </nav>
           </Reveal>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* LEFT: Content */}
+            <div className="lg:col-span-8 space-y-6">
+              <Reveal delay={0.05}>
+                <span className="inline-block text-xs font-black tracking-widest text-teal-400 uppercase bg-teal-800/10 border border-teal-800/20 px-3.5 py-1.5 rounded-full">
+                  Get in Touch
+                </span>
+              </Reveal>
+
+              <Reveal delay={0.1}>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+                  Contact Our Care Team
+                  <span className="block text-teal-400 text-2xl sm:text-3xl mt-1">
+                    In Dehradun
+                  </span>
+                </h1>
+              </Reveal>
+
+              <Reveal delay={0.15}>
+                <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+                  Have questions or ready to book? Reach out via call, email, or WhatsApp — our coordinator team responds in minutes.
+                </p>
+              </Reveal>
+
+              {/* CTA Buttons */}
+              <Reveal delay={0.2}>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href={waUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 px-7 py-4 bg-primary-brand text-white font-bold rounded-full hover:bg-primary-hover shadow-lg hover:scale-105 active:scale-95 transition-all text-sm cursor-pointer"
+                  >
+                    <MessageSquare className="w-4 h-4" />
+                    Book on WhatsApp
+                  </a>
+                  <a
+                    href={CLINIC_CONFIG.contact.phoneUrl}
+                    className="flex items-center justify-center gap-2 px-7 py-4 border border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all text-sm"
+                  >
+                    <Phone className="w-4 h-4" />
+                    Call Coordinator
+                  </a>
+                </div>
+              </Reveal>
+            </div>
+
+            {/* RIGHT: Image */}
+            <div className="lg:col-span-4">
+              <Reveal delay={0.3}>
+                <div className="relative rounded-3xl max-h-[65vh] overflow-hidden border border-white/20">
+                  <img
+                    src="/blog/home-physiotherapy.png"
+                    alt="Contact Physiotherapy Dehradun Team"
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
+
 
       {/* Main Grid */}
       <section className="py-16 bg-slate-50">
