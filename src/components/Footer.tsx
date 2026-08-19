@@ -121,7 +121,7 @@ export const Footer: React.FC = () => {
             <div className="overflow-hidden rounded-3xl border border-white/20 shadow-xl h-52">
               <iframe
                 title="Physiotherapy Dehradun"
-                src="https://maps.google.com/maps?q=Rajpur%20Road%20Dehradun&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                src={CLINIC_CONFIG.contact.googleMapRajpurRoad}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

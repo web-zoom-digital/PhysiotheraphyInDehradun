@@ -1,15 +1,33 @@
 import React from "react";
 import Link from "next/link";
 import { CLINIC_CONFIG } from "@/config/clinic";
-import { Reveal, StaggerContainer, StaggerItem } from "@/components/FramerWrapper";
+import {
+  Reveal,
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/FramerWrapper";
 import { ClinicSchema } from "@/components/ClinicSchema";
-import { Award, ShieldCheck, Heart, User, Sparkles, CheckCircle, MapPin, Activity, ChevronRight, ArrowRight, MessageSquare, Phone } from "lucide-react";
+import {
+  Award,
+  ShieldCheck,
+  Heart,
+  User,
+  Sparkles,
+  CheckCircle,
+  MapPin,
+  Activity,
+  ChevronRight,
+  ArrowRight,
+  MessageSquare,
+  Phone,
+} from "lucide-react";
 import { SERVICES_DATA } from "@/config/services";
 import { LOCATIONS_DATA } from "@/config/locations";
 
 export const metadata = {
   title: "About Us | Leading Physiotherapy Clinic in Dehradun",
-  description: "Learn about Physiotherapy Dehradun's philosophy, medical team, and advanced equipment. We are committed to evidence-based joint and muscle rehab."
+  description:
+    "Learn about Physiotherapy Dehradun's philosophy, medical team, and advanced equipment. We are committed to evidence-based joint and muscle rehab.",
 };
 
 export default function AboutPage() {
@@ -17,11 +35,14 @@ export default function AboutPage() {
 
   return (
     <>
-      <ClinicSchema type="breadcrumb" breadcrumbs={[
-        { name: "Home", item: "/" },
-        { name: "About Us", item: "/about" }
-      ]} />
-
+      <ClinicSchema
+        type="breadcrumb"
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "About Us", item: "/about" },
+        ]}
+      />
+      
       {/* ─── HERO SECTION ─── */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 py-16 sm:py-24 text-white">
         {/* Background Decorations */}
@@ -31,12 +52,30 @@ export default function AboutPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
 
+          <Reveal>
+            <nav
+              className="flex items-center gap-1.5 text-xs text-teal-300 flex-wrap"
+              aria-label="Breadcrumb"
+            >
+              <Link href="/" className="hover:text-white transition-colors">
+                Home
+              </Link>
+              <ChevronRight className="w-3 h-3 text-teal-500" />
+              <Link
+                href="/about"
+                className="hover:text-white text-white transition-colors"
+              >
+                About Us
+              </Link>
+             </nav>
+          </Reveal>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* LEFT: Content */}
             <div className="lg:col-span-7 space-y-6">
               <Reveal delay={0.05}>
-                <span className="inline-block text-xs font-black tracking-widest text-teal-800 uppercase bg-teal-800/10 border border-teal-800/20 px-3.5 py-1.5 rounded-full">
+                <span className="inline-block text-xs font-black tracking-widest text-teal-400 uppercase bg-teal-800/10 border border-teal-800/20 px-3.5 py-1.5 rounded-full">
                   ABOUT OUR CLINIC
                 </span>
               </Reveal>
@@ -44,7 +83,7 @@ export default function AboutPage() {
               <Reveal delay={0.1}>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
                   About Physiotherapy
-                  <span className="block text-teal-800 text-2xl sm:text-3xl mt-1">
+                  <span className="block text-teal-400 text-2xl sm:text-3xl mt-1">
                     In Dehradun
                   </span>
                 </h1>
@@ -52,7 +91,10 @@ export default function AboutPage() {
 
               <Reveal delay={0.15}>
                 <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
-                  We are Dehradun's premier evidence-based physical therapy & joint rehabilitation clinic, committed to restoring your active movement and pain-free living through senior consultant care.
+                  We are Dehradun's premier evidence-based physical therapy &
+                  joint rehabilitation clinic, committed to restoring your
+                  active movement and pain-free living through senior consultant
+                  care.
                 </p>
               </Reveal>
 
@@ -91,18 +133,25 @@ export default function AboutPage() {
                   {/* Overlay badge */}
                   <div className="absolute bottom-4 left-4 right-4 bg-black/50 backdrop-blur-sm rounded-2xl px-4 py-3 flex items-center justify-between">
                     <div>
-                      <p className="text-white font-black text-sm">Main Branch</p>
-                      <p className="text-teal-200 text-xs">Clock Tower, Dehradun</p>
+                      <p className="text-white font-black text-sm">
+                        Main Branch
+                      </p>
+                      <p className="text-teal-200 text-xs">
+                        Clock Tower, Dehradun
+                      </p>
                     </div>
                     <div className="text-right">
-                      <p className="text-white font-black text-sm">Experience</p>
-                      <p className="text-teal-200 text-xs">12+ Years Practice</p>
+                      <p className="text-white font-black text-sm">
+                        Experience
+                      </p>
+                      <p className="text-teal-200 text-xs">
+                        12+ Years Practice
+                      </p>
                     </div>
                   </div>
                 </div>
               </Reveal>
             </div>
-
           </div>
         </div>
       </section>
@@ -119,10 +168,16 @@ export default function AboutPage() {
                 Why We Built Dehradun's Most Premium Rehab Clinic
               </h2>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Most physiotherapy clinics rely purely on basic electrical machines, leaving patients with temporary relief but zero long-term recovery. At Physiotherapy Dehradun, we wanted to change that.
+                Most physiotherapy clinics rely purely on basic electrical
+                machines, leaving patients with temporary relief but zero
+                long-term recovery. At Physiotherapy Dehradun, we wanted to
+                change that.
               </p>
               <p className="text-sm text-slate-600 leading-relaxed">
-                By combining advanced European joint mobilization (Mulligan &amp; Maitland concepts) with localized neuromuscular training, we target the root biomechanical issues. We believe in active, exercise-based recovery rather than passive dependent machines.
+                By combining advanced European joint mobilization (Mulligan
+                &amp; Maitland concepts) with localized neuromuscular training,
+                we target the root biomechanical issues. We believe in active,
+                exercise-based recovery rather than passive dependent machines.
               </p>
             </div>
           </Reveal>
@@ -136,9 +191,12 @@ export default function AboutPage() {
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-md font-bold text-slate-800">Evidence-Based Medicine</h4>
+                    <h4 className="text-md font-bold text-slate-800">
+                      Evidence-Based Medicine
+                    </h4>
                     <p className="text-sm text-slate-600 mt-1 leading-relaxed">
-                      We follow international protocols verified by clinical trials to ensure safe, rapid, and complete healing.
+                      We follow international protocols verified by clinical
+                      trials to ensure safe, rapid, and complete healing.
                     </p>
                   </div>
                 </div>
@@ -150,9 +208,12 @@ export default function AboutPage() {
                     <ShieldCheck className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-md font-bold text-slate-800">Absolute Safety &amp; Hygiene</h4>
+                    <h4 className="text-md font-bold text-slate-800">
+                      Absolute Safety &amp; Hygiene
+                    </h4>
                     <p className="text-sm text-slate-600 mt-1 leading-relaxed">
-                      From sterilized clinical needles to deeply sanitized patient beds, your safety is our top healthcare priority.
+                      From sterilized clinical needles to deeply sanitized
+                      patient beds, your safety is our top healthcare priority.
                     </p>
                   </div>
                 </div>
@@ -164,9 +225,13 @@ export default function AboutPage() {
                     <Heart className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-md font-bold text-slate-800">Empathetic Care Pathways</h4>
+                    <h4 className="text-md font-bold text-slate-800">
+                      Empathetic Care Pathways
+                    </h4>
                     <p className="text-sm text-slate-600 mt-1 leading-relaxed">
-                      Chronic pain affects you emotionally. We build patient-centric programs that respect your speed, targets, and life.
+                      Chronic pain affects you emotionally. We build
+                      patient-centric programs that respect your speed, targets,
+                      and life.
                     </p>
                   </div>
                 </div>
@@ -180,32 +245,46 @@ export default function AboutPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6  lg:px-8 space-y-12">
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <h2 className="text-2xl sm:text-2.5xl font-extrabold text-slate-800 tracking-tight">Advanced Rehabilitation Equipment</h2>
-            <p className="text-xs text-slate-400">Our Dehradun branches are equipped with clinical-grade medical hardware.</p>
+            <h2 className="text-2xl sm:text-2.5xl font-extrabold text-slate-800 tracking-tight">
+              Advanced Rehabilitation Equipment
+            </h2>
+            <p className="text-xs text-slate-400">
+              Our Dehradun branches are equipped with clinical-grade medical
+              hardware.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 cursor-pointer">
             <div className="glass-panel p-6 rounded-3xl border border-slate-400 shadow-sm space-y-3">
               <Sparkles className="w-8 h-8 text-brand-blue" />
-              <h4 className="font-bold text-slate-800 text-md">Targeted Laser Therapy</h4>
+              <h4 className="font-bold text-slate-800 text-md">
+                Targeted Laser Therapy
+              </h4>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Utilizes localized coherent light to stimulate cellular metabolism, decrease pain, and speed up tendon tissue repair.
-              </p>
-            </div>
-            
-            <div className="glass-panel p-6 rounded-3xl border border-slate-400 shadow-sm space-y-3">
-              <Sparkles className="w-8 h-8 text-brand-blue" />
-              <h4 className="font-bold text-slate-800 text-sm">Interferential Therapy (IFT)</h4>
-              <p className="text-xs text-slate-500 leading-relaxed">
-                Uses mid-frequency currents to penetrate deep muscle tissues, providing strong pain-relief and reducing deep joint edema.
+                Utilizes localized coherent light to stimulate cellular
+                metabolism, decrease pain, and speed up tendon tissue repair.
               </p>
             </div>
 
             <div className="glass-panel p-6 rounded-3xl border border-slate-400 shadow-sm space-y-3">
               <Sparkles className="w-8 h-8 text-brand-blue" />
-              <h4 className="font-bold text-slate-800 text-md">Vestibular Balance Boards</h4>
+              <h4 className="font-bold text-slate-800 text-sm">
+                Interferential Therapy (IFT)
+              </h4>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                Uses mid-frequency currents to penetrate deep muscle tissues,
+                providing strong pain-relief and reducing deep joint edema.
+              </p>
+            </div>
+
+            <div className="glass-panel p-6 rounded-3xl border border-slate-400 shadow-sm space-y-3">
+              <Sparkles className="w-8 h-8 text-brand-blue" />
+              <h4 className="font-bold text-slate-800 text-md">
+                Vestibular Balance Boards
+              </h4>
               <p className="text-sm text-slate-600 leading-relaxed">
-                Advanced coordination training platforms designed to challenge balance, retrain gait, and prevent senior falls.
+                Advanced coordination training platforms designed to challenge
+                balance, retrain gait, and prevent senior falls.
               </p>
             </div>
           </div>
@@ -215,7 +294,6 @@ export default function AboutPage() {
       {/* ─── SERVICES WE OFFER SECTION ─── */}
       <section className="py-20 bg-slate-50 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
           {/* Centered Heading */}
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <span className="text-sm font-bold   text-teal-800  text-primary-brand px-3.5 py-1.5 rounded-full inline-block">
@@ -225,7 +303,9 @@ export default function AboutPage() {
               These Are the Services We Provide
             </h2>
             <p className="text-sm sm:text-base text-slate-500 leading-relaxed max-w-2xl mx-auto">
-              We offer evidence-based, clinical-grade physical therapy and rehabilitation programs customized to your specific recovery goals.
+              We offer evidence-based, clinical-grade physical therapy and
+              rehabilitation programs customized to your specific recovery
+              goals.
             </p>
           </div>
 
@@ -260,7 +340,7 @@ export default function AboutPage() {
               ))}
             </div>
           </StaggerContainer>
-          
+
           <div className="text-center mt-12">
             <Link
               href="/services"
@@ -270,14 +350,12 @@ export default function AboutPage() {
               <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
-
         </div>
       </section>
 
       {/* ─── LOCATIONS WE SERVE SECTION ─── */}
       <section className="py-20 bg-white border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
           {/* Centered Heading */}
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <span className="text-sm font-bold   text-teal-800  text-primary-brand px-3.5 py-1.5 rounded-full inline-block">
@@ -287,7 +365,8 @@ export default function AboutPage() {
               These Are the Locations We Serve
             </h2>
             <p className="text-sm sm:text-base text-slate-500 leading-relaxed max-w-2xl mx-auto">
-              Our mobile home-visit physiotherapy team and clinics serve patient needs across all major neighborhoods of Dehradun.
+              Our mobile home-visit physiotherapy team and clinics serve patient
+              needs across all major neighborhoods of Dehradun.
             </p>
           </div>
 
@@ -313,7 +392,10 @@ export default function AboutPage() {
                         </p>
                         <div className="mt-3.5 flex flex-wrap gap-1.5">
                           {loc.landmarks.slice(0, 3).map((landmark, idx) => (
-                            <span key={idx} className="text-[10px] text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-100">
+                            <span
+                              key={idx}
+                              className="text-[10px] text-slate-500 bg-slate-50 px-2 py-0.5 rounded border border-slate-100"
+                            >
                               {landmark}
                             </span>
                           ))}
@@ -339,7 +421,6 @@ export default function AboutPage() {
               <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
-
         </div>
       </section>
 
@@ -355,7 +436,8 @@ export default function AboutPage() {
               Find Our Clinic on Google Maps
             </h2>
             <p className="text-sm sm:text-base text-slate-500 leading-relaxed max-w-xl mx-auto">
-              Find our main Rajpur Road branch centrally located near Clock Tower for easy access from anywhere in Dehradun.
+              Find our main Rajpur Road branch centrally located near Clock
+              Tower for easy access from anywhere in Dehradun.
             </p>
           </div>
 
@@ -383,10 +465,16 @@ export default function AboutPage() {
               Begin Your Healing Journey Today
             </h2>
             <p className="text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-              Do not let joint stiffness or chronic muscle pain dictate your daily life. Schedule an in-clinic consult or home visit now.
+              Do not let joint stiffness or chronic muscle pain dictate your
+              daily life. Schedule an in-clinic consult or home visit now.
             </p>
             <div className="pt-6">
-              <a href={waUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-primary-brand text-white font-extrabold rounded-full hover:bg-primary-hover shadow-lg hover:scale-105 active:scale-95 transition-all">
+              <a
+                href={waUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-primary-brand text-white font-extrabold rounded-full hover:bg-primary-hover shadow-lg hover:scale-105 active:scale-95 transition-all"
+              >
                 Book Consultation on WhatsApp
               </a>
             </div>
