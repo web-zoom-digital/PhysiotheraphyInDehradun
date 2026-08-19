@@ -77,7 +77,7 @@ export default function DoctorPage() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <Reveal delay={0.05}>
-            <span className="inline-block text-xs font-black tracking-widest text-teal-800 uppercase bg-teal-800/10 border border-teal-800/20 px-3.5 py-1.5 rounded-full">
+            <span className="inline-block text-xs font-black tracking-widest text-white uppercase bg-teal-800/10 border border-teal-800 px-3.5 py-1.5 rounded-full">
               CLINICAL SPECIALISTS
             </span>
           </Reveal>
@@ -85,7 +85,7 @@ export default function DoctorPage() {
           <Reveal delay={0.1}>
             <h1 className="text-3xl sm:text-4xl lg:text-5.5xl font-extrabold tracking-tight leading-tight max-w-4xl mx-auto">
               Meet Our Highly Qualified
-              <span className="block text-teal-800 text-2xl sm:text-3xl lg:text-4xl mt-2 font-bold">
+              <span className="block text-teal-500 text-2xl sm:text-3xl lg:text-4xl mt-2 font-bold">
                 Specialist Physiotherapists in Dehradun
               </span>
             </h1>
@@ -107,19 +107,19 @@ export default function DoctorPage() {
               {DOCTORS_DATA.map((doctor, idx) => {
                 const docWaUrl = `${CLINIC_CONFIG.contact.whatsapp}?text=${encodeURIComponent(doctor.waMessage)}`;
                 return (
-                  <StaggerItem key={idx}>
-                    <div className="bg-white rounded-[32px] overflow-hidden border border-slate-200/80 shadow-[0_8px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_-15px_rgba(13,148,136,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full group">
+                  <StaggerItem key={idx} className="h-full">
+                    <div className="bg-white rounded-[32px] overflow-hidden border border-slate-200/80 shadow-[0_8px_30px_rgba(0,0,0,0.02)] cursor-pointer hover:shadow-[0_20px_40px_-15px_rgba(13,148,136,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full group">
                       
                       {/* Top banner header with accent overlay */}
-                      <div className="w-full h-24 bg-gradient-to-r from-teal-850 to-teal-900 relative shrink-0">
+                      <div className="w-full h-24 bg-gradient-to-r from-teal-500 to-teal-800 relative shrink-0 ">
                         <div className="absolute inset-0 bg-white/5 backdrop-blur-[1px]" />
                         
                         {/* Tags */}
                         <div className="absolute top-4 right-4 flex flex-col gap-1.5 items-end">
-                          <span className="px-2.5 py-0.5 bg-white/20 backdrop-blur-md border border-white/20 text-white rounded-full text-[9px] font-black uppercase tracking-wider">
+                          <span className="px-2.5 py-0.5 bg-white/20 backdrop-blur-md border border-white/20 text-white rounded-full text-[11px] font-black uppercase tracking-wider">
                             {doctor.specialty}
                           </span>
-                          <span className="px-2 py-0.5 bg-emerald-500/20 backdrop-blur-md border border-emerald-400/25 text-emerald-100 rounded-full text-[8px] font-bold">
+                          <span className="px-2 py-0.5 bg-emerald-500/20 backdrop-blur-md border border-emerald-400/25 text-emerald-100 rounded-full text-[10px] font-bold">
                             {doctor.experience}
                           </span>
                         </div>
@@ -197,7 +197,7 @@ export default function DoctorPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <Reveal yOffset={25}>
             <div className="space-y-6">
-              <span className="text-xs font-bold text-teal-850 uppercase tracking-widest bg-teal-50 px-3 py-1 rounded-full border border-teal-100">
+              <span className="text-sm font-extrabold text-teal-800 uppercase ">
                 CLINICAL PRACTICE STANDARDS
               </span>
               <h2 className="text-2xl sm:text-3.5xl font-extrabold text-slate-800 tracking-tight leading-tight">
@@ -215,7 +215,7 @@ export default function DoctorPage() {
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2.5">
                     <CheckCircle className="w-4 h-4 text-teal-800 shrink-0 mt-0.5" />
-                    <span className="text-xs text-slate-600 font-medium">{item}</span>
+                    <span className="text-sm text-slate-600 font-medium">{item}</span>
                   </div>
                 ))}
               </div>
@@ -267,14 +267,14 @@ export default function DoctorPage() {
                 href={generalWaUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-4 bg-teal-800 text-white font-extrabold rounded-full hover:bg-teal-900 transition-all shadow-lg hover:scale-105 active:scale-95 text-xs flex items-center justify-center gap-1.5"
+                className="w-full sm:w-auto px-8 py-4 bg-teal-800 text-white font-extrabold rounded-full hover:bg-teal-900 transition-all shadow-lg hover:scale-105  text-sm flex items-center justify-center gap-1.5"
               >
                 <MessageSquare className="w-4 h-4" />
                 Book Consultation on WhatsApp
               </a>
               <Link
                 href="/book-appointment"
-                className="w-full sm:w-auto px-8 py-4 bg-white text-[#04304a] font-extrabold rounded-full hover:bg-slate-50 transition-all shadow-md hover:scale-105 active:scale-95 text-xs flex items-center justify-center gap-1.5"
+                className="w-full sm:w-auto px-8 py-4 bg-white text-[#04304a] font-extrabold rounded-full hover:bg-slate-50 transition-all shadow-md hover:scale-105  text-sm flex items-center justify-center gap-1.5"
               >
                 <Calendar className="w-4 h-4" />
                 Schedule Appointment Form

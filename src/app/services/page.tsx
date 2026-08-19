@@ -654,7 +654,7 @@ export default function ServicesIndexPage() {
                   {category.services.map((service, sIdx) => {
                     const CardIcon = service.icon;
                     return (
-                      <StaggerItem key={sIdx}>
+                      <StaggerItem key={sIdx} className="h-full">
                         <Link
                           href={service.href}
                           className="bg-white rounded-2xl border border-slate-200 p-6 h-full flex flex-col justify-between shadow-sm hover:shadow-[0_20px_40px_-12px_rgba(13,148,136,0.12)] hover:-translate-y-1.5 hover:border-teal-200 transition-all duration-300 group cursor-pointer"

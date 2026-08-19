@@ -233,7 +233,7 @@ export default function AboutPage() {
           <StaggerContainer>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {SERVICES_DATA.slice(0, 3).map((service) => (
-                <StaggerItem key={service.slug}>
+                <StaggerItem key={service.slug} className="h-full">
                   <Link
                     href={`/services/${service.slug}`}
                     className="bg-white rounded-3xl border border-slate-400 p-7 flex flex-col justify-between shadow-sm hover:shadow-[0_20px_40px_-12px_rgba(13,148,136,0.12)] hover:-translate-y-1.5 hover:border-teal-200 transition-all duration-300 h-full group cursor-pointer"
@@ -295,7 +295,7 @@ export default function AboutPage() {
           <StaggerContainer>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {LOCATIONS_DATA.slice(0, 3).map((loc) => (
-                <StaggerItem key={loc.slug}>
+                <StaggerItem key={loc.slug} className="h-full">
                   <Link
                     href={`/locations/${loc.slug}`}
                     className="bg-white rounded-3xl border border-slate-400 p-7 flex flex-col justify-between shadow-sm hover:shadow-[0_20px_40px_-12px_rgba(13,148,136,0.12)] hover:-translate-y-1.5 hover:border-teal-200 transition-all duration-300 h-full group cursor-pointer"
