@@ -10,144 +10,820 @@ export interface BlogPost {
   authorTitle: string;
   readTime: string;
   image: string;
-  content: string;
   keywords: string[];
+  content: string;
 }
 
 export const BLOGS_DATA: BlogPost[] = [
   {
-    slug: "physiotherapy-exercises-for-back-pain",
-    title: "Best Physiotherapy Exercises for Lower Back Pain Relief",
-    category: "Back Pain",
-    metaTitle: "Physiotherapy Exercises for Lower Back Pain | Dehradun",
-    metaDesc: "Discover clinically proven physiotherapy exercises for lower back pain. Strengthen your core and relieve pain with expert guidance.",
-    shortDesc: "Struggling with lower back stiffness? Read our clinical guide on the best physiotherapy exercises to relieve back pain and rebuild core strength.",
-    publishedDate: "2026-08-01",
-    author: "Dr. Om Prakash, PT",
-    authorTitle: "Senior Consultant Physiotherapist",
-    readTime: "6 Min Read",
-    image: "/blog/back-pain-physio.png",
-    keywords: ["back pain exercises", "physiotherapy for back pain", "lower back relief"],
-    content: `<h2>Why Back Pain Occurs</h2><p>Over 80% of adults experience lower back pain at some point. Most back pain is mechanical, caused by poor posture, weak core muscles, or repetitive strain.</p><h2>Core Stabilization Exercises</h2><p>Strengthening your Transversus Abdominis and Multifidus muscles is essential to support your lumbar spine and prevent disc injuries.</p>`
+    slug: "acute-lumbar-muscle",
+    title: "Acute Lumbar Muscle",
+    category: "Physiotherapy",
+    metaTitle: "Acute Lumbar Muscle | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Acute Lumbar Muscle. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Acute Lumbar Muscle.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Acute Lumbar Muscle.png",
+    keywords: ["Acute Lumbar Muscle", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Acute Lumbar Muscle</h2>
+      <p>Welcome to our comprehensive guide on Acute Lumbar Muscle. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Acute Lumbar Muscle. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
   },
+
   {
-    slug: "knee-pain-physiotherapy-guide",
-    title: "Knee Pain Treatment: How Physiotherapy Helps Without Surgery",
-    category: "Knee Pain",
-    metaTitle: "Knee Pain Physiotherapy | Non-Surgical Treatment Dehradun",
-    metaDesc: "Learn how physiotherapy can treat knee pain, osteoarthritis, and ligament injuries without surgery in Dehradun.",
-    shortDesc: "Knee pain doesn't always need surgery. Discover how targeted physiotherapy, strengthening exercises, and manual therapy can restore your knee function.",
-    publishedDate: "2026-08-03",
-    author: "Dr. Om Prakash, PT",
-    authorTitle: "Senior Consultant Physiotherapist",
-    readTime: "5 Min Read",
-    image: "/blog/knee-pain-physio.png",
-    keywords: ["knee pain treatment", "physiotherapy for knee", "knee osteoarthritis"],
-    content: `<h2>Common Causes of Knee Pain</h2><p>Knee pain can result from osteoarthritis, ligament tears, meniscus injuries, or patellofemoral syndrome. Early physiotherapy intervention prevents long-term damage.</p><h2>Physiotherapy Treatment Approach</h2><p>We use a combination of manual joint mobilization, quadriceps strengthening, and electrotherapy to reduce pain and restore full knee function.</p>`
+    slug: "biceps-tendinitis",
+    title: "Biceps Tendinitis",
+    category: "Physiotherapy",
+    metaTitle: "Biceps Tendinitis | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Biceps Tendinitis. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Biceps Tendinitis.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Biceps Tendinitis.png",
+    keywords: ["Biceps Tendinitis", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Biceps Tendinitis</h2>
+      <p>Welcome to our comprehensive guide on Biceps Tendinitis. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Biceps Tendinitis. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
   },
+
   {
-    slug: "neck-pain-cervical-physiotherapy",
-    title: "Neck Pain & Cervical Spondylosis: Physiotherapy Treatment Guide",
-    category: "Neck Pain",
-    metaTitle: "Neck Pain & Cervical Spondylosis Physiotherapy | Dehradun",
-    metaDesc: "Effective physiotherapy for neck pain and cervical spondylosis. Manual therapy, posture correction, and exercises for lasting relief.",
-    shortDesc: "Cervical neck pain and spondylosis can be debilitating. Our physiotherapy approach combines manual therapy with targeted exercises for lasting relief.",
-    publishedDate: "2026-08-05",
-    author: "Dr. Om Prakash, PT",
-    authorTitle: "Senior Consultant Physiotherapist",
-    readTime: "5 Min Read",
-    image: "/blog/neck-pain-cervical.png",
-    keywords: ["neck pain physiotherapy", "cervical spondylosis treatment", "neck exercises"],
-    content: `<h2>Understanding Cervical Spondylosis</h2><p>Cervical spondylosis is age-related wear and tear affecting the spinal discs in your neck. It often causes neck stiffness, headaches, and arm pain.</p><h2>Physiotherapy for Neck Relief</h2><p>Our treatment includes cervical traction, Mulligan mobilization, and postural re-education to eliminate pain and prevent recurrence.</p>`
+    slug: "brachial-plexus-injury",
+    title: "Brachial Plexus Injury",
+    category: "Physiotherapy",
+    metaTitle: "Brachial Plexus Injury | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Brachial Plexus Injury. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Brachial Plexus Injury.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Brachial Plexus Injury.png",
+    keywords: ["Brachial Plexus Injury", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Brachial Plexus Injury</h2>
+      <p>Welcome to our comprehensive guide on Brachial Plexus Injury. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Brachial Plexus Injury. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
   },
+
   {
-    slug: "sciatica-pain-treatment-physiotherapy",
-    title: "Sciatica Pain: Causes, Symptoms & Physiotherapy Treatment",
-    category: "Sciatica",
-    metaTitle: "Sciatica Pain Treatment with Physiotherapy | Dehradun",
-    metaDesc: "Understand sciatica pain and how physiotherapy can relieve shooting leg pain without surgery. Expert care in Dehradun.",
-    shortDesc: "Sharp shooting pain from your lower back down your leg? Learn how physiotherapy treats sciatica through nerve mobilization and targeted exercises.",
-    publishedDate: "2026-08-07",
-    author: "Dr. Om Prakash, PT",
-    authorTitle: "Senior Consultant Physiotherapist",
-    readTime: "6 Min Read",
-    image: "/blog/sciatica-pain.png",
-    keywords: ["sciatica treatment", "leg pain physiotherapy", "nerve pain relief"],
-    content: `<h2>What is Sciatica?</h2><p>Sciatica is pain that travels along the sciatic nerve, from your lower back through the hip and down the leg. It is usually caused by a herniated disc or bone spur compressing the nerve.</p><h2>Physiotherapy Treatment</h2><p>Neural mobilization, McKenzie exercises, and dry needling are highly effective in relieving sciatic nerve compression and restoring mobility.</p>`
+    slug: "cervical-disc-herniation",
+    title: "Cervical Disc Herniation",
+    category: "Physiotherapy",
+    metaTitle: "Cervical Disc Herniation | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Cervical Disc Herniation. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Cervical Disc Herniation.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Cervical Disc Herniation.png",
+    keywords: ["Cervical Disc Herniation", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Cervical Disc Herniation</h2>
+      <p>Welcome to our comprehensive guide on Cervical Disc Herniation. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Cervical Disc Herniation. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
   },
+
   {
-    slug: "frozen-shoulder-non-surgical-treatment",
-    title: "Frozen Shoulder: Non-Surgical Solutions That Actually Work",
-    category: "Shoulder",
-    metaTitle: "Frozen Shoulder Treatment Without Surgery | Dehradun",
-    metaDesc: "Struggling with shoulder stiffness? Read about effective non-surgical treatments for frozen shoulder including Mulligan therapy.",
-    shortDesc: "Frozen shoulder causes severe stiffness and pain. Learn how advanced manual joint mobilization and stretching can restore your shoulder movement.",
-    publishedDate: "2026-08-09",
-    author: "Dr. Om Prakash, PT",
-    authorTitle: "Senior Consultant Physiotherapist",
-    readTime: "5 Min Read",
-    image: "/blog/frozen-shoulder.png",
-    keywords: ["frozen shoulder treatment", "shoulder stiffness", "mulligan mobilization"],
-    content: `<h2>What is Frozen Shoulder?</h2><p>Adhesive capsulitis (frozen shoulder) is a condition where the shoulder joint capsule becomes tight and inflamed, severely restricting movement. It typically progresses through freezing, frozen, and thawing stages.</p><h2>Advanced Physiotherapy Treatment</h2><p>Mulligan Mobilization with Movement (MWM), laser therapy, and progressive capsule stretching are highly effective in restoring full shoulder range of motion.</p>`
+    slug: "cervical-spondylosis",
+    title: "Cervical Spondylosis",
+    category: "Physiotherapy",
+    metaTitle: "Cervical Spondylosis | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Cervical Spondylosis. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Cervical Spondylosis.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Cervical Spondylosis.png",
+    keywords: ["Cervical Spondylosis", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Cervical Spondylosis</h2>
+      <p>Welcome to our comprehensive guide on Cervical Spondylosis. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Cervical Spondylosis. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
   },
+
   {
-    slug: "stroke-rehabilitation-guide",
-    title: "Stroke Rehabilitation: Timeline, Techniques & Recovery Tips",
-    category: "Neuro Rehab",
-    metaTitle: "Stroke Rehabilitation Guide | Neuro-Physiotherapy Dehradun",
-    metaDesc: "Learn about stroke rehabilitation timeline and advanced neuro-physiotherapy techniques to recover movement and independence.",
-    shortDesc: "A complete overview of post-stroke recovery. Discover how Bobath technique and PNF help stroke patients regain motor control and walk again.",
-    publishedDate: "2026-08-11",
-    author: "Dr. Om Prakash, PT",
-    authorTitle: "Senior Consultant Physiotherapist",
-    readTime: "8 Min Read",
-    image: "/blog/neuro-physio-stroke.png",
-    keywords: ["stroke rehabilitation", "neuro physiotherapy", "paralysis recovery"],
-    content: `<h2>The Role of Early Stroke Intervention</h2><p>Stroke causes rapid brain cell damage. Early, intensive physiotherapy using neuroplasticity principles is the gold standard for recovery.</p><h2>Recovery Timeline</h2><p>Recovery progresses from acute bedside mobility (week 1-2), to intensive gait training (month 2-3), to functional independence (6+ months).</p>`
+    slug: "fracture-rehab",
+    title: "Fracture Rehab",
+    category: "Physiotherapy",
+    metaTitle: "Fracture Rehab | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Fracture Rehab. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Fracture Rehab.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Fracture Rehab.png",
+    keywords: ["Fracture Rehab", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Fracture Rehab</h2>
+      <p>Welcome to our comprehensive guide on Fracture Rehab. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Fracture Rehab. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
   },
+
   {
-    slug: "slip-disc-treatment-physiotherapy",
-    title: "Slip Disc (Herniated Disc): Can Physiotherapy Avoid Surgery?",
-    category: "Spine",
-    metaTitle: "Slip Disc Treatment with Physiotherapy | Dehradun",
-    metaDesc: "Find out how physiotherapy for slip disc can relieve pain, reduce nerve compression, and help you avoid surgery.",
-    shortDesc: "A slipped disc doesn't always need surgery. Physiotherapy with McKenzie technique, traction, and core stabilization can provide lasting relief.",
-    publishedDate: "2026-08-13",
-    author: "Dr. Om Prakash, PT",
-    authorTitle: "Senior Consultant Physiotherapist",
-    readTime: "6 Min Read",
-    image: "/blog/slip-disc.png",
-    keywords: ["slip disc physiotherapy", "herniated disc treatment", "disc pain relief"],
-    content: `<h2>What is a Slip Disc?</h2><p>A herniated (slip) disc occurs when the soft cushion between vertebrae pushes out and presses on spinal nerves, causing pain, weakness, and numbness.</p><h2>Physiotherapy Approach</h2><p>McKenzie Method, lumbar traction, and deep core strengthening effectively reduce disc pressure and nerve irritation, helping most patients avoid surgery.</p>`
+    slug: "frozen-shoulder",
+    title: "Frozen Shoulder",
+    category: "Physiotherapy",
+    metaTitle: "Frozen Shoulder | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Frozen Shoulder. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Frozen Shoulder.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Frozen Shoulder.png",
+    keywords: ["Frozen Shoulder", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Frozen Shoulder</h2>
+      <p>Welcome to our comprehensive guide on Frozen Shoulder. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Frozen Shoulder. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
   },
+
   {
-    slug: "sports-injury-rehabilitation",
-    title: "Sports Injury Rehabilitation: Return to Peak Performance Faster",
-    category: "Sports",
-    metaTitle: "Sports Injury Physiotherapy & Rehabilitation | Dehradun",
-    metaDesc: "Recover from ACL tears, muscle strains, and sports injuries faster with expert physiotherapy and rehabilitation in Dehradun.",
-    shortDesc: "Sports injuries need specialized rehab to return safely to activity. Learn how our sports physiotherapy program gets athletes back on the field faster.",
-    publishedDate: "2026-08-15",
-    author: "Dr. Om Prakash, PT",
-    authorTitle: "Senior Consultant Physiotherapist",
-    readTime: "7 Min Read",
-    image: "/blog/sports-injury-rehab.png",
-    keywords: ["sports injury rehab", "ACL recovery", "sports physiotherapy"],
-    content: `<h2>Common Sports Injuries</h2><p>ACL tears, rotator cuff strains, ankle sprains, and meniscus injuries are among the most common sports injuries requiring expert rehabilitation.</p><h2>Our Sports Rehab Protocol</h2><p>We combine PRICE protocol, progressive loading, proprioceptive training, and sport-specific drills to ensure complete, safe return to competition.</p>`
+    slug: "herniated",
+    title: "Herniated",
+    category: "Physiotherapy",
+    metaTitle: "Herniated | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Herniated. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Herniated.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Herniated.png",
+    keywords: ["Herniated", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Herniated</h2>
+      <p>Welcome to our comprehensive guide on Herniated. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Herniated. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
   },
+
   {
-    slug: "home-physiotherapy-benefits",
-    title: "Home Visit Physiotherapy: Who Needs It & What to Expect",
-    category: "Home Visit",
-    metaTitle: "Home Visit Physiotherapy in Dehradun | Benefits & Process",
-    metaDesc: "Learn who benefits from home physiotherapy, what happens during a session, and how to book a certified home visit physiotherapist in Dehradun.",
-    shortDesc: "Home visit physiotherapy is ideal for stroke patients, post-surgery recovery, and elderly individuals. Learn how our mobile team brings clinic-quality care to you.",
-    publishedDate: "2026-08-17",
-    author: "Dr. Om Prakash, PT",
-    authorTitle: "Senior Consultant Physiotherapist",
-    readTime: "5 Min Read",
-    image: "/blog/home-physiotherapy.png",
-    keywords: ["home physiotherapy dehradun", "home visit physiotherapist", "mobile physiotherapy"],
-    content: `<h2>Who Benefits from Home Physiotherapy?</h2><p>Stroke survivors, post-knee/hip replacement patients, elderly individuals with fall risk, and bedridden patients benefit most from professional home visit physiotherapy.</p><h2>What to Expect During a Home Visit</h2><p>Our certified therapists bring portable IFT, TENS, and ultrasound units to deliver clinic-standard electrotherapy alongside manual therapy and exercise training at your home.</p>`
+    slug: "joint-separation",
+    title: "Joint Separation",
+    category: "Physiotherapy",
+    metaTitle: "Joint Separation | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Joint Separation. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Joint Separation.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Joint Separation.png",
+    keywords: ["Joint Separation", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Joint Separation</h2>
+      <p>Welcome to our comprehensive guide on Joint Separation. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Joint Separation. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
   },
+
+  {
+    slug: "lumbar-spondylosis",
+    title: "Lumbar Spondylosis",
+    category: "Physiotherapy",
+    metaTitle: "Lumbar Spondylosis | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Lumbar Spondylosis. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Lumbar Spondylosis.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Lumbar Spondylosis.png",
+    keywords: ["Lumbar Spondylosis", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Lumbar Spondylosis</h2>
+      <p>Welcome to our comprehensive guide on Lumbar Spondylosis. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Lumbar Spondylosis. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "piriformis-syndrome",
+    title: "Piriformis Syndrome",
+    category: "Physiotherapy",
+    metaTitle: "Piriformis Syndrome | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Piriformis Syndrome. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Piriformis Syndrome.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Piriformis Syndrome.png",
+    keywords: ["Piriformis Syndrome", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Piriformis Syndrome</h2>
+      <p>Welcome to our comprehensive guide on Piriformis Syndrome. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Piriformis Syndrome. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "postural-kyphos",
+    title: "Postural Kyphos",
+    category: "Physiotherapy",
+    metaTitle: "Postural Kyphos | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Postural Kyphos. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Postural Kyphos.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Postural Kyphos.png",
+    keywords: ["Postural Kyphos", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Postural Kyphos</h2>
+      <p>Welcome to our comprehensive guide on Postural Kyphos. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Postural Kyphos. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "rotator-cuff-tear",
+    title: "Rotator Cuff Tear",
+    category: "Physiotherapy",
+    metaTitle: "Rotator Cuff Tear | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Rotator Cuff Tear. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Rotator Cuff Tear.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Rotator Cuff Tear.png",
+    keywords: ["Rotator Cuff Tear", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Rotator Cuff Tear</h2>
+      <p>Welcome to our comprehensive guide on Rotator Cuff Tear. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Rotator Cuff Tear. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "rotator-cuff-tendinitis",
+    title: "Rotator Cuff Tendinitis",
+    category: "Physiotherapy",
+    metaTitle: "Rotator Cuff Tendinitis | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Rotator Cuff Tendinitis. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Rotator Cuff Tendinitis.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Rotator Cuff Tendinitis.png",
+    keywords: ["Rotator Cuff Tendinitis", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Rotator Cuff Tendinitis</h2>
+      <p>Welcome to our comprehensive guide on Rotator Cuff Tendinitis. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Rotator Cuff Tendinitis. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "sacroiliac-si-joint-dysfunctionstrain",
+    title: "Sacroiliac (SI) Joint DysfunctionStrain",
+    category: "Physiotherapy",
+    metaTitle: "Sacroiliac (SI) Joint DysfunctionStrain | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Sacroiliac (SI) Joint DysfunctionStrain. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Sacroiliac (SI) Joint DysfunctionStrain.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Sacroiliac (SI) Joint DysfunctionStrain.png",
+    keywords: ["Sacroiliac (SI) Joint DysfunctionStrain", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Sacroiliac (SI) Joint DysfunctionStrain</h2>
+      <p>Welcome to our comprehensive guide on Sacroiliac (SI) Joint DysfunctionStrain. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Sacroiliac (SI) Joint DysfunctionStrain. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "sciatica",
+    title: "Sciatica",
+    category: "Physiotherapy",
+    metaTitle: "Sciatica | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Sciatica. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Sciatica.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Sciatica.png",
+    keywords: ["Sciatica", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Sciatica</h2>
+      <p>Welcome to our comprehensive guide on Sciatica. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Sciatica. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "shoulder-dislocation",
+    title: "Shoulder Dislocation",
+    category: "Physiotherapy",
+    metaTitle: "Shoulder Dislocation | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Shoulder Dislocation. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Shoulder Dislocation.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Shoulder Dislocation.png",
+    keywords: ["Shoulder Dislocation", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Shoulder Dislocation</h2>
+      <p>Welcome to our comprehensive guide on Shoulder Dislocation. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Shoulder Dislocation. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "shoulder-instability-2",
+    title: "Shoulder Instability (2)",
+    category: "Physiotherapy",
+    metaTitle: "Shoulder Instability (2) | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Shoulder Instability (2). Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Shoulder Instability (2).",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Shoulder Instability (2).png",
+    keywords: ["Shoulder Instability (2)", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Shoulder Instability (2)</h2>
+      <p>Welcome to our comprehensive guide on Shoulder Instability (2). In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Shoulder Instability (2). Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "shoulder-instability",
+    title: "Shoulder Instability",
+    category: "Physiotherapy",
+    metaTitle: "Shoulder Instability | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Shoulder Instability. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Shoulder Instability.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Shoulder Instability.png",
+    keywords: ["Shoulder Instability", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Shoulder Instability</h2>
+      <p>Welcome to our comprehensive guide on Shoulder Instability. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Shoulder Instability. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "slap-tear",
+    title: "SLAP Tear",
+    category: "Physiotherapy",
+    metaTitle: "SLAP Tear | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about SLAP Tear. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for SLAP Tear.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/SLAP Tear.png",
+    keywords: ["SLAP Tear", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding SLAP Tear</h2>
+      <p>Welcome to our comprehensive guide on SLAP Tear. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from SLAP Tear. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "spinal-stenosis-strain",
+    title: "Spinal Stenosis Strain",
+    category: "Physiotherapy",
+    metaTitle: "Spinal Stenosis Strain | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Spinal Stenosis Strain. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Spinal Stenosis Strain.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Spinal Stenosis Strain.png",
+    keywords: ["Spinal Stenosis Strain", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Spinal Stenosis Strain</h2>
+      <p>Welcome to our comprehensive guide on Spinal Stenosis Strain. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Spinal Stenosis Strain. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "spondylolisthesis-2",
+    title: "Spondylolisthesis (2)",
+    category: "Physiotherapy",
+    metaTitle: "Spondylolisthesis (2) | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Spondylolisthesis (2). Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Spondylolisthesis (2).",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Spondylolisthesis (2).png",
+    keywords: ["Spondylolisthesis (2)", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Spondylolisthesis (2)</h2>
+      <p>Welcome to our comprehensive guide on Spondylolisthesis (2). In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Spondylolisthesis (2). Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "spondylolisthesis",
+    title: "Spondylolisthesis",
+    category: "Physiotherapy",
+    metaTitle: "Spondylolisthesis | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Spondylolisthesis. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Spondylolisthesis.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Spondylolisthesis.png",
+    keywords: ["Spondylolisthesis", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Spondylolisthesis</h2>
+      <p>Welcome to our comprehensive guide on Spondylolisthesis. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Spondylolisthesis. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "spondylolysis",
+    title: "Spondylolysis",
+    category: "Physiotherapy",
+    metaTitle: "Spondylolysis | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Spondylolysis. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Spondylolysis.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Spondylolysis.png",
+    keywords: ["Spondylolysis", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Spondylolysis</h2>
+      <p>Welcome to our comprehensive guide on Spondylolysis. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Spondylolysis. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "subacromial-bursitis",
+    title: "Subacromial Bursitis",
+    category: "Physiotherapy",
+    metaTitle: "Subacromial Bursitis | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Subacromial Bursitis. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Subacromial Bursitis.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Subacromial Bursitis.png",
+    keywords: ["Subacromial Bursitis", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Subacromial Bursitis</h2>
+      <p>Welcome to our comprehensive guide on Subacromial Bursitis. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Subacromial Bursitis. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "upper-crossed-syndrome",
+    title: "Upper Crossed Syndrome",
+    category: "Physiotherapy",
+    metaTitle: "Upper Crossed Syndrome | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Upper Crossed Syndrome. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Upper Crossed Syndrome.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Upper Crossed Syndrome.png",
+    keywords: ["Upper Crossed Syndrome", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Upper Crossed Syndrome</h2>
+      <p>Welcome to our comprehensive guide on Upper Crossed Syndrome. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Upper Crossed Syndrome. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "whiplash-injury",
+    title: "Whiplash Injury",
+    category: "Physiotherapy",
+    metaTitle: "Whiplash Injury | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Whiplash Injury. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Whiplash Injury.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Whiplash Injury.png",
+    keywords: ["Whiplash Injury", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Whiplash Injury</h2>
+      <p>Welcome to our comprehensive guide on Whiplash Injury. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Whiplash Injury. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  },
+
+  {
+    slug: "winging-of-scapula",
+    title: "Winging of Scapula",
+    category: "Physiotherapy",
+    metaTitle: "Winging of Scapula | Physiotherapy in Dehradun",
+    metaDesc: "Learn all about Winging of Scapula. Expert physiotherapy insights and treatments.",
+    shortDesc: "Discover effective physiotherapy approaches and treatments for Winging of Scapula.",
+    publishedDate: "August 19, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "4 min read",
+    image: "/blog-section/Winging of Scapula.png",
+    keywords: ["Winging of Scapula", "physiotherapy", "treatment"],
+    content: `
+      <h2>Understanding Winging of Scapula</h2>
+      <p>Welcome to our comprehensive guide on Winging of Scapula. In this article, we'll explore the causes, symptoms, and effective physiotherapy treatments available.</p>
+      
+      <h3>Common Symptoms</h3>
+      <ul>
+        <li>Pain and discomfort in the affected area.</li>
+        <li>Restricted mobility and stiffness.</li>
+        <li>Swelling or inflammation.</li>
+      </ul>
+      
+      <h3>How Physiotherapy Can Help</h3>
+      <p>Physiotherapy plays a crucial role in managing and recovering from Winging of Scapula. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
+    `
+  }
 ];
