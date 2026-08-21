@@ -421,7 +421,7 @@ export default async function LocationDetailPage({ params }: Props) {
       <section className="py-16 bg-gradient-to-br from-slate-900 to-teal-900 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-5">
           <Reveal>
-            <span className="inline-block text-xs font-black tracking-widest text-teal-800 uppercase bg-teal-800/10 border border-teal-800/20 px-3.5 py-1.5 rounded-full mb-3">
+            <span className="inline-block text-xs font-black tracking-widest text-teal-400 uppercase bg-teal-800/10 border border-teal-800/20 px-3.5 py-1.5 rounded-full mb-3">
               BOOK A SESSION IN {location.name.toUpperCase()}
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
