@@ -40,6 +40,24 @@ export default async function BlogIndexPage({
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <nav
+              className="flex items-center gap-1.5 text-xs text-teal-300 flex-wrap"
+              aria-label="Breadcrumb"
+            >
+              <Link href="/" className="hover:text-white transition-colors">
+                Home
+              </Link>
+              <ChevronRight className="w-3 h-3 text-teal-500" />
+              <Link
+                href="/blog"
+                className="hover:text-white text-white transition-colors"
+              >
+                Blog
+              </Link>
+            </nav>
+          </Reveal>
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* LEFT: Content */}
             <div className="lg:col-span-7 space-y-6">
