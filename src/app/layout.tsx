@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${CLINIC_CONFIG.name} | Physiotherapy in Dehradun`,
     description: `Expert physiotherapy for back pain, stroke rehab, sports injuries & more in Dehradun. Book now.`
+  },
+  verification: {
+    google: CLINIC_CONFIG.analytics.googleSiteVerification,
   }
 };
 
