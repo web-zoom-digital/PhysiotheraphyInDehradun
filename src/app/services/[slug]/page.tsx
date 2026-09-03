@@ -12,6 +12,9 @@ import {
 } from "@/components/FramerWrapper";
 import { LeadForm } from "@/components/LeadForm";
 import { ClinicSchema } from "@/components/ClinicSchema";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { MedicalReviewBadge } from "@/components/MedicalReviewBadge";
+import { FAQSchema } from "@/components/FAQSchema";
 import {
   Phone,
   Calendar,
@@ -107,13 +110,13 @@ export default async function ServiceDetailPage({ params }: Props) {
         name={service.title}
         description={service.shortDesc}
       />
-      <ClinicSchema type="faq" faqs={service.faqs} />
-      <ClinicSchema
-        type="breadcrumb"
-        breadcrumbs={[
-          { name: "Home", item: "/" },
-          { name: "Services", item: "/services/physiotherapy-in-dehradun" },
-          { name: service.title, item: `/services/${service.slug}` },
+      <FAQSchema faqs={service.faqs} />
+
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb
+        items={[
+          { label: "Services", url: "/services" },
+          { label: service.title, url: `/services/${service.slug}` },
         ]}
       />
 
@@ -233,6 +236,17 @@ export default async function ServiceDetailPage({ params }: Props) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             {/* LEFT: Main Content */}
             <div className="lg:col-span-7 space-y-14">
+              {/* Medical Review & YMYL E-E-A-T Badge */}
+              <MedicalReviewBadge />
+
+              {/* AEO Concise Summary Box for AI Search */}
+              <div className="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+                <h3 className="text-xs font-bold uppercase tracking-wider text-teal-700">Quick Clinical Overview (AEO Summary)</h3>
+                <p className="text-sm font-medium text-slate-800 leading-relaxed">
+                  <strong>{service.title} in Dehradun</strong> is an evidence-based rehabilitation program provided by senior consultant physiotherapists at {CLINIC_CONFIG.name}. It focuses on relief, joint mobility, muscle re-education, and long-term functional recovery. Treatment is available both in-clinic at Rajpur Road & Bhaniyawala and via home visit sessions across Dehradun.
+                </p>
+              </div>
+
               {/* What This Treats / Key Benefits */}
               <section aria-labelledby="benefits-heading">
                 <Reveal>

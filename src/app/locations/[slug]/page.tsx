@@ -8,6 +8,8 @@ import { CLINIC_CONFIG } from "@/config/clinic";
 import { Reveal, StaggerContainer, StaggerItem, FaqAccordion } from "@/components/FramerWrapper";
 import { LeadForm } from "@/components/LeadForm";
 import { ClinicSchema } from "@/components/ClinicSchema";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { FAQSchema } from "@/components/FAQSchema";
 import {
   Phone, CheckCircle2, ChevronRight, MapPin, Landmark, ShieldCheck,
   MessageSquare, Calendar, Star, Activity, Bone, Brain, ArrowRight,
@@ -86,12 +88,15 @@ export default async function LocationDetailPage({ params }: Props) {
         name={location.name}
         description={location.metaDescription}
       />
-      <ClinicSchema type="faq" faqs={location.faqs} />
-      <ClinicSchema type="breadcrumb" breadcrumbs={[
-        { name: "Home", item: "/" },
-        { name: "Locations", item: "/locations" },
-        { name: `Physiotherapy in ${location.name}`, item: `/locations/${location.slug}` }
-      ]} />
+      <FAQSchema faqs={location.faqs} />
+
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb
+        items={[
+          { label: "Locations", url: "/locations" },
+          { label: `Physiotherapy in ${location.name}`, url: `/locations/${location.slug}` },
+        ]}
+      />
 
       {/* ── HERO SECTION ── */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 py-16 sm:py-24 text-white">
