@@ -59,7 +59,8 @@ export const CLINIC_CONFIG = {
     }
   ],
   analytics: {
-    googleAnalyticsId: "G-XXXXXXXXXX",
+    googleAnalyticsId: "G-LB2D4HHGE5",
+    googleSiteVerification: "Ltw2K0v1Ga1GKe0RCrTG8AQowMnZUIFj0ILIfo9LQMk",
     googleTagManagerId: "GTM-XXXXXXX",
     microsoftClarityId: "xxxxxxxxxx",
   }
