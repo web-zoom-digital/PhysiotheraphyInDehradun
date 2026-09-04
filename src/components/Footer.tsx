@@ -1,78 +1,99 @@
 import React from "react";
 import Link from "next/link";
 import { CLINIC_CONFIG } from "@/config/clinic";
-import { Mail, Phone, Clock, MapPin } from "lucide-react";
+import { Mail, Phone, Clock, ArrowRight } from "lucide-react";
 
 export const Footer: React.FC = () => {
-  const navLinks = [
+  const quickLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Doctors", href: "/doctor" },
     { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
+    { name: "Doctors", href: "/doctor" },
+    { name: "Contact Us", href: "/contact" },
     { name: "Book Appointment", href: "/book-appointment" },
   ];
 
+  const serviceLinks = [
+    { name: "Physiotherapy in Dehradun", href: "/services/physiotherapy-in-dehradun" },
+    { name: "Home Visit Physiotherapy", href: "/home-visit-physiotherapy" },
+    { name: "Stroke Rehabilitation", href: "/services/stroke-rehabilitation-dehradun" },
+    { name: "Sports Injury Treatment", href: "/services/sports-injury-physiotherapy-dehradun" },
+    { name: "Paralysis Treatment", href: "/services/paralysis-treatment-dehradun" },
+    { name: "Chiropractic Treatment", href: "/services/chiropractic-chiropractor-dehradun" },
+    { name: "Back Pain Treatment", href: "/services/back-pain-treatment-dehradun" },
+    { name: "Dry Needling Therapy", href: "/services/dry-needling-therapy-dehradun" },
+  ];
+
+  const locationLinks = [
+    { name: "Rajpur Road", href: "/locations/rajpur-road" },
+    { name: "GMS Road", href: "/locations/gms-road" },
+    { name: "Sahastradhara Road", href: "/locations/sahastradhara-road" },
+    { name: "Jakhan", href: "/locations/jakhan" },
+    { name: "Vasant Vihar", href: "/locations/vasant-vihar" },
+    { name: "Dalanwala", href: "/locations/dalanwala" },
+    { name: "Patel Nagar", href: "/locations/patel-nagar" },
+    { name: "Prem Nagar", href: "/locations/prem-nagar" },
+  ];
+
   return (
-    <footer className="bg-teal-800 text-white pt-16 pb-28 lg:pb-12">
+    <footer className="bg-teal-800 text-white pt-10 pb-20 lg:pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8">
           {/* Clinic Info */}
-          <div className="lg:col-span-5 space-y-6">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-2xl bg-white text-teal-800 flex items-center justify-center font-black text-xl shadow-lg">
+          <div className="lg:col-span-3 space-y-3.5">
+            <Link href="/" className="flex items-center gap-2.5">
+              <div className="w-9 h-9 rounded-xl bg-white text-teal-800 flex items-center justify-center font-black text-lg shadow-md">
                 P
               </div>
-
-              <span className="text-xl font-black tracking-tight text-white">
+              <h3 className="text-base font-black tracking-tight text-white">
                 {CLINIC_CONFIG.name}
-              </span>
+              </h3>
             </Link>
 
-            <p className="text-sm leading-relaxed max-w-md text-white">
+            <p className="text-xs leading-relaxed text-white opacity-95">
               Dehradun's trusted physiotherapy and rehabilitation clinic.
               Providing advanced manual therapy, stroke rehabilitation, sports
               injury treatment and home physiotherapy services.
             </p>
 
-            {/* Contact */}
-            <div className="space-y-3 text-sm">
-              <div className="flex items-center gap-3">
-                <Clock className="w-5 h-5 text-white" />
-                <span className="text-teal-50">
+            {/* Contact Details */}
+            <div className="space-y-2 text-xs">
+              <div className="flex items-center gap-2">
+                <Clock className="w-3.5 h-3.5 text-white shrink-0" />
+                <span className="text-white">
                   Mon-Sat: 9 AM - 10 PM | Sun: 10 AM - 6 PM
                 </span>
               </div>
 
-              <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-white" />
+              <div className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-white shrink-0" />
                 <a
                   href={CLINIC_CONFIG.contact.phoneUrl}
-                  className="hover:text-white text-teal-50 transition"
+                  className="hover:underline text-white transition"
                 >
                   {CLINIC_CONFIG.contact.phone}
                 </a>
               </div>
 
-              <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-white" />
+              <div className="flex items-center gap-2">
+                <Mail className="w-3.5 h-3.5 text-white shrink-0" />
                 <a
                   href={`mailto:${CLINIC_CONFIG.contact.email}`}
-                  className="hover:text-white text-teal-50 transition"
+                  className="hover:underline text-white transition break-all"
                 >
                   {CLINIC_CONFIG.contact.email}
                 </a>
               </div>
             </div>
 
-            {/* Social */}
-            <div className="flex gap-3">
+            {/* Social Icons */}
+            <div className="flex gap-2 pt-0.5">
               <a
                 href="https://www.facebook.com/people/RonEx-Physiotherapy-Rehabilitation-centre/61582957640581/#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-teal-800 transition"
+                aria-label="Facebook Page"
+                className="w-8 h-8 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-xs hover:bg-white hover:text-teal-800 transition"
               >
                 f
               </a>
@@ -81,44 +102,110 @@ export const Footer: React.FC = () => {
                 href="https://www.instagram.com/ronex_physiotherapy/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-teal-800 transition"
+                aria-label="Instagram Profile"
+                className="w-8 h-8 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-xs hover:bg-white hover:text-teal-800 transition"
               >
                 ◎
               </a>
             </div>
           </div>
 
-          {/* Navigation */}
-          <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-teal-100">
-              Quick Navigation
-            </h4>
-
-            <ul className="flex flex-col gap-2.5 text-sm font-medium">
-              {navLinks.map((link) => (
+          {/* Navigation (About, Blog, etc) */}
+          <div className="lg:col-span-2 space-y-2.5">
+            <h3 className="text-xs font-bold text-white uppercase tracking-wider border-b border-white/20 pb-1.5">
+              Navigation
+            </h3>
+            <ul className="flex flex-col gap-1.5">
+              {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-teal-50 hover:text-white transition"
-                  >
-                    {link.name}
-                  </Link>
+                  <p className="text-xs text-white">
+                    <Link
+                      href={link.href}
+                      className="text-white hover:text-teal-200 transition-colors inline-block"
+                    >
+                      {link.name}
+                    </Link>
+                  </p>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Maps */}
-          <div className="lg:col-span-4 space-y-4">
-            {/* Main Map */}
+          {/* Services Column */}
+          <div className="lg:col-span-3 space-y-2.5">
+            <h3 className="text-xs font-bold text-white uppercase tracking-wider border-b border-white/20 pb-1.5">
+              Services
+            </h3>
+            <ul className="flex flex-col gap-1.5">
+              {serviceLinks.map((service) => (
+                <li key={service.name}>
+                  <p className="text-xs text-white">
+                    <Link
+                      href={service.href}
+                      className="text-white hover:text-teal-200 transition-colors inline-block"
+                    >
+                      {service.name}
+                    </Link>
+                  </p>
+                </li>
+              ))}
+              <li>
+                <p className="text-xs font-semibold text-teal-200 mt-0.5">
+                  <Link
+                    href="/services"
+                    className="hover:text-white flex items-center gap-1 transition-colors"
+                  >
+                    View All Services <ArrowRight className="w-3 h-3" />
+                  </Link>
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          {/* Locations Column */}
+          <div className="lg:col-span-2 space-y-2.5">
+            <h3 className="text-xs font-bold text-white uppercase tracking-wider border-b border-white/20 pb-1.5">
+              Locations
+            </h3>
+            <ul className="flex flex-col gap-1.5">
+              {locationLinks.map((location) => (
+                <li key={location.name}>
+                  <p className="text-xs text-white">
+                    <Link
+                      href={location.href}
+                      className="text-white hover:text-teal-200 transition-colors inline-block"
+                    >
+                      {location.name}
+                    </Link>
+                  </p>
+                </li>
+              ))}
+              <li>
+                <p className="text-xs font-semibold text-teal-200 mt-0.5">
+                  <Link
+                    href="/locations"
+                    className="hover:text-white flex items-center gap-1 transition-colors"
+                  >
+                    View All Locations <ArrowRight className="w-3 h-3" />
+                  </Link>
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          {/* Maps Column */}
+          <div className="lg:col-span-2 space-y-2.5">
+            <h3 className="text-xs font-bold text-white uppercase tracking-wider border-b border-white/20 pb-1.5">
+              Clinic Location
+            </h3>
             <div>
-              <h4 className="font-bold text-white uppercase text-sm">
+              <h3 className="font-semibold text-white text-xs">
                 Rajpur Road Clinic
-              </h4>
-              <p className="text-sm text-white mt-1">Dehradun, Uttarakhand</p>
+              </h3>
+              <p className="text-[11px] text-white opacity-90">Dehradun, Uttarakhand</p>
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-white/20 shadow-xl h-52">
+            <div className="overflow-hidden rounded-xl border border-white/20 shadow-md h-36">
               <iframe
                 title="Physiotherapy Dehradun"
                 src={CLINIC_CONFIG.contact.googleMapRajpurRoad}
@@ -132,22 +219,22 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-white/20 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-teal-100">
+        <div className="mt-8 pt-6 border-t border-white/20 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-white">
           <p>
             © {new Date().getFullYear()} {CLINIC_CONFIG.name}. All Rights
             Reserved.
           </p>
 
-          <div className="flex gap-5">
-            <Link href="/privacy" className="hover:text-white">
+          <div className="flex gap-4">
+            <Link href="/privacy" className="hover:text-teal-200 transition">
               Privacy Policy
             </Link>
 
-            <Link href="/terms" className="hover:text-white">
+            <Link href="/terms" className="hover:text-teal-200 transition">
               Terms
             </Link>
 
-            <Link href="/sitemap.xml" className="hover:text-white">
+            <Link href="/sitemap.xml" className="hover:text-teal-200 transition">
               Sitemap
             </Link>
           </div>
@@ -156,3 +243,5 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
+
+
