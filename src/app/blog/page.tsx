@@ -4,7 +4,7 @@ import { BLOGS_DATA } from "@/config/blogs";
 import { CLINIC_CONFIG } from "@/config/clinic";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/FramerWrapper";
 import { ClinicSchema } from "@/components/ClinicSchema";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { Clock, Calendar, ArrowRight, MessageSquare, Phone,ChevronLeft, ChevronRight } from "lucide-react";
 
 export const metadata = {
   title: "Physiotherapy Blog & Recovery Guides | Physiotherapy Dehradun",
@@ -31,31 +31,95 @@ export default async function BlogIndexPage({
 
   return (
     <>
-      <ClinicSchema type="breadcrumb" breadcrumbs={[
-        { name: "Home", item: "/" },
-        { name: "Blog", item: "/blog" }
-      ]} />
-
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20 pb-20 sm:pt-25 sm:pb-40 min-h-[90vh] flex items-center">
-        <div className="absolute inset-0 min-h-[80vh] overflow-hidden">
-          <img
-            src="/blog/best-physiotherapy.png"
-            alt="Physiotherapy Blog Dehradun"
-            className="w-full h-full object-cover object-center opacity-80"
-          />
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 py-16 sm:py-24 text-white">
+        {/* Background Decorations */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-brand/20 blur-3xl rounded-full -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-teal-800/10 blur-3xl rounded-full translate-y-1/2 -translate-x-1/2" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <Reveal delay={0.1} yOffset={25}>
-            <h1 className="text-2xl sm:text-3xl lg:text-4.5xl font-bold text-white">
-              Physiotherapy Blog<br />
-              <span className="text-teal-800">&amp; Recovery Guides</span>
-            </h1>
-            <p className="text-slate-300 mt-3 text-sm sm:text-base max-w-xl">
-              Evidence-based exercise guides, clinical timelines, and health advice from our physiotherapy team in Dehradun.
-            </p>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Reveal>
+            <nav
+              className="flex items-center gap-1.5 text-xs text-teal-300 flex-wrap"
+              aria-label="Breadcrumb"
+            >
+              <Link href="/" className="hover:text-white transition-colors">
+                Home
+              </Link>
+              <ChevronRight className="w-3 h-3 text-teal-500" />
+              <Link
+                href="/blog"
+                className="hover:text-white text-white transition-colors"
+              >
+                Blog
+              </Link>
+            </nav>
           </Reveal>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* LEFT: Content */}
+            <div className="lg:col-span-7 space-y-6">
+              <Reveal delay={0.05}>
+                <span className="inline-block text-xs font-black tracking-widest text-teal-400 uppercase bg-teal-800/10 border border-teal-800/20 px-3.5 py-1.5 rounded-full">
+                  Physiotherapy Blog &amp; Recovery Guides
+                </span>
+              </Reveal>
+
+              <Reveal delay={0.1}>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+                  Health &amp; Rehabilitation
+                  <span className="block text-teal-400 text-2xl sm:text-3xl mt-1">
+                    Blog &amp; Articles
+                  </span>
+                </h1>
+              </Reveal>
+
+              <Reveal delay={0.15}>
+                <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+                  Evidence-based exercise guides, clinical timelines, and health advice from our physiotherapy team in Dehradun.
+                </p>
+              </Reveal>
+
+              {/* CTA Buttons */}
+              <Reveal delay={0.2}>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    // href={waUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 px-7 py-4 bg-primary-brand text-white font-bold rounded-full hover:bg-primary-hover shadow-lg hover:scale-105 active:scale-95 transition-all text-sm"
+                  >
+                    <MessageSquare className="w-4 h-4" />
+                    Book on WhatsApp
+                  </a>
+                  <a
+                    href={CLINIC_CONFIG.contact.phoneUrl}
+                    className="flex items-center justify-center gap-2 px-7 py-4 border border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all text-sm"
+                  >
+                    <Phone className="w-4 h-4" />
+                    Call {CLINIC_CONFIG.contact.phone}
+                  </a>
+                </div>
+              </Reveal>
+
+            </div>
+
+            {/* RIGHT: Image */}
+            <div className="lg:col-span-5">
+              <Reveal delay={0.3}>
+                <div className="relative rounded-3xl overflow-hidden border border-white/20 shadow-2xl min-h-[40vh] sm:min-h-[50vh] lg:min-h-[60vh]">
+                  <img
+                    src="/services/sports_rehab.png"
+                    alt="Physiotherapy Blog Dehradun"
+                    className="w-full h-full object-cover absolute inset-0"
+                  />
+                  
+                </div>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
 

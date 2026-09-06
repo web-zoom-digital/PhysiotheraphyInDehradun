@@ -7,6 +7,9 @@ import { CLINIC_CONFIG } from "@/config/clinic";
 import { Reveal, FaqAccordion } from "@/components/FramerWrapper";
 import { LeadForm } from "@/components/LeadForm";
 import { ClinicSchema } from "@/components/ClinicSchema";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { MedicalReviewBadge } from "@/components/MedicalReviewBadge";
+import { FAQSchema } from "@/components/FAQSchema";
 import { Phone, Calendar, ArrowRight, ChevronRight, CheckCircle2, ShieldAlert, Sparkles } from "lucide-react";
 
 interface Props {
@@ -75,12 +78,15 @@ export default async function ConditionDetailPage({ params }: Props) {
         name={condition.title} 
         description={condition.description} 
       />
-      <ClinicSchema type="faq" faqs={condition.faqs} />
-      <ClinicSchema type="breadcrumb" breadcrumbs={[
-        { name: "Home", item: "/" },
-        { name: "Conditions", item: "/conditions/back-pain" },
-        { name: condition.title, item: `/conditions/${condition.slug}` }
-      ]} />
+      <FAQSchema faqs={condition.faqs} />
+
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb
+        items={[
+          { label: "Conditions", url: "/conditions/back-pain" },
+          { label: condition.title, url: `/conditions/${condition.slug}` },
+        ]}
+      />
 
       {/* Hero Header */}
       <section className="bg-gradient-to-tr from-primary-brand to-brand-blue py-16 text-white overflow-hidden">
@@ -128,6 +134,9 @@ export default async function ConditionDetailPage({ params }: Props) {
           {/* Left Column: Details */}
           <div className="lg:col-span-8 space-y-10">
             
+            {/* Medical Review & YMYL E-E-A-T Badge */}
+            <MedicalReviewBadge />
+
             {/* HTML Description */}
             <div className="prose max-w-none text-slate-500 text-sm leading-relaxed space-y-4"
               dangerouslySetInnerHTML={{ __html: condition.content }}

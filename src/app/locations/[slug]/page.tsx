@@ -8,6 +8,8 @@ import { CLINIC_CONFIG } from "@/config/clinic";
 import { Reveal, StaggerContainer, StaggerItem, FaqAccordion } from "@/components/FramerWrapper";
 import { LeadForm } from "@/components/LeadForm";
 import { ClinicSchema } from "@/components/ClinicSchema";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { FAQSchema } from "@/components/FAQSchema";
 import {
   Phone, CheckCircle2, ChevronRight, MapPin, Landmark, ShieldCheck,
   MessageSquare, Calendar, Star, Activity, Bone, Brain, ArrowRight,
@@ -86,12 +88,15 @@ export default async function LocationDetailPage({ params }: Props) {
         name={location.name}
         description={location.metaDescription}
       />
-      <ClinicSchema type="faq" faqs={location.faqs} />
-      <ClinicSchema type="breadcrumb" breadcrumbs={[
-        { name: "Home", item: "/" },
-        { name: "Locations", item: "/locations" },
-        { name: `Physiotherapy in ${location.name}`, item: `/locations/${location.slug}` }
-      ]} />
+      <FAQSchema faqs={location.faqs} />
+
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb
+        items={[
+          { label: "Locations", url: "/locations" },
+          { label: `Physiotherapy in ${location.name}`, url: `/locations/${location.slug}` },
+        ]}
+      />
 
       {/* ── HERO SECTION ── */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 py-16 sm:py-24 text-white">
@@ -199,7 +204,7 @@ export default async function LocationDetailPage({ params }: Props) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
 
             {/* LEFT: Main Content */}
-            <div className="lg:col-span-8 space-y-14">
+            <div className="lg:col-span-7 space-y-14">
 
               {/* Services Available in [Area] */}
               <section aria-labelledby="services-heading">
@@ -371,15 +376,16 @@ export default async function LocationDetailPage({ params }: Props) {
             </div>
 
             {/* RIGHT: Sticky Sidebar */}
-            <div className="lg:col-span-4 space-y-5 lg:sticky lg:top-24">
+            <div className="lg:col-span-5 space-y-5 lg:sticky lg:top-24">
 
               {/* Lead Booking Form */}
               <div className="bg-white rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.08)] border border-slate-100 overflow-hidden">
                 {/* Form header bar */}
                 <div className="bg-gradient-to-r from-teal-800 to-teal-800 px-6 py-5">
+                  <h2 className="text-white font-black text-base tracking-tight">Book a Consultation</h2>
                   <p className="text-teal-100 text-xs mt-1">Secure your slot — redirects to WhatsApp for instant confirmation.</p>
                 </div>
-                <div className="p-6">
+                <div className="p-8 sm:p-6">
                   <LeadForm />
                 </div>
               </div>
@@ -420,7 +426,7 @@ export default async function LocationDetailPage({ params }: Props) {
       <section className="py-16 bg-gradient-to-br from-slate-900 to-teal-900 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-5">
           <Reveal>
-            <span className="inline-block text-xs font-black tracking-widest text-teal-800 uppercase bg-teal-800/10 border border-teal-800/20 px-3.5 py-1.5 rounded-full mb-3">
+            <span className="inline-block text-xs font-black tracking-widest text-teal-400 uppercase bg-teal-800/10 border border-teal-800/20 px-3.5 py-1.5 rounded-full mb-3">
               BOOK A SESSION IN {location.name.toUpperCase()}
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">

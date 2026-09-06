@@ -59,8 +59,16 @@ export const CLINIC_CONFIG = {
     }
   ],
   analytics: {
-    googleAnalyticsId: "G-XXXXXXXXXX",
+    googleAnalyticsId: "G-LB2D4HHGE5",
+    googleSiteVerification: "Ltw2K0v1Ga1GKe0RCrTG8AQowMnZUIFj0ILIfo9LQMk",
     googleTagManagerId: "GTM-XXXXXXX",
     microsoftClarityId: "xxxxxxxxxx",
+    indexNowKey: "47ab56cfa5b6179c4342b95ddc0fd58c"
+  },
+  medicalReviewer: {
+    name: "Dr. Om Prakash, PT",
+    title: "Senior Consultant Physiotherapist & Director",
+    credentials: "BPT, MPT (Neurology & Rehabilitation), COMT",
+    lastReviewed: "2026-09-01"
   }
 };

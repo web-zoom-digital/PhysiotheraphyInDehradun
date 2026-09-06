@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CLINIC_CONFIG } from "@/config/clinic";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/FramerWrapper";
 import { ClinicSchema } from "@/components/ClinicSchema";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { Award, GraduationCap, CheckCircle, Stethoscope, MessageSquare, Phone, Calendar, Heart, Sparkles } from "lucide-react";
 
 export const metadata = {
@@ -62,10 +63,12 @@ export default function DoctorPage() {
 
   return (
     <>
-      <ClinicSchema type="breadcrumb" breadcrumbs={[
-        { name: "Home", item: "/" },
-        { name: "Our Doctors", item: "/doctor" }
-      ]} />
+      <ClinicSchema type="doctor" />
+      <Breadcrumb
+        items={[
+          { label: "Our Doctors", url: "/doctor" }
+        ]}
+      />
 
       {/* 1. HERO SECTION */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 py-16 sm:py-24 text-white">
