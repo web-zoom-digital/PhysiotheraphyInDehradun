@@ -302,10 +302,17 @@ export default function HomePage() {
       <section className="relative overflow-hidden pt-20 pb-20 sm:pt-25 sm:pb-40 min-h-[70vh] sm:min-h-[90vh] flex items-center">
         {/* Background Image of Physiotherapy Center - Full Width */}
         <div className="absolute inset-0 overflow-hidden">
+          {/* Desktop Image */}
           <img
             src="/services/hero-section.png"
-            alt="Physiotherapy Clinic"
-            className="w-full h-full object-cover "
+            alt="Physiotherapy Clinic Desktop"
+            className="hidden sm:block w-full h-full object-cover"
+          />
+          {/* Mobile Image */}
+          <img
+            src="/services/hero-section-banner.png"
+            alt="Physiotherapy Clinic Mobile"
+            className="block sm:hidden w-full h-full object-cover"
           />
         </div>
         {/* Subtle Dark Overlay/Gradient behind text for high readability */}
