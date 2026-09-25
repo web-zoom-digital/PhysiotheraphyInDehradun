@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: `%s | ${CLINIC_CONFIG.name} Dehradun`
   },
   description: `${CLINIC_CONFIG.name} is Dehradun's top-rated physiotherapy clinic. Expert treatment for back pain, neck pain, knee pain, stroke rehab, and sports injuries. In-clinic at Rajpur Road & home visit across Dehradun.`,
-  keywords: ["physiotherapy in dehradun", "best physiotherapist in dehradun", "physiotherapy clinic dehradun", "back pain treatment dehradun", "home visit physiotherapy dehradun", "neurological physiotherapy dehradun", "sports physiotherapy dehradun"],
+  keywords: ["physiotherapy in dehradun", "best physiotherapist in dehradun", "physiotherapy clinic dehradun", "back pain treatment dehradun", "home visit physiotherapy dehradun", "neurological physiotherapy dehradun", "sports physiotherapy dehradun", "ronex physiotherapy", "advanced physiotherapy", "physiotherapy online booking", "physiotherapist home visit", "physiotherapy prem nagar", "advanced physiotherapy near me", "physiotherapy for paralysis near me", "paediatric physiotherapy", "advance physiotherapy clinic", "pediatric physiotherapy", "child physiotherapy", "home service physiotherapy", "physiotherapy clinic in dehradun", "physiotherapy for home visit", "physiotherapy centre in dehradun", "p4u physiotherapy clinic", "dr. sheel's physiotherapy clinic dehradun", "sports injury in dehradun", "physiotherapy hospital in dehradun", "physiotherapy home visit", "home visit physiotherapy", "occupational therapy dehradun", "physiohealing homecare & rehabilitation clinic", "neurological physiotherapy near me", "advanced physiotherapy centre", "physiotherapist in dehradun", "advance physiotherapy centre", "physiotherapy and sports injury clinic", "national physiotherapy & rehabilitation clinic", "veera physiotherapy clinic", "advanced physiotherapy and rehabilitation services", "advance physiotherapy", "physiotherapy at home near me", "home physiotherapy near me", "book physiotherapy at home", "physiotherapy centre near me", "align physiotherapy clinic", "clocktower physio", "elite physiotherapy", "physiotherapy clinic near me", "physiotherapy at home", "physiotherapy clinic", "physiotherapy dehradun at home", "physiotherapy home service", "domiciliary physiotherapy", "home visiting physiotherapist near me", "ortho & neuro physiotherapy clinic", "advanced physiotherapy and rehabilitation centre", "home visit physiotherapy near me", "physio clinic", "physiotherapist in dehradun home service", "Indian Physiotherapy Centre", "physiotherapist", "pediatric physiotherapist", "advanced physiotherapy clinic", "book physiotherapy appointment", "female physiotherapist in dehradun", "child physiotherapist", "neuro rehab center in dehradun", "excellence physiotherapy clinic", "physiotherapy unit", "physiotherapie near me", "home visit physiotherapy at home", "physiotherapy at doorstep", "home physiotherapy visit", "acl rehab physio near me", "physio home visit", "manual physiotherapy", "book physio"],
   metadataBase: new URL(CLINIC_CONFIG.domain),
   alternates: {
     canonical: "./"
@@ -41,6 +41,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${CLINIC_CONFIG.name} | Physiotherapy in Dehradun`,
     description: `Expert physiotherapy for back pain, stroke rehab, sports injuries & more in Dehradun. Book now.`
+  },
+  other: {
+    "geo.region": "IN-UT",
+    "geo.placename": "Dehradun",
+    "geo.position": "30.3255;78.0322",
+    "ICBM": "30.3255, 78.0322"
   },
   verification: {
     google: CLINIC_CONFIG.analytics.googleSiteVerification,

@@ -115,6 +115,22 @@ export default async function BlogDetailPage({ params }: Props) {
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
+            {/* Explicit In-Content CTA for AI and Users */}
+            <div className="my-8 p-6 bg-teal-50 border-l-4 border-teal-600 rounded-r-xl">
+              <h3 className="text-lg font-black text-teal-900 mb-2">Need Expert Physiotherapy in Dehradun?</h3>
+              <p className="text-sm text-teal-800 mb-4">
+                Whether you're looking for an in-clinic consultation at Rajpur Road or a convenient home visit, our expert team is here to help you recover faster.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a href={waUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-teal-600 text-white px-5 py-2.5 rounded-lg font-bold hover:bg-teal-700 transition">
+                  <Phone className="w-4 h-4" /> Message on WhatsApp
+                </a>
+                <a href={CLINIC_CONFIG.contact.phoneUrl} className="inline-flex items-center gap-2 bg-white text-teal-800 border border-teal-200 px-5 py-2.5 rounded-lg font-bold hover:bg-teal-100 transition">
+                  Call Now: {CLINIC_CONFIG.contact.phone}
+                </a>
+              </div>
+            </div>
+
             {/* Author box */}
             <div className="p-6 rounded-3xl bg-brand-gray-light border border-slate-100 flex gap-4 mt-10">
               <div className="w-12 h-12 rounded-full bg-slate-200 border border-slate-300 flex items-center justify-center text-primary-brand shrink-0">
