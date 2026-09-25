@@ -213,8 +213,6 @@ export default function HomePage() {
       text: "My frozen shoulder was affecting my daily work. After 10 sessions of targeted manual therapy and guided exercises, I have almost full range of motion back. Very happy with the results.",
     },
   ];
-    // Blog data is now dynamically fetched from BLOGS_DATA
-  ];
   const stats = [
     { target: 10000, suffix: "+", label: "Patients Recovered", decimals: 0 },
     {
