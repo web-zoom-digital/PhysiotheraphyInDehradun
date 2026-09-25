@@ -338,5 +338,85 @@ export const LOCATIONS_DATA: LocationItem[] = [
       <h3>Physiotherapy & Pain Rehabilitation near Clock Tower, Dehradun</h3>
       <p>Clock Tower is the central landmark of Dehradun. Our main clinic is situated right next to Clock Tower at Rajpur Road. We specialize in orthopedic care, neurological rehabilitation, and sports injury recovery with state-of-the-art facilities.</p>
     `
+  },
+  {
+    slug: "dharampur",
+    name: "Dharampur",
+    metaTitle: "Physiotherapy Clinic Near Me in Dharampur Dehradun | RonEx",
+    metaDescription: "Searching for 'advanced physiotherapy near me' in Dharampur? RonEx provides top-rated in-clinic and home visit physiotherapy. Call for an appointment.",
+    keywords: ["physiotherapy clinic near me", "advanced physiotherapy near me", "home visiting physiotherapist near me", "physiotherapist in dharampur dehradun"],
+    tagline: "Advanced Pain Relief & Physiotherapy near Dharampur",
+    homeVisitAvailable: true,
+    landmarks: ["Dharampur Chowk", "Nehru Colony", "Haridwar Road"],
+    faqs: [
+      {
+        question: "How can I find a physiotherapy centre near me in Dharampur?",
+        answer: "RonEx Physiotherapy is highly accessible from Dharampur. We offer an advanced physiotherapy centre nearby at Rajpur Road, and we provide specialized home visits directly to your doorstep in Dharampur."
+      }
+    ],
+    content: `
+      <h3>Advanced Physiotherapy Near You in Dharampur</h3>
+      <p>Dharampur is a bustling commercial and residential area. If you are looking for an <strong>advanced physiotherapy near me</strong> or a reliable <em>home visiting physiotherapist near me</em>, our expert team is ready to assist. We specialize in treating acute back pain, frozen shoulder, and sports injuries using modern electrotherapy and manual adjustments.</p>
+    `
+  },
+  {
+    slug: "nehru-colony",
+    name: "Nehru Colony",
+    metaTitle: "Physiotherapy Centre Near Me | Nehru Colony Dehradun",
+    metaDescription: "Find a premium physiotherapy centre near Nehru Colony. Get expert treatment for knee pain, paralysis, and slip disc. Home visits available.",
+    keywords: ["physiotherapy centre near me", "physiotherapie near me", "home visit physiotherapy near me", "physiotherapist in nehru colony"],
+    tagline: "Expert Rehabilitation & Post-Surgery Care in Nehru Colony",
+    homeVisitAvailable: true,
+    landmarks: ["Nehru Colony Fountain", "LIC Building", "Rispana Pul"],
+    faqs: [
+      {
+        question: "Do you offer physiotherapy for paralysis near me in Nehru Colony?",
+        answer: "Yes, we specialize in neuro-rehabilitation and provide home visits for stroke and paralysis patients in Nehru Colony."
+      }
+    ],
+    content: `
+      <h3>Expert Physiotherapy Services in Nehru Colony</h3>
+      <p>Nehru Colony is one of Dehradun's largest residential layouts. Patients often search for a reliable <strong>physiotherapy centre near me</strong> to avoid long commutes while in pain. We bring our premium physical therapy services directly to your home in Nehru Colony, ensuring consistent, high-quality care for post-operative recovery and paralysis.</p>
+    `
+  },
+  {
+    slug: "raipur",
+    name: "Raipur",
+    metaTitle: "Physiotherapist in Raipur Dehradun | Sports Injury Rehab",
+    metaDescription: "Top-rated physiotherapist near Raipur Dehradun. Get advanced ACL rehab, sports injury recovery, and home physiotherapy sessions.",
+    keywords: ["acl rehab physio near me", "sports injury physiotherapist near me", "physiotherapist in raipur dehradun", "physiotherapy clinic raipur"],
+    tagline: "Elite Sports Rehab and Orthopedic Care in Raipur",
+    homeVisitAvailable: true,
+    landmarks: ["Maharana Pratap Sports College", "Raipur Chowk", "Ordnance Factory"],
+    faqs: [
+      {
+        question: "Can I find an ACL rehab physio near me in Raipur?",
+        answer: "Yes, our sports rehab experts provide specialized ACL post-op rehabilitation for athletes and residents near Raipur and Maharana Pratap Sports College."
+      }
+    ],
+    content: `
+      <h3>Sports Injury and Orthopedic Rehab in Raipur, Dehradun</h3>
+      <p>Given the proximity to sports facilities like the Maharana Pratap Sports College, Raipur sees a lot of sports-related injuries. If you are looking for an <strong>acl rehab physio near me</strong>, our clinic offers world-class sports rehabilitation. We focus on strength, agility, and a safe return to sports.</p>
+    `
+  },
+  {
+    slug: "majra",
+    name: "Majra",
+    metaTitle: "Home Visit Physiotherapy Near Me in Majra Dehradun",
+    metaDescription: "Book the best home visit physiotherapy near Majra, Dehradun. Expert relief for back pain, sciatica, and joint stiffness.",
+    keywords: ["home visit physiotherapy near me", "physiotherapy clinic near me", "physiotherapist in majra dehradun"],
+    tagline: "Convenient In-Home Physiotherapy Care in Majra",
+    homeVisitAvailable: true,
+    landmarks: ["ISBT", "Shimla Bypass Road", "Saharanpur Road"],
+    faqs: [
+      {
+        question: "How quickly can a home visiting physiotherapist reach Majra?",
+        answer: "Our home visit teams are very active around the Majra and ISBT areas, allowing us to schedule prompt sessions based on your availability."
+      }
+    ],
+    content: `
+      <h3>Dedicated Home Physiotherapy in Majra</h3>
+      <p>Traffic and travel can worsen orthopedic conditions like sciatica or slip discs. For residents of Majra and surrounding areas, our <strong>home visit physiotherapy near me</strong> service is the perfect solution. You receive the same standard of clinical care, including electrotherapy and manual mobilization, right in your living room.</p>
+    `
   }
 ];

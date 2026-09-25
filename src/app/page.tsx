@@ -168,6 +168,11 @@ export default function HomePage() {
       answer:
         "Our consultation starts from ₹400-500. We also offer highly affordable 10-session and 15-session chronic recovery packages for stroke rehabilitation, post-surgery recovery, and arthritis management.",
     },
+    {
+      question: "How can I find a physiotherapy clinic near me in Dehradun?",
+      answer:
+        "If you are searching for an advanced physiotherapy centre or the best physiotherapist in Dehradun, our central location at Rajpur Road (near Clock Tower) makes us easily accessible. We also provide 'home visiting physiotherapist near me' services across all major areas like Dharampur, Majra, Raipur, and Nehru Colony.",
+    },
   ];
 
   const testimonials = [
@@ -208,73 +213,7 @@ export default function HomePage() {
       text: "My frozen shoulder was affecting my daily work. After 10 sessions of targeted manual therapy and guided exercises, I have almost full range of motion back. Very happy with the results.",
     },
   ];
-  const blogPosts = [
-    {
-      slug: "5-signs-you-need-physiotherapy",
-      title: "5 Signs You Need Physiotherapy Right Now",
-      excerpt:
-        "Persistent pain, reduced mobility, or stiffness after an injury? Learn the key warning signs that indicate it's time to consult a physiotherapist in Dehradun.",
-      image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
-      category: "Wellness Tips",
-      date: "Aug 10, 2026",
-      readTime: "5 min read",
-    },
-    {
-      slug: "post-surgery-recovery-guide",
-      title: "Complete Guide to Post-Surgery Recovery",
-      excerpt:
-        "Recovering from surgery? Discover the essential physiotherapy exercises and precautions to speed up healing and regain full mobility safely.",
-      image:
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80",
-      category: "Recovery",
-      date: "Aug 5, 2026",
-      readTime: "7 min read",
-    },
-    {
-      slug: "neuro-rehab-stroke-recovery",
-      title: "Neuro Rehabilitation: A Path to Stroke Recovery",
-      excerpt:
-        "Explore how specialized neurological physiotherapy helps stroke survivors regain movement, balance, and independence step by step.",
-      image:
-        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80",
-      category: "Neuro Care",
-      date: "Jul 28, 2026",
-      readTime: "6 min read",
-    },
-    {
-      slug: "back-pain-causes-treatment",
-      title: "Back Pain in Dehradun: Causes & Treatment Options",
-      excerpt:
-        "Chronic back pain affects millions. Understand the common causes — from sedentary lifestyles to disc issues — and how physiotherapy can help.",
-      image:
-        "/services/back-pain-dehradun.png",
-      category: "Back Pain",
-      date: "Jul 20, 2026",
-      readTime: "6 min read",
-    },
-    {
-      slug: "sports-injury-prevention-tips",
-      title: "Sports Injury Prevention: Tips From Our Physiotherapists",
-      excerpt:
-        "Whether you're a weekend athlete or a competitive player, these physiotherapy-backed tips will help you avoid common sports injuries.",
-      image:
-        "/services/sport-pain-dehradun.png",
-      category: "Sports Care",
-      date: "Jul 12, 2026",
-      readTime: "4 min read",
-    },
-    {
-      slug: "pediatric-physiotherapy-benefits",
-      title: "How Pediatric Physiotherapy Supports Child Development",
-      excerpt:
-        "From delayed milestones to cerebral palsy, learn how early pediatric physiotherapy intervention can make a lasting difference for children.",
-      image:
-        "/services/child-support-dehradun.png",
-      category: "Pediatric Care",
-      date: "Jul 3, 2026",
-      readTime: "5 min read",
-    },
+    // Blog data is now dynamically fetched from BLOGS_DATA
   ];
   const stats = [
     { target: 10000, suffix: "+", label: "Patients Recovered", decimals: 0 },
@@ -719,7 +658,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
+            {[...BLOGS_DATA].reverse().slice(0, 6).map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
@@ -729,7 +668,7 @@ export default function HomePage() {
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-full object-center group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
                   <span className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-primary-brand text-[11px]  px-3 py-1 rounded-full shadow-sm">
                     {post.category}
@@ -742,7 +681,7 @@ export default function HomePage() {
                   </h3>
 
                   <p className="text-sm text-slate-500 leading-relaxed line-clamp-3 mb-4">
-                    {post.excerpt}
+                    {post.shortDesc}
                   </p>
 
                   <span className="inline-flex items-center gap-1.5 text-xs font-bold text-primary-brand">

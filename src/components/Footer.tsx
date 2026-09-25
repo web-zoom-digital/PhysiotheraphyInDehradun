@@ -239,6 +239,13 @@ export const Footer: React.FC = () => {
             </Link>
           </div>
         </div>
+
+        {/* SEO Keywords - Visually subtle but indexable */}
+        <div className="mt-6 text-[10px] text-teal-800/20 text-center leading-relaxed">
+          <p>
+            <strong>Top searches:</strong> ronex physiotherapy, advanced physiotherapy, physiotherapy online booking, physiotherapist home visit, physiotherapy prem nagar, advanced physiotherapy near me, physiotherapy for paralysis near me, paediatric physiotherapy, advance physiotherapy clinic, pediatric physiotherapy, child physiotherapy, home service physiotherapy, physiotherapy clinic in dehradun, physiotherapy for home visit, physiotherapy centre in dehradun, p4u physiotherapy clinic, physiotherapy in dehradun, dr. sheel's physiotherapy clinic dehradun, sports injury in dehradun, physiotherapy hospital in dehradun, physiotherapy home visit, best physiotherapist in dehradun, home visit physiotherapy, occupational therapy dehradun, physiohealing homecare & rehabilitation clinic, neurological physiotherapy near me, advanced physiotherapy centre, physiotherapist in dehradun, advance physiotherapy centre, physiotherapy and sports injury clinic, national physiotherapy & rehabilitation clinic, veera physiotherapy clinic, advanced physiotherapy and rehabilitation services, best physiotherapy in dehradun, advance physiotherapy, physiotherapy at home near me, home physiotherapy near me, book physiotherapy at home, physiotherapy centre near me, align physiotherapy clinic, clocktower physio, elite physiotherapy, physiotherapy clinic near me, physiotherapy at home, physiotherapy clinic, physiotherapy dehradun at home, physiotherapy home service, domiciliary physiotherapy, home visiting physiotherapist near me, ortho & neuro physiotherapy clinic, advanced physiotherapy and rehabilitation centre, home visit physiotherapy near me, physio clinic, physiotherapist in dehradun home service, Indian Physiotherapy Centre, physiotherapist, pediatric physiotherapist, advanced physiotherapy clinic, book physiotherapy appointment, female physiotherapist in dehradun, child physiotherapist, neuro rehab center in dehradun, excellence physiotherapy clinic, physiotherapy unit, physiotherapie near me, home visit physiotherapy at home, physiotherapy at doorstep, home physiotherapy visit, acl rehab physio near me, physio home visit, manual physiotherapy, book physio.
+          </p>
+        </div>
       </div>
     </footer>
   );

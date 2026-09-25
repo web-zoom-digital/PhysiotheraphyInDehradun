@@ -123,7 +123,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDesc: "Receive expert physiotherapy sessions in the absolute comfort and privacy of your home in Dehradun. Ideal for post-surgery, elderly, and stroke patients.",
     metaTitle: "Home Visit Physiotherapy in Dehradun | RonEx",
     metaDesc: "Book home visit physiotherapy in Dehradun. Get professional treatment for stroke, paralysis, knee replacement, and back pain directly in your home.",
-    keywords: ["home physiotherapy dehradun", "physiotherapist at home dehradun", "home visit physiotherapy dehradun"],
+    keywords: ["home physiotherapy dehradun", "physiotherapist at home dehradun", "home visit physiotherapy dehradun", "physiotherapist home visit", "physiotherapy for home visit", "physiotherapy home visit", "home visit physiotherapy", "book physiotherapy at home", "physiotherapy dehradun at home", "physiotherapy home service", "domiciliary physiotherapy", "home visiting physiotherapist near me", "home visit physiotherapy near me", "physiotherapist in dehradun home service", "home visit physiotherapy at home", "physiotherapy at doorstep", "home physiotherapy visit", "physio home visit"],
     benefits: [
       "Maximum comfort without travel fatigue",
       "Safe and hygienic treatment environment",
@@ -159,7 +159,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDesc: "Rebuild motor function, balance, and independence. Targeted therapy for Stroke, Parkinson's, Multiple Sclerosis, and Spinal Cord Injuries in Dehradun.",
     metaTitle: "Neurological Physiotherapy in Dehradun | Stroke & Nerve Rehab",
     metaDesc: "Advanced neurological physiotherapy in Dehradun at RonEx. Specialized programs for stroke rehabilitation, Parkinson's, and paralysis recovery.",
-    keywords: ["neuro physiotherapy dehradun", "neurological rehabilitation dehradun", "paralysis treatment dehradun"],
+    keywords: ["neuro physiotherapy dehradun", "neurological rehabilitation dehradun", "paralysis treatment dehradun", "neurological physiotherapy near me", "physiotherapy for paralysis near me", "neuro rehab center in dehradun", "ortho & neuro physiotherapy clinic"],
     benefits: [
       "Re-education of motor pathways (neuroplasticity)",
       "Marked improvement in static and dynamic balance",
@@ -195,7 +195,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDesc: "Recover faster and return to peak athletic performance. Expert care for ACL tears, ligament injuries, muscle strains, and biomechanical corrections.",
     metaTitle: "Sports Physiotherapy in Dehradun | ACL & Athletic Rehab",
     metaDesc: "Ranked top sports physiotherapy in Dehradun. Get evidence-based treatment for ligament tears, sprains, and kinetic chain optimizations. Call now.",
-    keywords: ["sports physiotherapy dehradun", "sports injury clinic dehradun", "acl rehabilitation dehradun"],
+    keywords: ["sports physiotherapy dehradun", "sports injury clinic dehradun", "acl rehabilitation dehradun", "sports injury in dehradun", "physiotherapy and sports injury clinic", "acl rehab physio near me"],
     benefits: [
       "Accelerated tissue healing and repair",
       "Correction of faulty biomechanics & movement patterns",
@@ -259,7 +259,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDesc: "Specialized rehabilitation for developmental delays, Cerebral Palsy, and pediatric movement disorders. Nurturing children toward independence.",
     metaTitle: "Pediatric Physiotherapy in Dehradun | Child Developmental Care",
     metaDesc: "Caring pediatric physiotherapy in Dehradun. Expert intervention for developmental delays, cerebral palsy, and juvenile posture issues.",
-    keywords: ["pediatric physiotherapy dehradun", "cerebral palsy treatment dehradun", "developmental delay physiotherapist dehradun"],
+    keywords: ["pediatric physiotherapy dehradun", "cerebral palsy treatment dehradun", "developmental delay physiotherapist dehradun", "child physiotherapist", "pediatric physiotherapist", "paediatric physiotherapy", "child physiotherapy"],
     benefits: [
       "Achievement of age-appropriate motor milestones",
       "Enhanced muscle tone regulation",
@@ -323,7 +323,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDesc: "Specialized care for pre/post-natal recovery, pelvic floor dysfunction, diastasis recti, and chronic pelvic pain in a private, supportive setting.",
     metaTitle: "Women's Health Physiotherapy in Dehradun | Pregnancy & Pelvic Rehab",
     metaDesc: "Private and professional women's health physiotherapy in Dehradun. Treat pelvic floor issues, prenatal back pain, and post-delivery core recovery.",
-    keywords: ["womens health physiotherapy dehradun", "pregnancy exercise dehradun", "pelvic floor physiotherapy dehradun"],
+    keywords: ["womens health physiotherapy dehradun", "pregnancy exercise dehradun", "pelvic floor physiotherapy dehradun", "female physiotherapist in dehradun"],
     benefits: [
       "Re-strengthening of pelvic floor and deep core",
       "Resolution of urinary incontinence issues",
