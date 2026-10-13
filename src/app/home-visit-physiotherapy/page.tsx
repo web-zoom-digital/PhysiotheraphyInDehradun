@@ -4,11 +4,31 @@ import { CLINIC_CONFIG } from "@/config/clinic";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/FramerWrapper";
 import { ClinicSchema } from "@/components/ClinicSchema";
 import { LeadForm } from "@/components/LeadForm";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { Home, ClipboardCheck, Laptop, ShieldAlert, Award, Phone } from "lucide-react";
 
 export const metadata = {
-  title: "Home Visit Physiotherapy in Dehradun | Physiotherapy",
-  description: "Get professional, MPT-certified physiotherapy at home in Dehradun. Specialized home rehab for stroke paralysis, knee replacements, and seniors. Call today."
+  title: "Home Visit Physiotherapy in Dehradun | RonEx Physiotherapy",
+  description: "Get professional, MPT-certified physiotherapy at home in Dehradun. Specialized doorstep rehab for stroke paralysis, knee replacement, and seniors. Call +91 92862 44489.",
+  keywords: "home visit physiotherapy dehradun, home physiotherapy dehradun, physiotherapist at home dehradun, doorstep physiotherapy",
+  alternates: {
+    canonical: `${CLINIC_CONFIG.domain}/home-visit-physiotherapy`,
+  },
+  openGraph: {
+    title: "Home Visit Physiotherapy in Dehradun | RonEx Physiotherapy",
+    description: "Doorstep physical therapy across Dehradun. Specialized care for post-surgery, stroke recovery, and elderly mobility.",
+    url: `${CLINIC_CONFIG.domain}/home-visit-physiotherapy`,
+    type: "website",
+    locale: "en_IN",
+    siteName: CLINIC_CONFIG.name,
+    images: [{ url: `${CLINIC_CONFIG.domain}/og-image.jpg`, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Home Visit Physiotherapy in Dehradun | RonEx",
+    description: "MPT-certified physical therapists at your home in Dehradun.",
+    images: [`${CLINIC_CONFIG.domain}/og-image.jpg`],
+  },
 };
 
 export default function HomeVisitPage() {
@@ -39,6 +59,29 @@ export default function HomeVisitPage() {
         { name: "Home", item: "/" },
         { name: "Home Visit Physiotherapy", item: "/home-visit-physiotherapy" }
       ]} />
+      <ClinicSchema
+        type="webpage"
+        slug="home-visit-physiotherapy"
+        name="Home Visit Physiotherapy in Dehradun | RonEx Physiotherapy"
+        description="Get professional, MPT-certified physiotherapy at home in Dehradun. Specialized home rehab for stroke paralysis, knee replacements, and seniors."
+        pageType="MedicalWebPage"
+      />
+      <ClinicSchema
+        type="howto"
+        name="How Home Visit Physiotherapy Works in Dehradun"
+        description="Step-by-step process of receiving clinical physiotherapy at home with RonEx Physiotherapy in Dehradun."
+        howToSteps={processSteps.map((step) => ({
+          name: step.title,
+          text: step.desc,
+        }))}
+      />
+
+      <Breadcrumb
+        items={[
+          { label: "Home", url: "/" },
+          { label: "Home Visit Physiotherapy", url: "/home-visit-physiotherapy" },
+        ]}
+      />
 
       {/* Header Banner */}
       <section className="bg-gradient-to-tr from-primary-brand to-brand-blue py-16 text-white text-center">

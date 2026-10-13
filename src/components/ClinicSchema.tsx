@@ -2,14 +2,25 @@ import React from "react";
 import { CLINIC_CONFIG } from "@/config/clinic";
 
 interface SchemaProps {
-  type: "clinic" | "doctor" | "service" | "condition" | "location" | "faq" | "breadcrumb" | "review" | "webpage";
+  type: "clinic" | "doctor" | "service" | "condition" | "location" | "faq" | "breadcrumb" | "review" | "webpage" | "itemlist" | "howto" | "article" | "blogposting";
   slug?: string;
   name?: string;
   description?: string;
+  pageTitle?: string;
+  headline?: string;
+  image?: string;
+  author?: string;
   faqs?: { question: string; answer: string }[];
   breadcrumbs?: { name: string; item: string }[];
+  items?: { name: string; url: string; description: string }[];
+  itemListElements?: { name: string; url: string; description: string; position?: number }[];
+  steps?: { name: string; text: string }[];
+  howToSteps?: { name: string; text: string }[];
   reviewCount?: number;
   ratingValue?: number;
+  pageType?: "MedicalWebPage" | "AboutPage" | "ContactPage" | "FAQPage" | "CollectionPage" | "WebPage";
+  datePublished?: string;
+  dateModified?: string;
 }
 
 export const ClinicSchema: React.FC<SchemaProps> = ({
@@ -17,10 +28,21 @@ export const ClinicSchema: React.FC<SchemaProps> = ({
   slug = "",
   name = "",
   description = "",
+  pageTitle = "",
+  headline = "",
+  image = "",
+  author = "",
   faqs = [],
   breadcrumbs = [],
+  items = [],
+  itemListElements = [],
+  steps = [],
+  howToSteps = [],
   reviewCount = 847,
   ratingValue = 4.9,
+  pageType = "MedicalWebPage",
+  datePublished = "2024-01-01",
+  dateModified = new Date().toISOString().split("T")[0],
 }) => {
   const urlBase = CLINIC_CONFIG.domain;
 
@@ -305,6 +327,135 @@ export const ClinicSchema: React.FC<SchemaProps> = ({
         "name": b.name,
         "item": b.item.startsWith("http") ? b.item : `${urlBase}${b.item}`
       }))
+    };
+  }
+
+  // 8. MedicalWebPage — AEO/GEO key schema for AI search discoverability
+  if (type === "webpage") {
+    const pageUrl = slug ? `${urlBase}/${slug}` : urlBase;
+    schemaObj = {
+      "@context": "https://schema.org",
+      "@type": pageType,
+      "@id": `${pageUrl}#webpage`,
+      "url": pageUrl,
+      "name": pageTitle || name,
+      "description": description,
+      "inLanguage": "en-IN",
+      "isPartOf": { "@id": `${urlBase}/#website` },
+      "about": { "@id": `${urlBase}/#organization` },
+      "datePublished": datePublished,
+      "dateModified": dateModified,
+      "author": {
+        "@type": "Person",
+        "name": CLINIC_CONFIG.doctor.name,
+        "jobTitle": CLINIC_CONFIG.doctor.title
+      },
+      "reviewedBy": {
+        "@type": "Person",
+        "name": CLINIC_CONFIG.medicalReviewer.name,
+        "jobTitle": CLINIC_CONFIG.medicalReviewer.title
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", ".speakable"]
+      },
+      "breadcrumb": breadcrumbs.length > 0 ? {
+        "@type": "BreadcrumbList",
+        "itemListElement": breadcrumbs.map((b, index) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": b.name,
+          "item": b.item.startsWith("http") ? b.item : `${urlBase}${b.item}`
+        }))
+      } : undefined
+    };
+  }
+
+  // 9. ItemList — for /services, /conditions listing pages (enables rich carousel snippets)
+  const resolvedItems = items.length > 0 ? items : itemListElements;
+  if (type === "itemlist" && resolvedItems.length > 0) {
+    schemaObj = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": name,
+      "description": description,
+      "url": slug ? `${urlBase}/${slug}` : urlBase,
+      "numberOfItems": resolvedItems.length,
+      "itemListElement": resolvedItems.map((item, index) => ({
+        "@type": "ListItem",
+        "position": (item as any).position || index + 1,
+        "name": item.name,
+        "description": item.description,
+        "url": item.url.startsWith("http") ? item.url : `${urlBase}${item.url}`
+      }))
+    };
+  }
+
+  // 10. HowTo — for treatment/service pages (targets AI how-to answers)
+  const resolvedSteps = steps.length > 0 ? steps : howToSteps;
+  if (type === "howto" && resolvedSteps.length > 0) {
+    schemaObj = {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": name,
+      "description": description,
+      "step": resolvedSteps.map((step, index) => ({
+        "@type": "HowToStep",
+        "position": String(index + 1),
+        "name": step.name,
+        "text": step.text
+      })),
+      "totalTime": "PT45M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "INR",
+        "value": "500-1500"
+      }
+    };
+  }
+
+  // 11. Article / BlogPosting Schema — for educational blog articles
+  if (type === "article" || type === "blogposting") {
+    const articleUrl = slug ? `${urlBase}/${slug}` : urlBase;
+    schemaObj = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "@id": `${articleUrl}#article`,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": articleUrl
+      },
+      "headline": headline || name,
+      "description": description,
+      "image": image || `${urlBase}/og-image.jpg`,
+      "url": articleUrl,
+      "inLanguage": "en-IN",
+      "datePublished": datePublished,
+      "dateModified": dateModified,
+      "author": {
+        "@type": "Person",
+        "name": author || CLINIC_CONFIG.doctor.name,
+        "jobTitle": CLINIC_CONFIG.doctor.title,
+        "worksFor": {
+          "@type": "MedicalOrganization",
+          "name": CLINIC_CONFIG.name
+        }
+      },
+      "publisher": {
+        "@type": "MedicalOrganization",
+        "name": CLINIC_CONFIG.name,
+        "url": urlBase,
+        "logo": {
+          "@type": "ImageObject",
+          "url": `${urlBase}/logo.png`,
+          "width": 200,
+          "height": 60
+        }
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", "article p"]
+      }
     };
   }
 

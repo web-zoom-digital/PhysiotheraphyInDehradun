@@ -40,12 +40,14 @@ export async function generateMetadata({ params }: Props) {
       url: `${CLINIC_CONFIG.domain}/conditions/${condition.slug}`,
       type: "website",
       locale: "en_IN",
-      siteName: CLINIC_CONFIG.name
+      siteName: CLINIC_CONFIG.name,
+      images: [{ url: `${CLINIC_CONFIG.domain}/og-image.jpg`, width: 1200, height: 630 }]
     },
     twitter: {
       card: "summary_large_image",
       title: condition.metaTitle,
-      description: condition.metaDescription
+      description: condition.metaDescription,
+      images: [`${CLINIC_CONFIG.domain}/og-image.jpg`]
     }
   };
 }
@@ -78,12 +80,27 @@ export default async function ConditionDetailPage({ params }: Props) {
         name={condition.title} 
         description={condition.description} 
       />
+      <ClinicSchema
+        type="webpage"
+        slug={`conditions/${condition.slug}`}
+        name={`${condition.title} Treatment in Dehradun`}
+        description={condition.description}
+        pageType="MedicalWebPage"
+      />
+      <ClinicSchema
+        type="breadcrumb"
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Conditions", item: "/conditions" },
+          { name: condition.title, item: `/conditions/${condition.slug}` },
+        ]}
+      />
       <FAQSchema faqs={condition.faqs} />
 
       {/* Breadcrumb Navigation */}
       <Breadcrumb
         items={[
-          { label: "Conditions", url: "/conditions/back-pain" },
+          { label: "Conditions", url: "/conditions" },
           { label: condition.title, url: `/conditions/${condition.slug}` },
         ]}
       />
@@ -95,7 +112,7 @@ export default async function ConditionDetailPage({ params }: Props) {
             <nav className="mb-4 flex items-center gap-1 text-xs text-blue-200 flex-wrap">
               <Link href="/" className="hover:text-white transition-colors">Home</Link>
               <ChevronRight className="w-3.5 h-3.5 text-blue-300" />
-              <span>Conditions</span>
+              <Link href="/conditions" className="hover:text-white transition-colors">Conditions</Link>
               <ChevronRight className="w-3.5 h-3.5 text-blue-300" />
               <span className="text-white font-bold">{condition.title}</span>
             </nav>

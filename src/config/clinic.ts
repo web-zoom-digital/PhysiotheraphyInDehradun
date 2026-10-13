@@ -1,8 +1,8 @@
 export const CLINIC_CONFIG = {
-  name: "Physiotherapy",
-  shortName: "physiotherapy",
-  tagline: "Premium Physical Therapy & Rehabilitation Clinic",
-  domain: "https://www.physiotherapyindehradun.in", // Canonical domain
+  name: "RonEx Physiotherapy",
+  shortName: "RonEx",
+  tagline: "Dehradun's Leading Physiotherapy & Rehabilitation Clinic",
+  domain: "https://www.physiotherapyindehradun.in", 
   contact: {
     phone: "+91 92862 44489",
     phoneUrl: "tel:+919286244489",

@@ -6,8 +6,27 @@ import { ClinicSchema } from "@/components/ClinicSchema";
 import { Camera, MapPin, CheckCircle, Activity, Sparkles, Shield } from "lucide-react";
 
 export const metadata = {
-  title: "Clinic Gallery & Facilities | Physiotherapy Dehradun",
-  description: "Take a visual tour of Physiotherapy Dehradun's modern clinics. View our private consulting rooms, treatment beds, and advanced exercise gym equipment."
+  title: "Clinic Gallery & Facilities | RonEx Physiotherapy Dehradun",
+  description: "Take a visual tour of RonEx Physiotherapy's modern clinics in Dehradun. View our consultation rooms, treatment beds, and advanced exercise gym equipment.",
+  keywords: "physiotherapy clinic photos Dehradun, RonEx physiotherapy facility, physiotherapy gym Dehradun",
+  alternates: {
+    canonical: `${CLINIC_CONFIG.domain}/gallery`,
+  },
+  openGraph: {
+    title: "Clinic Gallery & Facilities | RonEx Physiotherapy Dehradun",
+    description: "Take a visual tour of our modern clinics at Rajpur Road and Bhaniyawala.",
+    url: `${CLINIC_CONFIG.domain}/gallery`,
+    type: "website",
+    locale: "en_IN",
+    siteName: CLINIC_CONFIG.name,
+    images: [{ url: `${CLINIC_CONFIG.domain}/og-image.jpg`, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Clinic Facilities & Photo Tour | RonEx Dehradun",
+    description: "State-of-the-art physiotherapy equipment and rehab gym in Dehradun.",
+    images: [`${CLINIC_CONFIG.domain}/og-image.jpg`],
+  },
 };
 
 export default function GalleryPage() {
@@ -17,7 +36,7 @@ export default function GalleryPage() {
     {
       title: "Private Consultation Rooms",
       tag: "Assessment",
-      desc: "Soundproof, private spaces for Dr. Rohan Mehta to conduct detailed postural, orthopedic, and neurological diagnostic checks.",
+      desc: "Soundproof, private spaces for Dr. Om Prakash (PT) to conduct detailed postural, orthopedic, and neurological diagnostic checks.",
       icon: Shield
     },
     {
@@ -58,6 +77,13 @@ export default function GalleryPage() {
         { name: "Home", item: "/" },
         { name: "Clinic Gallery", item: "/gallery" }
       ]} />
+      <ClinicSchema
+        type="webpage"
+        slug="gallery"
+        name="Clinic Gallery & Facilities | RonEx Physiotherapy Dehradun"
+        description="Take a visual tour of RonEx Physiotherapy's modern clinical facilities and equipment in Dehradun."
+        pageType="WebPage"
+      />
 
       {/* Header Banner */}
       <section className="bg-gradient-to-tr from-primary-brand to-brand-blue py-16 text-white text-center">

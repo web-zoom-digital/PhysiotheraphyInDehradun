@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { CLINIC_CONFIG } from "@/config/clinic";
 import { SERVICES_DATA } from "@/config/services";
 import { CONDITIONS_DATA } from "@/config/conditions";
@@ -237,7 +238,7 @@ export default function HomePage() {
 
       {/* 1. HERO SECTION */}
       <section className="relative overflow-hidden pt-20 pb-20 sm:pt-25 sm:pb-40 min-h-[70vh] sm:min-h-[90vh] flex items-center">
-        {/* Background Image of Physiotherapy Center - Full Width */}
+        {/* Background Image of Physiotherapy Center - Full Width (High Priority LCP) */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Desktop Image */}
           <img
@@ -386,7 +387,7 @@ export default function HomePage() {
       </section>
 
       {/* 4. SERVICES SECTION */}
-      <section className="py-20 bg-brand-gray-light/30">
+      <section className="py-20 bg-brand-gray-light/30 content-visibility-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4 flex flex-col items-center">
             <span className="text-sm font-bold uppercase tracking-wide text-teal-800">
@@ -462,7 +463,7 @@ export default function HomePage() {
       </section>
 
       {/* 4. CONDITIONS SECTION */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white content-visibility-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4 flex flex-col items-center">
             <span className="text-sm font-bold uppercase tracking-wide text-teal-800">
@@ -606,7 +607,7 @@ export default function HomePage() {
         </div>
       </section> */}
 
-      <section className="py-20 bg-brand-gray-light/30 border-y border-slate-100">
+      <section className="py-20 bg-brand-gray-light/30 border-y border-slate-100 content-visibility-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4 flex flex-col items-center">
             <span className="text-sm font-bold uppercase tracking-wide text-primary-brand">
@@ -640,7 +641,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className=" bg-white">
+      <section className="py-20 bg-white content-visibility-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4 flex flex-col items-center">
             <span className="text-sm font-bold uppercase tracking-wide text-primary-brand">
@@ -662,13 +663,13 @@ export default function HomePage() {
                 href={`/blog/${post.slug}`}
                 className="group block bg-white rounded-2xl border border-slate-400 overflow-hidden shadow-soft hover:shadow-premium hover:-translate-y-1 transition-all duration-300 h-full"
               >
-                <div className="relative w-full h-52 overflow-hidden">
-                  <img
+                <div className="relative w-full h-52 overflow-hidden bg-slate-100">
+                  <Image
                     src={post.image}
                     alt={post.title}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
-                  <span className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-primary-brand text-[11px]  px-3 py-1 rounded-full shadow-sm">
+                  <span className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-primary-brand text-[11px] font-semibold px-3 py-1 rounded-full shadow-sm z-10">
                     {post.category}
                   </span>
                 </div>
@@ -682,10 +683,10 @@ export default function HomePage() {
                     {post.shortDesc}
                   </p>
 
-                  <span className="inline-flex items-center gap-1.5 text-xs font-bold text-primary-brand">
+                  {/* <span className="inline-flex items-center gap-1.5 text-xs font-bold text-primary-brand">
                     Read Article
                     <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
-                  </span>
+                  </span> */}
                 </div>
               </Link>
             ))}
@@ -704,7 +705,7 @@ export default function HomePage() {
       </section>
 
       {/* 8. FAQS ACCORDION */}
-      <section className="relative py-20 bg-white overflow-hidden">
+      <section className="relative py-20 bg-white overflow-hidden content-visibility-auto">
         {/* Background Decoration */}
         <div className="absolute top-0 left-0 w-72 h-72 bg-teal-50 rounded-full blur-3xl opacity-60 -z-0" />
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-cyan-50 rounded-full blur-3xl opacity-60 -z-0" />
@@ -790,7 +791,7 @@ export default function HomePage() {
       </section>
 
       {/* 9. GOOGLE MAPS EMBED & BRANCHES */}
-      <section className="py-20 bg-brand-gray-light/30 border-t border-slate-100 relative">
+      <section className="py-20 bg-brand-gray-light/30 border-t border-slate-100 relative content-visibility-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-4 flex flex-col items-center">
             <span className="text-sm font-bold uppercase tracking-wide text-teal-800">
@@ -818,7 +819,7 @@ export default function HomePage() {
       </section>
 
       {/* 10. FINAL CTA BANNER */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white content-visibility-auto">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel bg-slate-900 text-slate-100 rounded-[32px] p-8 sm:p-16 text-center space-y-6 shadow-premium relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-brand/30 via-transparent to-transparent pointer-events-none" />

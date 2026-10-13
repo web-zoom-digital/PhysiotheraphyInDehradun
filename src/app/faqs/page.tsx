@@ -6,8 +6,27 @@ import { ClinicSchema } from "@/components/ClinicSchema";
 import { MessageSquare, ArrowRight, Phone, ChevronRight } from "lucide-react";
 
 export const metadata = {
-  title: "Frequently Asked Questions (FAQs) | Physiotherapy Dehradun",
-  description: "Find answers to commonly asked questions about physiotherapy consultations, treatment session durations, home visits, and health insurance billing at our Dehradun clinics."
+  title: "Frequently Asked Questions (FAQs) | RonEx Physiotherapy Dehradun",
+  description: "Find answers to commonly asked questions about physiotherapy consultations, treatment session durations, home visits, and health insurance billing at our Dehradun clinics.",
+  keywords: "physiotherapy FAQ Dehradun, physiotherapy treatment charges, physiotherapy home visits Dehradun",
+  alternates: {
+    canonical: `${CLINIC_CONFIG.domain}/faqs`,
+  },
+  openGraph: {
+    title: "Frequently Asked Questions (FAQs) | RonEx Physiotherapy",
+    description: "Got questions about physiotherapy? Read answers regarding appointments, techniques, session durations, and home care.",
+    url: `${CLINIC_CONFIG.domain}/faqs`,
+    type: "website",
+    locale: "en_IN",
+    siteName: CLINIC_CONFIG.name,
+    images: [{ url: `${CLINIC_CONFIG.domain}/og-image.jpg`, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Physiotherapy FAQs | RonEx Dehradun",
+    description: "Common questions about physical therapy, home visits, and appointments answered.",
+    images: [`${CLINIC_CONFIG.domain}/og-image.jpg`],
+  },
 };
 
 export default function FaqsPage() {
@@ -77,6 +96,13 @@ export default function FaqsPage() {
         { name: "Home", item: "/" },
         { name: "FAQs", item: "/faqs" }
       ]} />
+      <ClinicSchema
+        type="webpage"
+        slug="faqs"
+        name="Frequently Asked Questions (FAQs) | RonEx Physiotherapy Dehradun"
+        description="Comprehensive answers to patient questions on physiotherapy treatments, session durations, and home visits in Dehradun."
+        pageType="FAQPage"
+      />
 
       {/* ─── HERO SECTION ─── */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 py-16 sm:py-24 text-white">

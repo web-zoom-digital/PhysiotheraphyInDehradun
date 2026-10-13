@@ -6,8 +6,27 @@ import { ClinicSchema } from "@/components/ClinicSchema";
 import { Check, ShieldCheck, HelpCircle, Receipt } from "lucide-react";
 
 export const metadata = {
-  title: "Pricing & Rehabilitation Packages | RonEx Physiotherapy",
-  description: "Transparent pricing for physiotherapy sessions in Dehradun. View charges for clinical consultations, home visits, and multi-session recovery packages."
+  title: "Pricing & Rehabilitation Packages | RonEx Physiotherapy Dehradun",
+  description: "Transparent pricing for physiotherapy sessions in Dehradun. View charges for clinical consultations, home visits, and multi-session recovery packages.",
+  keywords: "physiotherapy charges Dehradun, physiotherapy cost per session, home visit physiotherapy price Dehradun",
+  alternates: {
+    canonical: `${CLINIC_CONFIG.domain}/pricing`,
+  },
+  openGraph: {
+    title: "Pricing & Rehabilitation Packages | RonEx Physiotherapy",
+    description: "Transparent pricing for physiotherapy sessions and home visits in Dehradun.",
+    url: `${CLINIC_CONFIG.domain}/pricing`,
+    type: "website",
+    locale: "en_IN",
+    siteName: CLINIC_CONFIG.name,
+    images: [{ url: `${CLINIC_CONFIG.domain}/og-image.jpg`, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Physiotherapy Pricing in Dehradun | RonEx",
+    description: "Clear and honest consultation fees and multi-session therapy packages.",
+    images: [`${CLINIC_CONFIG.domain}/og-image.jpg`],
+  },
 };
 
 export default function PricingPage() {
@@ -81,6 +100,13 @@ export default function PricingPage() {
         { name: "Home", item: "/" },
         { name: "Pricing", item: "/pricing" }
       ]} />
+      <ClinicSchema
+        type="webpage"
+        slug="pricing"
+        name="Pricing & Rehabilitation Packages | RonEx Physiotherapy"
+        description="Transparent pricing for physiotherapy sessions and recovery packages in Dehradun."
+        pageType="WebPage"
+      />
 
       {/* Header Banner */}
       <section className="bg-gradient-to-tr from-primary-brand to-brand-blue py-16 text-white text-center">

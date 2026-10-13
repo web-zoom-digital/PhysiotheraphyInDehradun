@@ -174,3 +174,9 @@ p {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Defer rendering for off-screen sections (Performance & CWV) */
+.content-visibility-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}

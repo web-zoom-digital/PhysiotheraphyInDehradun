@@ -44,12 +44,14 @@ export async function generateMetadata({ params }: Props) {
       url: `${CLINIC_CONFIG.domain}/locations/${location.slug}`,
       type: "website",
       locale: "en_IN",
-      siteName: CLINIC_CONFIG.name
+      siteName: CLINIC_CONFIG.name,
+      images: [{ url: `${CLINIC_CONFIG.domain}/og-image.jpg`, width: 1200, height: 630 }]
     },
     twitter: {
       card: "summary_large_image",
       title: location.metaTitle,
-      description: location.metaDescription
+      description: location.metaDescription,
+      images: [`${CLINIC_CONFIG.domain}/og-image.jpg`]
     }
   };
 }
@@ -87,6 +89,21 @@ export default async function LocationDetailPage({ params }: Props) {
         slug={location.slug}
         name={location.name}
         description={location.metaDescription}
+      />
+      <ClinicSchema
+        type="breadcrumb"
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Locations", item: "/locations" },
+          { name: `Physiotherapy in ${location.name}`, item: `/locations/${location.slug}` },
+        ]}
+      />
+      <ClinicSchema
+        type="webpage"
+        slug={`locations/${location.slug}`}
+        name={`${location.name} Physiotherapy Clinic & Home Care | RonEx`}
+        description={location.metaDescription}
+        pageType="WebPage"
       />
       <FAQSchema faqs={location.faqs} />
 

@@ -7,8 +7,27 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { Award, GraduationCap, CheckCircle, Stethoscope, MessageSquare, Phone, Calendar, Heart, Sparkles } from "lucide-react";
 
 export const metadata = {
-  title: "Our Specialists | Expert Physiotherapists in Dehradun",
-  description: "Meet our team of highly qualified and experienced MPT physiotherapists in Dehradun. Specialized in neuro, ortho, sports, and pediatric rehabilitation."
+  title: "Specialist Physiotherapists in Dehradun | RonEx Clinical Team",
+  description: "Meet our qualified team of MPT physiotherapists led by Dr. Om Prakash in Dehradun. Specialized in neuro rehab, ortho care, sports injury, and pediatric therapy.",
+  keywords: "physiotherapist in Dehradun, Dr Om Prakash physiotherapist, best physiotherapy doctor Dehradun, female physiotherapist Dehradun",
+  alternates: {
+    canonical: `${CLINIC_CONFIG.domain}/doctor`,
+  },
+  openGraph: {
+    title: "Specialist Physiotherapists in Dehradun | RonEx Clinical Team",
+    description: "Meet our qualified team of MPT physiotherapists in Dehradun. Specialized in neuro, ortho, sports, and pediatric rehabilitation.",
+    url: `${CLINIC_CONFIG.domain}/doctor`,
+    type: "website",
+    locale: "en_IN",
+    siteName: CLINIC_CONFIG.name,
+    images: [{ url: `${CLINIC_CONFIG.domain}/og-image.jpg`, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Physiotherapy Specialists in Dehradun | RonEx",
+    description: "Expert MPT-certified physical therapists in Dehradun.",
+    images: [`${CLINIC_CONFIG.domain}/og-image.jpg`],
+  },
 };
 
 const DOCTORS_DATA = [
@@ -64,8 +83,23 @@ export default function DoctorPage() {
   return (
     <>
       <ClinicSchema type="doctor" />
+      <ClinicSchema
+        type="breadcrumb"
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Doctors", item: "/doctor" },
+        ]}
+      />
+      <ClinicSchema
+        type="webpage"
+        slug="doctor"
+        name="Specialist Physiotherapists in Dehradun | RonEx"
+        description="Meet our team of senior MPT physiotherapists in Dehradun."
+        pageType="AboutPage"
+      />
       <Breadcrumb
         items={[
+          { label: "Home", url: "/" },
           { label: "Our Doctors", url: "/doctor" }
         ]}
       />

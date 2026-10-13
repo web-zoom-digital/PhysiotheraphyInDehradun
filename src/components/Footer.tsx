@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { CLINIC_CONFIG } from "@/config/clinic";
 import { Mail, Phone, Clock, ArrowRight } from "lucide-react";
+import { FaInstagram, FaWhatsapp, FaPhoneAlt, FaFacebookF } from "react-icons/fa";
 
 export const Footer: React.FC = () => {
   const quickLinks = [
@@ -51,7 +52,7 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="text-xs leading-relaxed text-white opacity-95">
-              Dehradun's trusted physiotherapy and rehabilitation clinic.
+              Dehradun&apos;s trusted physiotherapy and rehabilitation clinic.
               Providing advanced manual therapy, stroke rehabilitation, sports
               injury treatment and home physiotherapy services.
             </p>
@@ -86,26 +87,48 @@ export const Footer: React.FC = () => {
               </div>
             </div>
 
-            {/* Social Icons */}
-            <div className="flex gap-2 pt-0.5">
-              <a
-                href="https://www.facebook.com/people/RonEx-Physiotherapy-Rehabilitation-centre/61582957640581/#"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook Page"
-                className="w-8 h-8 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-xs hover:bg-white hover:text-teal-800 transition"
-              >
-                f
-              </a>
-
+            {/* Social & Contact Quick Icons */}
+            <div className="flex items-center gap-2 pt-1">
               <a
                 href="https://www.instagram.com/ronex_physiotherapy/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram Profile"
-                className="w-8 h-8 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-xs hover:bg-white hover:text-teal-800 transition"
+                title="Instagram"
+                className="w-8 h-8 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-gradient-to-tr hover:from-amber-500 hover:via-rose-500 hover:to-purple-600 hover:border-transparent transition-all duration-200"
               >
-                ◎
+                <FaInstagram className="w-4 h-4" />
+              </a>
+
+              <a
+                href={CLINIC_CONFIG.contact.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat on WhatsApp"
+                title="WhatsApp"
+                className="w-8 h-8 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#25D366] hover:border-transparent transition-all duration-200"
+              >
+                <FaWhatsapp className="w-4 h-4" />
+              </a>
+
+              <a
+                href={CLINIC_CONFIG.contact.phoneUrl}
+                aria-label="Call Now"
+                title="Call Now"
+                className="w-8 h-8 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-emerald-600 hover:border-transparent transition-all duration-200"
+              >
+                <FaPhoneAlt className="w-3.5 h-3.5" />
+              </a>
+
+              <a
+                href="https://www.facebook.com/people/RonEx-Physiotherapy-Rehabilitation-centre/61582957640581/#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook Page"
+                title="Facebook"
+                className="w-8 h-8 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#1877F2] hover:border-transparent transition-all duration-200"
+              >
+                <FaFacebookF className="w-3.5 h-3.5" />
               </a>
             </div>
           </div>

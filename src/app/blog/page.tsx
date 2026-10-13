@@ -7,8 +7,30 @@ import { ClinicSchema } from "@/components/ClinicSchema";
 import { Clock, Calendar, ArrowRight, MessageSquare, Phone,ChevronLeft, ChevronRight } from "lucide-react";
 
 export const metadata = {
-  title: "Physiotherapy Blog & Recovery Guides | Physiotherapy Dehradun",
-  description: "Read physical therapy guidelines, exercises, and rehabilitation guides written by our expert physiotherapists in Dehradun."
+  title: "Physiotherapy Blog & Health Recovery Guides | RonEx Dehradun",
+  description:
+    "Evidence-based physical therapy guidelines, exercises, and rehabilitation articles written by MPT-certified physiotherapists at RonEx Dehradun.",
+  keywords:
+    "physiotherapy blog Dehradun, physical therapy recovery guides, back pain exercises, stroke rehab blog, physiotherapy tips",
+  alternates: {
+    canonical: `${CLINIC_CONFIG.domain}/blog`,
+  },
+  openGraph: {
+    title: "Physiotherapy Blog & Recovery Guides | RonEx Dehradun",
+    description:
+      "Evidence-based exercises, rehabilitation guides, and pain relief tips from RonEx Physiotherapy in Dehradun.",
+    url: `${CLINIC_CONFIG.domain}/blog`,
+    type: "website",
+    locale: "en_IN",
+    siteName: CLINIC_CONFIG.name,
+    images: [{ url: `${CLINIC_CONFIG.domain}/og-image.jpg`, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Physiotherapy Blog & Health Guides | RonEx Dehradun",
+    description: "Explore clinical guides and physical rehabilitation articles from RonEx Dehradun.",
+    images: [`${CLINIC_CONFIG.domain}/og-image.jpg`],
+  },
 };
 
 export default async function BlogIndexPage({
@@ -29,8 +51,37 @@ export default async function BlogIndexPage({
   const startIndex = (currentPage - 1) * postsPerPage;
   const currentPosts = BLOGS_DATA.slice(startIndex, startIndex + postsPerPage);
 
+  const waMsg = "Hello RonEx Physiotherapy, I read your blog and would like to ask a question or book an appointment.";
+  const waUrl = `${CLINIC_CONFIG.contact.whatsapp}?text=${encodeURIComponent(waMsg)}`;
+
   return (
     <>
+      {/* Schemas */}
+      <ClinicSchema
+        type="breadcrumb"
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Blog", item: "/blog" },
+        ]}
+      />
+      <ClinicSchema
+        type="webpage"
+        slug="blog"
+        name="Physiotherapy Blog & Recovery Guides | RonEx Dehradun"
+        description="Evidence-based physical therapy guidelines, exercises, and rehabilitation articles written by RonEx Physiotherapy."
+        pageType="MedicalWebPage"
+      />
+      <ClinicSchema
+        type="itemlist"
+        name="Physiotherapy Health & Recovery Articles"
+        itemListElements={currentPosts.map((post, i) => ({
+          name: post.title,
+          url: `${CLINIC_CONFIG.domain}/blog/${post.slug}`,
+          description: post.shortDesc || post.metaDesc,
+          position: startIndex + i + 1,
+        }))}
+      />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 py-16 sm:py-24 text-white">
         {/* Background Decorations */}
@@ -86,7 +137,7 @@ export default async function BlogIndexPage({
               <Reveal delay={0.2}>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
-                    // href={waUrl}
+                    href={waUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 px-7 py-4 bg-primary-brand text-white font-bold rounded-full hover:bg-primary-hover shadow-lg hover:scale-105 active:scale-95 transition-all text-sm"
@@ -131,7 +182,7 @@ export default async function BlogIndexPage({
               {currentPosts.map((post) => (
                 <StaggerItem key={post.slug} className="h-full">
                   <Link
-                    href={`/blog/${post.slug}`}
+                    href={'/blog'}
                     className="group block bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-soft hover:shadow-premium hover:-translate-y-1 transition-all duration-300 h-full flex flex-col"
                   >
                     {/* Image */}
@@ -160,10 +211,10 @@ export default async function BlogIndexPage({
                         {post.shortDesc}
                       </p>
 
-                      <span className="inline-flex items-center gap-1 text-xs font-bold text-primary-brand mt-auto">
+                      {/* <span className="inline-flex items-center gap-1 text-xs font-bold text-primary-brand mt-auto">
                         Read Article
                         <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" />
-                      </span>
+                      </span> */}
                     </div>
                   </Link>
                 </StaggerItem>
