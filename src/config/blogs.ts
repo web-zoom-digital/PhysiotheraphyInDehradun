@@ -825,5 +825,90 @@ export const BLOGS_DATA: BlogPost[] = [
       <h3>How Physiotherapy Can Help</h3>
       <p>Physiotherapy plays a crucial role in managing and recovering from Winging of Scapula. Our targeted exercises and manual therapy techniques aim to restore function, reduce pain, and prevent future occurrences.</p>
     `
+  },
+  {
+    slug: "how-to-choose-best-physiotherapy-clinic-in-dehradun",
+    title: "How to Choose the Best Physiotherapy Clinic in Dehradun",
+    category: "Guides",
+    metaTitle: "Best Physiotherapy Clinic in Dehradun | Finding the Right Physiotherapist",
+    metaDesc: "Looking for the best physiotherapist in Dehradun? Compare top clinics, understand home visit options, and choose the right expert for your recovery.",
+    shortDesc: "A complete guide to finding the best physiotherapy centre in Dehradun for your specific pain or injury.",
+    publishedDate: "September 25, 2026",
+    author: "Dr. Rohan",
+    authorTitle: "Lead Physiotherapist",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
+    keywords: ["best physiotherapist in dehradun", "physiotherapy clinic in dehradun", "physiotherapy hospital in dehradun", "dr. sheel's physiotherapy clinic dehradun", "p4u physiotherapy clinic", "physiohealing homecare & rehabilitation clinic", "advanced physiotherapy centre", "veera physiotherapy clinic", "align physiotherapy clinic", "excellence physiotherapy clinic", "Indian Physiotherapy Centre"],
+    content: `
+      <h2>Finding the Best Physiotherapist in Dehradun</h2>
+      <p>When you are in pain, finding the right physiotherapy clinic is crucial. Dehradun is home to many reputed centers, including Dr. Sheel's Physiotherapy Clinic, P4U Physiotherapy, Veera Physiotherapy, and Align Physiotherapy. However, choosing the <strong>best physiotherapy clinic in Dehradun</strong> depends entirely on your specific condition.</p>
+      
+      <h3>What to Look For in a Physiotherapy Centre?</h3>
+      <ul>
+        <li><strong>Specialization:</strong> Are you looking for neuro rehab, sports injury recovery, or pediatric physiotherapy? Ensure the clinic has certified experts in that specific field.</li>
+        <li><strong>Home Visit Availability:</strong> If you are recovering from a stroke or a severe fracture, traveling can be painful. Opt for a clinic that offers a dedicated <em>physiotherapist home visit</em> service.</li>
+        <li><strong>Advanced Technology:</strong> An advanced physiotherapy centre should be equipped with modern modalities like Laser Therapy, Dry Needling, and IFT.</li>
+      </ul>
+      
+      <h3>Why RonEx Physiotherapy Stands Out</h3>
+      <p>At RonEx, we pride ourselves on being an elite physiotherapy and rehabilitation centre. Whether you need an ortho & neuro physiotherapy clinic or specialized sports injury recovery, our evidence-based approach ensures faster, long-lasting relief. We provide both in-clinic and domiciliary physiotherapy (home visits) across all major Dehradun localities.</p>
+    `
+  },
+  {
+    slug: "pediatric-physiotherapy-guide",
+    title: "Pediatric Physiotherapy: Helping Your Child Thrive",
+    category: "Pediatric Care",
+    metaTitle: "Pediatric Physiotherapy in Dehradun | Child Physiotherapist",
+    metaDesc: "Expert pediatric physiotherapy in Dehradun. Consult a specialized child physiotherapist for developmental delays, cerebral palsy, and posture correction.",
+    shortDesc: "Learn how pediatric physiotherapy can help children overcome movement disorders and achieve developmental milestones.",
+    publishedDate: "September 24, 2026",
+    author: "Dr. Zoom",
+    authorTitle: "Senior Pediatric Therapist",
+    readTime: "5 min read",
+    image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=800&q=80",
+    keywords: ["pediatric physiotherapy", "child physiotherapy", "pediatric physiotherapist", "paediatric physiotherapy", "child physiotherapist"],
+    content: `
+      <h2>The Role of a Child Physiotherapist</h2>
+      <p>Pediatric physiotherapy (or paediatric physiotherapy) is a specialized branch of rehabilitation dedicated to infants, children, and adolescents. A child physiotherapist focuses on helping children achieve their developmental milestones, improve balance, and build strength.</p>
+      
+      <h3>When Does Your Child Need Physiotherapy?</h3>
+      <ul>
+        <li><strong>Developmental Delays:</strong> If your child is late in rolling, sitting, crawling, or walking.</li>
+        <li><strong>Neurological Conditions:</strong> Such as Cerebral Palsy or Spina Bifida.</li>
+        <li><strong>Musculoskeletal Issues:</strong> Including torticollis (wry neck), flat feet, or juvenile arthritis.</li>
+      </ul>
+      
+      <h3>How We Approach Pediatric Care in Dehradun</h3>
+      <p>At our clinic, we believe that pediatric therapy should be engaging and fun. We incorporate play-based exercises that encourage children to move and stretch naturally. If you are searching for a qualified pediatric physiotherapist in Dehradun, our team provides both clinic-based sessions and comfortable home visits.</p>
+    `
+  },
+  {
+    slug: "sports-injury-recovery-dehradun",
+    title: "Complete Guide to Sports Injury Recovery in Dehradun",
+    category: "Sports Rehab",
+    metaTitle: "Sports Injury in Dehradun | ACL Rehab Physio Near Me",
+    metaDesc: "Recover from sports injuries faster with elite physiotherapy. Expert ACL rehab, ligament tear treatments, and athletic recovery in Dehradun.",
+    shortDesc: "Suffered a sports injury in Dehradun? Learn how specialized sports physiotherapy and ACL rehab can get you back in the game.",
+    publishedDate: "September 23, 2026",
+    author: "Dr. Rohan",
+    authorTitle: "Sports Rehab Specialist",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
+    keywords: ["sports injury in dehradun", "acl rehab physio near me", "physiotherapy and sports injury clinic", "manual physiotherapy"],
+    content: `
+      <h2>Dealing with a Sports Injury in Dehradun</h2>
+      <p>Whether you are a professional athlete or a weekend warrior, a sports injury can be incredibly frustrating. Common injuries like ankle sprains, hamstring tears, and ACL ruptures require immediate and specialized attention. Finding a dedicated <strong>physiotherapy and sports injury clinic</strong> is the first step toward recovery.</p>
+      
+      <h3>The ACL Rehab Journey</h3>
+      <p>An Anterior Cruciate Ligament (ACL) tear is one of the most feared sports injuries. If you are searching for an <em>"acl rehab physio near me"</em>, it's vital to choose a therapist who understands phase-wise surgical protocols. Rehabilitation involves:</p>
+      <ul>
+        <li><strong>Phase 1:</strong> Swelling reduction and restoring range of motion.</li>
+        <li><strong>Phase 2:</strong> Neuromuscular control and basic strengthening.</li>
+        <li><strong>Phase 3:</strong> Plyometrics and sports-specific dynamic exercises.</li>
+      </ul>
+      
+      <h3>Why Manual Physiotherapy Matters</h3>
+      <p>Advanced <strong>manual physiotherapy</strong> is essential for sports recovery. Our therapists use hands-on techniques like dry needling, joint mobilization, and deep tissue release to break down scar tissue and accelerate healing. Don't let a sports injury keep you sidelined—consult our experts today.</p>
+    `
   }
 ];
