@@ -13,7 +13,10 @@ export const metadata: Metadata = {
     template: `%s | ${CLINIC_CONFIG.name} Dehradun`
   },
   description: `${CLINIC_CONFIG.name} is Dehradun's top-rated physiotherapy clinic. Expert treatment for back pain, neck pain, knee pain, stroke rehab, and sports injuries. In-clinic at Rajpur Road & home visit across Dehradun.`,
-  keywords: ["physiotherapy in dehradun", "best physiotherapist in dehradun", "physiotherapy clinic dehradun", "back pain treatment dehradun", "home visit physiotherapy dehradun", "neurological physiotherapy dehradun", "sports physiotherapy dehradun"],
+  keywords: ["physiotherapy in dehradun", "best physiotherapist in dehradun", "physiotherapy clinic dehradun", "back pain treatment dehradun", "home visit physiotherapy dehradun", "neurological physiotherapy dehradun", "sports physiotherapy dehradun", "RonEx Physiotherapy"],
+  authors: [{ name: CLINIC_CONFIG.doctor.name, url: `${CLINIC_CONFIG.domain}/doctor` }],
+  creator: CLINIC_CONFIG.name,
+  publisher: CLINIC_CONFIG.name,
   metadataBase: new URL(CLINIC_CONFIG.domain),
   alternates: {
     canonical: "./"
@@ -35,12 +38,21 @@ export const metadata: Metadata = {
     url: CLINIC_CONFIG.domain,
     title: `${CLINIC_CONFIG.name} | Best Physiotherapy in Dehradun`,
     description: `Dehradun's most trusted physiotherapy clinic. Specialized orthopedic, neurological & sports rehab. Clinic at Rajpur Road + home visits across 15+ areas.`,
-    siteName: CLINIC_CONFIG.name
+    siteName: CLINIC_CONFIG.name,
+    images: [
+      {
+        url: `${CLINIC_CONFIG.domain}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: `${CLINIC_CONFIG.name} - Best Physiotherapy Clinic in Dehradun`
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: `${CLINIC_CONFIG.name} | Physiotherapy in Dehradun`,
-    description: `Expert physiotherapy for back pain, stroke rehab, sports injuries & more in Dehradun. Book now.`
+    description: `Expert physiotherapy for back pain, stroke rehab, sports injuries & more in Dehradun. Book now.`,
+    images: [`${CLINIC_CONFIG.domain}/og-image.jpg`]
   },
   verification: {
     google: CLINIC_CONFIG.analytics.googleSiteVerification,
@@ -61,43 +73,58 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        {/* Google Analytics (GA4) */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${CLINIC_CONFIG.analytics.googleAnalyticsId}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${CLINIC_CONFIG.analytics.googleAnalyticsId}', {
-              page_path: window.location.pathname,
-            });
-          `}
-        </Script>
+        {/* Resource Hints for Faster Connection to Remote Assets */}
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
-        {/* Google Tag Manager (GTM) */}
-        <Script id="google-tag-manager" strategy="afterInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${CLINIC_CONFIG.analytics.googleTagManagerId}');
-          `}
-        </Script>
+        {/* Google Analytics (GA4) - Deferred to not block LCP */}
+        {CLINIC_CONFIG.analytics.googleAnalyticsId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${CLINIC_CONFIG.analytics.googleAnalyticsId}`}
+              strategy="lazyOnload"
+            />
+            <Script id="google-analytics" strategy="lazyOnload">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${CLINIC_CONFIG.analytics.googleAnalyticsId}', {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        )}
 
-        {/* Microsoft Clarity */}
-        <Script id="microsoft-clarity" strategy="afterInteractive">
-          {`
-            (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "${CLINIC_CONFIG.analytics.microsoftClarityId}");
-          `}
-        </Script>
+        {/* Google Tag Manager (GTM) - Only load if valid ID configured */}
+        {CLINIC_CONFIG.analytics.googleTagManagerId && !CLINIC_CONFIG.analytics.googleTagManagerId.includes("XXXX") && (
+          <Script id="google-tag-manager" strategy="lazyOnload">
+            {`
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','${CLINIC_CONFIG.analytics.googleTagManagerId}');
+            `}
+          </Script>
+        )}
+
+        {/* Microsoft Clarity - Only load if valid ID configured */}
+        {CLINIC_CONFIG.analytics.microsoftClarityId && !CLINIC_CONFIG.analytics.microsoftClarityId.includes("xxxx") && (
+          <Script id="microsoft-clarity" strategy="lazyOnload">
+            {`
+              (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "${CLINIC_CONFIG.analytics.microsoftClarityId}");
+            `}
+          </Script>
+        )}
       </head>
       <body className="antialiased min-h-screen flex flex-col">
         {/* GTM Noscript */}
@@ -110,8 +137,32 @@ export default function RootLayout({
           />
         </noscript>
 
-        {/* Global MedicalClinic Schema Injection */}
+        {/* Global MedicalClinic + WebSite Schema Injection */}
         <ClinicSchema type="clinic" />
+        {/* WebSite Schema: Enables Google Sitelinks Searchbox */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "@id": `${CLINIC_CONFIG.domain}/#website`,
+              "url": CLINIC_CONFIG.domain,
+              "name": CLINIC_CONFIG.name,
+              "description": "Dehradun's leading physiotherapy clinic for back pain, stroke rehab, sports injuries, and home visit physiotherapy.",
+              "inLanguage": "en-IN",
+              "publisher": { "@id": `${CLINIC_CONFIG.domain}/#organization` },
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": `${CLINIC_CONFIG.domain}/services?q={search_term_string}`
+                },
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
 
         <Header />
         

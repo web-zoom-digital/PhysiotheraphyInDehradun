@@ -25,13 +25,32 @@ import { SERVICES_DATA } from "@/config/services";
 import { LOCATIONS_DATA } from "@/config/locations";
 
 export const metadata = {
-  title: "About Us | Leading Physiotherapy Clinic in Dehradun",
+  title: "About Us | Leading Physiotherapy Clinic in Dehradun | RonEx",
   description:
-    "Learn about Physiotherapy Dehradun's philosophy, medical team, and advanced equipment. We are committed to evidence-based joint and muscle rehab.",
+    "Learn about RonEx Physiotherapy Dehradun's philosophy, medical team, and advanced equipment directed by Dr. Om Prakash (PT). Committed to evidence-based joint and muscle rehab.",
+  keywords: "about RonEx physiotherapy, Dr Om Prakash physiotherapist, best physiotherapy clinic Dehradun",
+  alternates: {
+    canonical: `${CLINIC_CONFIG.domain}/about`,
+  },
+  openGraph: {
+    title: "About RonEx Physiotherapy Dehradun | Clinical Excellence",
+    description: "Learn about RonEx Physiotherapy's medical team, advanced electrotherapy modalities, and Dr. Om Prakash (PT).",
+    url: `${CLINIC_CONFIG.domain}/about`,
+    type: "website",
+    locale: "en_IN",
+    siteName: CLINIC_CONFIG.name,
+    images: [{ url: `${CLINIC_CONFIG.domain}/og-image.jpg`, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About RonEx Physiotherapy Clinic in Dehradun",
+    description: "Evidence-based joint, spine, and neuro rehabilitation led by Dr. Om Prakash (PT).",
+    images: [`${CLINIC_CONFIG.domain}/og-image.jpg`],
+  },
 };
 
 export default function AboutPage() {
-  const waUrl = `${CLINIC_CONFIG.contact.whatsapp}?text=Hi%20Physiotherapy%20Dehradun%2C%20I%20read%20your%20About%20page%20and%20want%20to%20consult%20Dr.%20Om%20Prakash.`;
+  const waUrl = `${CLINIC_CONFIG.contact.whatsapp}?text=Hi%20RonEx%20Physiotherapy%2C%20I%20read%20your%20About%20page%20and%20want%20to%20consult%20Dr.%20Om%20Prakash.`;
 
   return (
     <>
@@ -42,6 +61,14 @@ export default function AboutPage() {
           { name: "About Us", item: "/about" },
         ]}
       />
+      <ClinicSchema
+        type="webpage"
+        slug="about"
+        name="About RonEx Physiotherapy Clinic Dehradun"
+        description="Learn about RonEx Physiotherapy's philosophy, clinical team, and advanced equipment in Dehradun."
+        pageType="AboutPage"
+      />
+      <ClinicSchema type="clinic" />
       
       {/* ─── HERO SECTION ─── */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 py-16 sm:py-24 text-white">

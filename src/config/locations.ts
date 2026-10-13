@@ -40,6 +40,40 @@ export const LOCATIONS_DATA: LocationItem[] = [
     `
   },
   {
+    slug: "bhaniyawala",
+    name: "Bhaniyawala",
+    metaTitle: "Physiotherapy Clinic in Bhaniyawala Dehradun | RonEx Physiotherapy",
+    metaDescription: "Visit RonEx Physiotherapy at Bhaniyawala, Dehradun (Rama Market, Thano Chowk). Specialized care for back pain, stroke paralysis, knee arthritis & home visits.",
+    keywords: ["physiotherapy clinic bhaniyawala dehradun", "physiotherapist in bhaniyawala", "home physiotherapy bhaniyawala dehradun", "thano chowk physiotherapy", "physiotherapy near jolly grant"],
+    tagline: "Dedicated In-Clinic Rehabilitation & Home Physiotherapy at Bhaniyawala Branch",
+    homeVisitAvailable: true,
+    landmarks: ["Rama Market", "Thano Chowk", "Ranjit Singh Marg", "Jolly Grant Airport Road", "Doiwala"],
+    faqs: [
+      {
+        question: "Where is the RonEx Physiotherapy clinic located in Bhaniyawala?",
+        answer: "Our Bhaniyawala clinic is located at Rama Market, Thano Chowk, opposite Ranjit Singh Marg, Bhaniyawala, Dehradun 248140."
+      },
+      {
+        question: "Are home physiotherapy visits available in Bhaniyawala, Thano, and Doiwala?",
+        answer: "Yes, our certified physiotherapists provide doorstep rehabilitation across Bhaniyawala, Thano Chowk, Doiwala, and Jolly Grant for patients who cannot commute."
+      },
+      {
+        question: "What conditions are treated at the Bhaniyawala branch?",
+        answer: "We treat acute and chronic back pain, slip disc, cervical spondylosis, knee osteoarthritis, frozen shoulder, stroke hemiplegia, and post-fracture stiffness with advanced electrotherapy and manual techniques."
+      }
+    ],
+    content: `
+      <h3>RonEx Physiotherapy Clinic in Bhaniyawala, Dehradun</h3>
+      <p>RonEx Physiotherapy operates a fully equipped clinical branch in Bhaniyawala, conveniently situated at Rama Market near Thano Chowk. This branch serves patients from Bhaniyawala, Doiwala, Jolly Grant, Thano, and the eastern Dehradun corridor, eliminating the need to travel long distances into central Dehradun for daily physical therapy sessions.</p>
+      
+      <h3>Clinical Facilities & Expert Modalities</h3>
+      <p>Our Bhaniyawala branch features modern electrotherapy modalities including Interferential Therapy (IFT), Therapeutic Ultrasound, TENS, cervical and lumbar traction units, and neuromuscular electrical stimulation. Under the clinical protocols directed by Dr. Om Prakash (PT), patients receive targeted manual therapy, posture correction, and tailored strengthening exercises.</p>
+
+      <h3>Home Visit Physiotherapy in Bhaniyawala & Doiwala Belt</h3>
+      <p>For stroke patients, bedridden seniors, and individuals recovering from hip or knee replacement surgeries in Bhaniyawala and surrounding rural-urban pockets, our mobile rehabilitation team provides structured home visits with portable recovery equipment.</p>
+    `
+  },
+  {
     slug: "gms-road",
     name: "GMS Road",
     metaTitle: "Physiotherapist in GMS Road Dehradun | Home Visit Physiotherapy",

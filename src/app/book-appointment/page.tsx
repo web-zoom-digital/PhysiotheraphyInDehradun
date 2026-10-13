@@ -7,8 +7,27 @@ import { ClinicSchema } from "@/components/ClinicSchema";
 import { Phone, Clock, FileText, UserCheck, MessageSquare, ChevronRight } from "lucide-react";
 
 export const metadata = {
-  title: "Book a Physiotherapy Appointment | Physiotherapy Dehradun",
-  description: "Schedule a physical therapy session or request a home visit in Dehradun. Fill out our booking form or connect instantly on WhatsApp at +91 92862 44489."
+  title: "Book a Physiotherapy Appointment | RonEx Physiotherapy Dehradun",
+  description: "Schedule a physical therapy session or request a home visit in Dehradun. Fill out our booking form or connect instantly on WhatsApp at +91 92862 44489.",
+  keywords: "book physiotherapy appointment Dehradun, physical therapist appointment, physiotherapy home visit booking",
+  alternates: {
+    canonical: `${CLINIC_CONFIG.domain}/book-appointment`,
+  },
+  openGraph: {
+    title: "Book a Physiotherapy Appointment | RonEx Dehradun",
+    description: "Schedule an in-clinic consultation or home visit session with Dr. Om Prakash (PT).",
+    url: `${CLINIC_CONFIG.domain}/book-appointment`,
+    type: "website",
+    locale: "en_IN",
+    siteName: CLINIC_CONFIG.name,
+    images: [{ url: `${CLINIC_CONFIG.domain}/og-image.jpg`, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Book Physiotherapy Session | RonEx Dehradun",
+    description: "Reserve your slot online or via WhatsApp +91 92862 44489.",
+    images: [`${CLINIC_CONFIG.domain}/og-image.jpg`],
+  },
 };
 
 export default function BookAppointmentPage() {
@@ -20,6 +39,13 @@ export default function BookAppointmentPage() {
         { name: "Home", item: "/" },
         { name: "Book Appointment", item: "/book-appointment" }
       ]} />
+      <ClinicSchema
+        type="webpage"
+        slug="book-appointment"
+        name="Book a Physiotherapy Appointment | RonEx Dehradun"
+        description="Schedule a physical therapy session or request a home visit in Dehradun with RonEx Physiotherapy."
+        pageType="ContactPage"
+      />
 
       {/* ─── HERO SECTION ─── */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 py-16 sm:py-24 text-white">

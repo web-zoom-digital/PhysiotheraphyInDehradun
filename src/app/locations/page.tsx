@@ -19,20 +19,57 @@ import {
 export const metadata = {
   title: "Physiotherapy Home Visit Locations in Dehradun | RonEx Physiotherapy",
   description: "Find all sectors and neighborhoods served by RonEx Physiotherapy home visit rehabilitation team in Dehradun, Uttarakhand. Call +91 92862 44489.",
-  keywords: "physiotherapy in dehradun, home visit physiotherapy dehradun, physiotherapy near rajpur road, GMS road, kargi chowk"
+  keywords: "physiotherapy in dehradun, home visit physiotherapy dehradun, physiotherapy near rajpur road, GMS road, kargi chowk",
+  alternates: {
+    canonical: `${CLINIC_CONFIG.domain}/locations`,
+  },
+  openGraph: {
+    title: "Physiotherapy Home Visit Locations in Dehradun | RonEx",
+    description: "Find all sectors and neighborhoods served by RonEx Physiotherapy home visit team across Dehradun.",
+    url: `${CLINIC_CONFIG.domain}/locations`,
+    type: "website",
+    locale: "en_IN",
+    siteName: CLINIC_CONFIG.name,
+    images: [{ url: `${CLINIC_CONFIG.domain}/og-image.jpg`, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Physiotherapy Locations Served in Dehradun | RonEx",
+    description: "Explore neighborhood coverage for home-visit physiotherapy in Dehradun.",
+    images: [`${CLINIC_CONFIG.domain}/og-image.jpg`],
+  },
 };
 
 export default function LocationsIndexPage() {
   const globalWaMsg = "Hello RonEx Physiotherapy, I would like to check home visit availability for my area and book an appointment.";
   const waUrl = `${CLINIC_CONFIG.contact.whatsapp}?text=${encodeURIComponent(globalWaMsg)}`;
 
+  const locationItems = LOCATIONS_DATA.map((loc, i) => ({
+    name: `Physiotherapy in ${loc.name}, Dehradun`,
+    url: `${CLINIC_CONFIG.domain}/locations/${loc.slug}`,
+    description: loc.metaDescription,
+    position: i + 1,
+  }));
+
   return (
     <>
       {/* Dynamic SEO JSON-LD injection */}
       <ClinicSchema type="breadcrumb" breadcrumbs={[
         { name: "Home", item: "/" },
-        { name: "Locations served", item: "/locations" }
+        { name: "Locations", item: "/locations" }
       ]} />
+      <ClinicSchema
+        type="webpage"
+        slug="locations"
+        name="Physiotherapy Locations in Dehradun | RonEx Physiotherapy"
+        description="Comprehensive list of locations and neighborhoods served by RonEx Physiotherapy in Dehradun, Uttarakhand."
+        pageType="WebPage"
+      />
+      <ClinicSchema
+        type="itemlist"
+        name="Physiotherapy Locations in Dehradun"
+        itemListElements={locationItems}
+      />
       
       {/* 1. BREADCRUMB */}
       <nav className="bg-slate-50 border-b border-slate-100 py-3" aria-label="Breadcrumb">

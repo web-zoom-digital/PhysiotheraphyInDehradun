@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 
 export function BlogImage({ src, alt, index }: { src: string; alt: string; index: number }) {
-  const [imgSrc, setImgSrc] = useState(src);
   const [hasError, setHasError] = useState(false);
 
   // When an image fails to load, we assign a completely unique, real human photograph 
@@ -12,8 +11,10 @@ export function BlogImage({ src, alt, index }: { src: string; alt: string; index
 
   return (
     <img
-      src={hasError ? fallbackUrl : imgSrc}
+      src={hasError ? fallbackUrl : src}
       alt={alt}
+      loading="lazy"
+      decoding="async"
       className="w-full h-full object-cover transition-opacity duration-300"
       onError={() => {
         if (!hasError) {

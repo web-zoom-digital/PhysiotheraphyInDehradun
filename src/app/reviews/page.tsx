@@ -6,8 +6,27 @@ import { ClinicSchema } from "@/components/ClinicSchema";
 import { Star, CheckCircle, MessageSquare, ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Patient Reviews & Success Stories | RonEx Physiotherapy",
-  description: "Read real reviews from patients cured at our Dehradun clinics. Verified success stories for stroke rehabilitation, back pain, and knee arthritis."
+  title: "Patient Reviews & Success Stories | RonEx Physiotherapy Dehradun",
+  description: "Read real reviews from patients treated at our Dehradun clinics. Verified feedback for stroke rehabilitation, back pain, and knee arthritis.",
+  keywords: "physiotherapy reviews Dehradun, RonEx physiotherapy ratings, best physiotherapist review",
+  alternates: {
+    canonical: `${CLINIC_CONFIG.domain}/reviews`,
+  },
+  openGraph: {
+    title: "Patient Reviews & Success Stories | RonEx Physiotherapy",
+    description: "Read verified feedback from patients treated at RonEx Physiotherapy Dehradun.",
+    url: `${CLINIC_CONFIG.domain}/reviews`,
+    type: "website",
+    locale: "en_IN",
+    siteName: CLINIC_CONFIG.name,
+    images: [{ url: `${CLINIC_CONFIG.domain}/og-image.jpg`, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Patient Reviews | RonEx Physiotherapy Dehradun",
+    description: "Real patient stories and verified rehabilitation results.",
+    images: [`${CLINIC_CONFIG.domain}/og-image.jpg`],
+  },
 };
 
 export default function ReviewsPage() {
@@ -70,6 +89,14 @@ export default function ReviewsPage() {
         { name: "Home", item: "/" },
         { name: "Reviews", item: "/reviews" }
       ]} />
+      <ClinicSchema type="review" reviewCount={847} ratingValue={4.9} />
+      <ClinicSchema
+        type="webpage"
+        slug="reviews"
+        name="Patient Reviews & Ratings | RonEx Physiotherapy Dehradun"
+        description="Verified patient reviews and clinical rehabilitation results at RonEx Physiotherapy Dehradun."
+        pageType="WebPage"
+      />
 
       {/* Header Banner */}
       <section className="bg-gradient-to-tr from-primary-brand to-brand-blue py-16 text-white text-center">

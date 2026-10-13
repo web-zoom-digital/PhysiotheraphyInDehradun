@@ -110,6 +110,29 @@ export default async function ServiceDetailPage({ params }: Props) {
         name={service.title}
         description={service.shortDesc}
       />
+      {/* MedicalWebPage Schema — AEO/E-E-A-T signal with speakable and author */}
+      <ClinicSchema
+        type="webpage"
+        pageType="MedicalWebPage"
+        slug={`services/${service.slug}`}
+        name={service.metaTitle}
+        description={service.metaDesc}
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Services", item: "/services" },
+          { name: service.title, item: `/services/${service.slug}` }
+        ]}
+      />
+      {/* HowTo Schema — targets AI how-to answers for treatment steps */}
+      <ClinicSchema
+        type="howto"
+        name={`How is ${service.title} performed at RonEx Physiotherapy?`}
+        description={service.shortDesc}
+        steps={service.approach.map((step) => ({
+          name: step,
+          text: `${step} — performed by certified MPT physiotherapists at RonEx Physiotherapy, Dehradun.`
+        }))}
+      />
       <FAQSchema faqs={service.faqs} />
 
       {/* Breadcrumb Navigation */}

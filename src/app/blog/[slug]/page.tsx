@@ -35,8 +35,17 @@ export async function generateMetadata({ params }: Props) {
       description: post.metaDesc,
       url: `${CLINIC_CONFIG.domain}/blog/${post.slug}`,
       type: "article",
+      locale: "en_IN",
+      siteName: CLINIC_CONFIG.name,
       publishedTime: post.publishedDate,
-      authors: [post.author]
+      authors: [post.author],
+      images: [{ url: `${CLINIC_CONFIG.domain}${post.image || "/og-image.jpg"}`, width: 1200, height: 630 }]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.metaTitle,
+      description: post.metaDesc,
+      images: [`${CLINIC_CONFIG.domain}${post.image || "/og-image.jpg"}`]
     }
   };
 }
@@ -52,7 +61,7 @@ export default async function BlogDetailPage({ params }: Props) {
   // Related posts selection
   const otherPosts = BLOGS_DATA.filter((b) => b.slug !== slug).slice(0, 3);
 
-  const customWaMessage = `Hi Physiotherapy Dehradun, I read your article "${post.title}" and would like to ask a question.`;
+  const customWaMessage = `Hi RonEx Physiotherapy, I read your article "${post.title}" and would like to ask a question.`;
   const waUrl = `${CLINIC_CONFIG.contact.whatsapp}?text=${encodeURIComponent(customWaMessage)}`;
 
   return (
@@ -62,6 +71,22 @@ export default async function BlogDetailPage({ params }: Props) {
         { name: "Blog", item: "/blog" },
         { name: post.title, item: `/blog/${post.slug}` }
       ]} />
+      <ClinicSchema
+        type="article"
+        slug={`blog/${post.slug}`}
+        headline={post.title}
+        description={post.metaDesc}
+        image={`${CLINIC_CONFIG.domain}${post.image || "/og-image.jpg"}`}
+        author={post.author}
+        datePublished={post.publishedDate}
+      />
+      <ClinicSchema
+        type="webpage"
+        slug={`blog/${post.slug}`}
+        name={post.title}
+        description={post.metaDesc}
+        pageType="MedicalWebPage"
+      />
 
       {/* Hero Header */}
       <section className="bg-gradient-to-tr from-primary-brand to-brand-blue py-12 text-white overflow-hidden">
@@ -149,7 +174,7 @@ export default async function BlogDetailPage({ params }: Props) {
             </div>
 
             {/* Related articles */}
-            <div className="glass-panel border-slate-100 rounded-3xl p-6 shadow-soft space-y-3 bg-white">
+            {/* <div className="glass-panel border-slate-100 rounded-3xl p-6 shadow-soft space-y-3 bg-white">
               <h4 className="font-extrabold text-slate-800 text-sm">Other Clinical Guides</h4>
               <div className="flex flex-col gap-3">
                 {otherPosts.map((op) => (
@@ -165,7 +190,7 @@ export default async function BlogDetailPage({ params }: Props) {
                   </Link>
                 ))}
               </div>
-            </div>
+            </div> */}
 
           </div>
 

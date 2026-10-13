@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { CLINIC_CONFIG } from "@/config/clinic";
+import { SERVICES_DATA } from "@/config/services";
 import {
   Reveal,
   StaggerContainer,
@@ -53,6 +54,18 @@ export const metadata = {
     "Explore advanced physiotherapy services in Dehradun. RonEx Physiotherapy offers orthopedic rehabilitation, stroke neuro rehab, sports injury recovery, pediatric therapy, and home visit care.",
   keywords:
     "physiotherapy services in Dehradun, orthopedic physiotherapy, neuro physiotherapy, sports physiotherapy, pediatric physiotherapy, women's health physiotherapy, home physiotherapy",
+  alternates: {
+    canonical: `${CLINIC_CONFIG.domain}/services`
+  },
+  openGraph: {
+    title: "Physiotherapy Services in Dehradun | RonEx Physiotherapy",
+    description: "Explore advanced physiotherapy services in Dehradun. RonEx offers orthopedic, neuro, sports, pediatric & home visit physiotherapy.",
+    url: `${CLINIC_CONFIG.domain}/services`,
+    type: "website",
+    locale: "en_IN",
+    siteName: CLINIC_CONFIG.name,
+    images: [{ url: `${CLINIC_CONFIG.domain}/og-image.jpg`, width: 1200, height: 630 }]
+  }
 };
 
 export default function ServicesIndexPage() {
@@ -486,6 +499,30 @@ export default function ServicesIndexPage() {
       {/* Dynamic SEO JSON-LD injection */}
       <ClinicSchema
         type="breadcrumb"
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Services", item: "/services" },
+        ]}
+      />
+      {/* ItemList Schema — improves rich carousel eligibility in Google SERPs */}
+      <ClinicSchema
+        type="itemlist"
+        slug="services"
+        name="Physiotherapy Services in Dehradun — RonEx Physiotherapy"
+        description="Comprehensive list of physiotherapy services offered at RonEx Physiotherapy, Dehradun, including orthopedic, neurological, sports, pediatric, and home visit physiotherapy."
+        items={SERVICES_DATA.map((s) => ({
+          name: s.title,
+          description: s.shortDesc,
+          url: `${CLINIC_CONFIG.domain}/services/${s.slug}`
+        }))}
+      />
+      {/* MedicalWebPage Schema — AEO/GEO signal for AI search engines */}
+      <ClinicSchema
+        type="webpage"
+        pageType="CollectionPage"
+        slug="services"
+        name="Physiotherapy Services in Dehradun"
+        description="Explore advanced physiotherapy services in Dehradun at RonEx — orthopedic rehab, neuro rehab, sports injury recovery, pediatric therapy, and home visits."
         breadcrumbs={[
           { name: "Home", item: "/" },
           { name: "Services", item: "/services" },

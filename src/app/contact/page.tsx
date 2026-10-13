@@ -8,12 +8,31 @@ import { Mail, Phone, MapPin,  MessageSquare,
 import Link from "next/link";
 
 export const metadata = {
-  title: "Contact Us | Physiotherapy Clinic Dehradun",
-  description: "Get in touch with us. View phone numbers, clinic addresses, operating hours, and Google maps directions for our Rajpur Road and Bhaniyawala branches."
+  title: "Contact Us | RonEx Physiotherapy Clinic Dehradun",
+  description: "Get in touch with RonEx Physiotherapy. View phone numbers, clinic addresses, operating hours, and Google maps directions for Rajpur Road and Bhaniyawala branches.",
+  keywords: "contact RonEx physiotherapy, physiotherapy phone number Dehradun, physiotherapy clinic Rajpur Road address",
+  alternates: {
+    canonical: `${CLINIC_CONFIG.domain}/contact`,
+  },
+  openGraph: {
+    title: "Contact RonEx Physiotherapy Clinic Dehradun",
+    description: "Get in touch with RonEx Physiotherapy. View phone numbers, clinic addresses, and Google maps directions.",
+    url: `${CLINIC_CONFIG.domain}/contact`,
+    type: "website",
+    locale: "en_IN",
+    siteName: CLINIC_CONFIG.name,
+    images: [{ url: `${CLINIC_CONFIG.domain}/og-image.jpg`, width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact RonEx Physiotherapy Dehradun",
+    description: "Phone numbers, branch addresses, and consultation hours.",
+    images: [`${CLINIC_CONFIG.domain}/og-image.jpg`],
+  },
 };
 
 export default function ContactPage() {
-  const waUrl = `${CLINIC_CONFIG.contact.whatsapp}?text=Hi%20Physiotherapy%20Dehradun%2C%20I%20want%20to%20get%20in%20touch%20with%20your%20clinic.`;
+  const waUrl = `${CLINIC_CONFIG.contact.whatsapp}?text=Hi%20RonEx%20Physiotherapy%2C%20I%20want%20to%20get%20in%20touch%20with%20your%20clinic.`;
 
   return (
     <>
@@ -21,6 +40,13 @@ export default function ContactPage() {
         { name: "Home", item: "/" },
         { name: "Contact", item: "/contact" }
       ]} />
+      <ClinicSchema
+        type="webpage"
+        slug="contact"
+        name="Contact RonEx Physiotherapy Clinic Dehradun"
+        description="Get in touch with RonEx Physiotherapy. Phone numbers, addresses, and maps for Rajpur Road and Bhaniyawala branches."
+        pageType="ContactPage"
+      />
 
       {/* ─── HERO SECTION ─── */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900 to-slate-800 py-16 sm:py-24 text-white">
